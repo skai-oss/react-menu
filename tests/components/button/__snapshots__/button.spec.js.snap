@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component recieves className 1`] = `
+<button
+  className="button TEST_CLASS"
+>
+  TEST
+</button>
+`;
+
+exports[`Button component renders children 1`] = `
+<button
+  className="button"
+>
+  TEST
+</button>
+`;

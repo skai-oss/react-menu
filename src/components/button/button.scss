@@ -1,0 +1,13 @@
+@import "../../resources/globals";
+
+.button {
+  padding: 1em;
+  border: none;
+  outline: none;
+  background: inherit;
+  cursor: pointer;
+
+  &:hover {
+    background: $element-backfround-color;
+  }
+}
