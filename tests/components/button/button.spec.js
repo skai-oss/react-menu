@@ -15,6 +15,15 @@ describe("Button component", () => {
     expect(cmp).toMatchSnapshot();
   });
 
+  test("disabled button", () => {
+    const cmp = renderer.create(
+      <Button isDisabled onClick={mockFn}>
+        TEST
+      </Button>
+    );
+    expect(cmp).toMatchSnapshot();
+  });
+
   test("triggers onClick", () => {
     const mockFn = jest.fn();
     const cmp = shallow(<Button onClick={mockFn}>TEST</Button>);
