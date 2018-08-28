@@ -1,11 +1,19 @@
+const glob = require("glob");
 const path = require("path");
 
-const { babelLoader, cssLoader } = require("./loaders");
+const { babelLoader, cssLoader, mdLoader } = require("./loaders");
 
 module.exports = {
-  entry: {
-    index: "./src/index.js"
-  },
+  entry: glob.sync("./src/components/**/*.js").reduce(
+    (entries, entry) =>
+      Object.assign(entries, {
+        [entry
+          .split("/")
+          .pop()
+          .replace(".js", "")]: entry
+      }),
+    { index: path.join(__dirname, "../../src/index.js") }
+  ),
   externals: {
     react: "react"
   },
@@ -13,9 +21,9 @@ module.exports = {
     filename: "[name].js",
     path: path.resolve(process.cwd(), "dist"),
     library: "@kenshooui/react-menu",
-    libraryTarget: "commonjs2"
+    libraryTarget: "umd"
   },
   module: {
-    rules: [babelLoader, cssLoader]
+    rules: [babelLoader, cssLoader, mdLoader]
   }
 };
