@@ -1,23 +1,26 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-
-import { Menu } from "../src";
-import style from "./story_book.scss";
-
-storiesOf("Menu", module).add("Default view", () => (
-  <Menu className={style.menu} />
-
-import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
+import { boolean, text, withKnobs } from "@storybook/addon-knobs";
 
 import { Menu, Button } from "../src/";
 
-storiesOf("Menu", module).add("with button", () => (
-  <Menu>
-    <Button onClick={action("Button clicked")}>Portfolio</Button>
-    <Button isDisabled onClick={action("Button clicked")}>
-      About
-    </Button>
-    <Button onClick={action("Button clicked")}>Contact</Button>
-  </Menu>
-));
+import styles from "./menu.stories.scss";
+
+storiesOf("Menu", module)
+  .addDecorator(withKnobs)
+  .add("with button", () => (
+    <Menu>
+      <Button
+        onClick={action("Button clicked")}
+        isDisabled={boolean("disabled", false)}
+        className={text("custom className", `${styles.custom_button}`)}
+        disabledClassName={text(
+          "custom disabledClassName",
+          `${styles.custom_button_disabled}`
+        )}
+      >
+        Button
+      </Button>
+    </Menu>
+  ));
