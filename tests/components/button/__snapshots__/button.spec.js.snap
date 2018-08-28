@@ -1,5 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Button component disabled button 1`] = `
+<button
+  className="button disabled"
+  disabled={true}
+>
+  TEST
+</button>
+`;
+
 exports[`Button component recieves className 1`] = `
 <button
   className="button TEST_CLASS"

@@ -3,8 +3,18 @@ import classnames from "classnames";
 
 import styles from "./button.scss";
 
-export const Button = ({ className, children, ...props }) => (
-  <button className={classnames(styles.button, className)} {...props}>
-    {children}
-  </button>
-);
+export const Button = ({ className, children, isDisabled, ...props }) => {
+  return (
+    <button
+      className={classnames(
+        styles.button,
+        { [styles.disabled]: isDisabled },
+        className
+      )}
+      disabled={isDisabled}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+};

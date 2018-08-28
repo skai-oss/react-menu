@@ -11,3 +11,13 @@
     background: $element-background-color;
   }
 }
+
+.disabled {
+  color: $element-disabled-color;
+  user-select: none;
+  cursor: default;
+
+  &:hover {
+    background: inherit;
+  }
+}

@@ -15,7 +15,9 @@ import { Menu, Button } from "../src/";
 storiesOf("Menu", module).add("with button", () => (
   <Menu>
     <Button onClick={action("Button clicked")}>Portfolio</Button>
-    <Button onClick={action("Button clicked")}>About</Button>
+    <Button isDisabled onClick={action("Button clicked")}>
+      About
+    </Button>
     <Button onClick={action("Button clicked")}>Contact</Button>
   </Menu>
 ));
