@@ -1,0 +1,25 @@
+@import "../../resources/globals";
+
+.dropdown {
+  background-color: $element-background-color;
+  cursor: pointer;
+
+  &:hover {
+    background: $element-hover-color;
+  }
+}
+
+.dropdown_items {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.disabled {
+  user-select: none;
+  cursor: default;
+
+  &:hover {
+    background: inherit;
+  }
+}

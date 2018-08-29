@@ -1,8 +1,9 @@
-$menu-height: 40px;
-$menu-background-color: #dddddd;
+$menu-hover-color: #bfbfbf;
 
-.menu {
-  width: 100%;
-  height: $menu-height;
-  background-color: $menu-background-color;
+.dropdown_item {
+  margin-left: 10px;
+
+  &:hover {
+    background: $menu-hover-color;
+  }
 }
