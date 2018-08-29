@@ -2,7 +2,7 @@
 
 exports[`LeftMenu component recieves className 1`] = `
 <div
-  className="right_menu TEST_CLASS"
+  className="left_menu TEST_CLASS"
 >
   TEST
 </div>
@@ -10,7 +10,7 @@ exports[`LeftMenu component recieves className 1`] = `
 
 exports[`LeftMenu component renders children 1`] = `
 <div
-  className="right_menu"
+  className="left_menu"
 >
   TEST
 </div>

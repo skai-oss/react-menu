@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import styles from "./left_menu.scss";
 
 export const LeftMenu = ({ className, children }) => (
-  <div className={classnames(styles.right_menu, className)}>{children}</div>
+  <div className={classnames(styles.left_menu, className)}>{children}</div>
 );
 
 LeftMenu.propTypes = {
