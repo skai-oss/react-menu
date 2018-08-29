@@ -10,7 +10,7 @@ import styles from "./story_book.scss";
 storiesOf("Menu", module)
   .addDecorator(withKnobs)
   .add("with button", () => (
-    <Menu>
+    <Menu className={styles.menu}>
       <Button
         onClick={action("Button clicked")}
         isDisabled={boolean("disabled", false)}
