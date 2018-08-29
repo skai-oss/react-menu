@@ -5,7 +5,7 @@ import { boolean, text, withKnobs } from "@storybook/addon-knobs";
 
 import { Menu, Button } from "../src/";
 
-import styles from "./menu.stories.scss";
+import styles from "./story_book.scss";
 
 storiesOf("Menu", module)
   .addDecorator(withKnobs)

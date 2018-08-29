@@ -1,8 +1,30 @@
 $menu-height: 40px;
 $menu-background-color: #dddddd;
+$button-background-color: papayawhip;
+$button-background-color-hover: orange;
+$button-background-color-disabled: gray;
+$button-color-disabled: white;
 
 .menu {
   width: 100%;
   height: $menu-height;
   background-color: $menu-background-color;
+}
+
+.custom_button {
+  background: $button-background-color;
+
+  &:hover {
+    background: $button-background-color-hover;
+  }
+}
+
+.custom_button_disabled {
+  background: $button-background-color-disabled;
+  cursor: default;
+  color: $button-color-disabled;
+
+  &:hover {
+    background: $button-background-color-disabled;
+  }
 }
