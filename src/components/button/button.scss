@@ -1,0 +1,23 @@
+@import "../../resources/globals";
+
+.button {
+  padding: 1em;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  background: inherit;
+  cursor: pointer;
+
+  &:hover {
+    background: $element-background-color;
+  }
+}
+
+.disabled {
+  color: $element-disabled-color;
+  cursor: default;
+
+  &:hover {
+    background: inherit;
+  }
+}
