@@ -29,7 +29,7 @@ export const Button = ({
 Button.propTypes = {
   className: PropTypes.string,
   disabledClassName: PropTypes.string,
-  isDisabled: PropTypes.boolean,
+  isDisabled: PropTypes.bool,
   children: PropTypes.node
 };
 
