@@ -1,5 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
+import { action } from "@storybook/addon-actions";
+import { boolean, text, withKnobs } from "@storybook/addon-knobs";
 
 import { Menu } from "../src";
 import Dropdown from "../src/components/dropdown/dropdown";
@@ -35,5 +37,23 @@ storiesOf("Dropdown", module)
         <SampleDropDownMenuItem>item 1</SampleDropDownMenuItem>
         <SampleDropDownMenuItem>item 2</SampleDropDownMenuItem>
       </Dropdown>
+    </Menu>
+  ));
+
+storiesOf("Button", module)
+  .addDecorator(withKnobs)
+  .add("Simple", () => (
+    <Menu className={styles.menu}>
+      <Button
+        onClick={action("Button clicked")}
+        isDisabled={boolean("disabled", false)}
+        className={text("custom className", `${styles.custom_button}`)}
+        disabledClassName={text(
+          "custom disabledClassName",
+          `${styles.custom_button_disabled}`
+        )}
+      >
+        Button
+      </Button>
     </Menu>
   ));
