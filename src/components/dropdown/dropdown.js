@@ -24,35 +24,31 @@ class Dropdown extends Component {
     ])
   };
 
+  state = {
+    isOpened: false
+  };
+
   constructor(props) {
     super(props);
-
-    this.state = {
-      isOpened: false
-    };
-
-    this.open = this.open.bind(this);
-    this.close = this.close.bind(this);
-    this.onClick = this.onClick.bind(this);
   }
 
-  open(event) {
+  open = event => {
     if (this.props.isDisabled) {
       return;
     }
     this.setState({ isOpened: true });
-  }
+  };
 
-  close(event) {
+  close = event => {
     this.setState({ isOpened: false });
-  }
+  };
 
-  onClick(event) {
+  onClick = event => {
     const { onClick } = this.props;
     if (onClick) {
       onClick(event);
     }
-  }
+  };
 
   render() {
     const {
@@ -79,11 +75,7 @@ class Dropdown extends Component {
           {label}
         </div>
         {isOpened && (
-          <div
-            id="items"
-            onClick={this.onClick}
-            className={styles.dropdown_items}
-          >
+          <div onClick={this.onClick} className={styles.dropdown_items}>
             {children}
           </div>
         )}

@@ -83,7 +83,7 @@ describe("Dropdown component", () => {
     cmp.update();
 
     cmp
-      .find({ id: "items" })
+      .find(".dropdown_items")
       .find("div")
       .at(0)
       .simulate("click");
