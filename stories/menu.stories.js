@@ -56,7 +56,16 @@ storiesOf("Menu", module)
 storiesOf("Dropdown", module)
   .add("Simple", () => (
     <Menu>
-      <Dropdown label={"Simple Menu"}>
+      <Dropdown
+        label={"Simple"}
+        onClick={action("item clicked")}
+        isDisabled={boolean("disabled", false)}
+        className={text("custom className", `${styles.custom_dropdown}`)}
+        disabledClassName={text(
+          "custom disabledClassName",
+          `${styles.custom_dropdown_disabled}`
+        )}
+      >
         <SampleDropDownMenuItem>item 1</SampleDropDownMenuItem>
         <SampleDropDownMenuItem>item 2</SampleDropDownMenuItem>
         <SampleDropDownMenuItem>item 3</SampleDropDownMenuItem>
@@ -65,21 +74,22 @@ storiesOf("Dropdown", module)
   ))
   .add("Cascading dropdowns", () => (
     <Menu>
-      <Dropdown label={"Cascading Menu"}>
+      <Dropdown
+        label={"Cascading"}
+        onClick={action("item clicked")}
+        isDisabled={boolean("disabled", false)}
+        className={text("className", `${styles.custom_dropdown}`)}
+        disabledClassName={text(
+          "disabledClassName",
+          `${styles.custom_dropdown_disabled}`
+        )}
+      >
         <SampleDropDownMenuItem>item 1</SampleDropDownMenuItem>
         <SampleDropDownMenuItem>item 2</SampleDropDownMenuItem>
-        <Dropdown label={"Dropdown Sub Menu"}>
+        <Dropdown label={"Sub Menu"}>
           <SampleDropDownMenuItem>sub item 1</SampleDropDownMenuItem>
           <SampleDropDownMenuItem>sub item 2</SampleDropDownMenuItem>
         </Dropdown>
-      </Dropdown>
-    </Menu>
-  ))
-  .add("Disabled dropdown", () => (
-    <Menu>
-      <Dropdown label={"Disabled Menu"} isDisabled={true}>
-        <SampleDropDownMenuItem>item 1</SampleDropDownMenuItem>
-        <SampleDropDownMenuItem>item 2</SampleDropDownMenuItem>
       </Dropdown>
     </Menu>
   ));
