@@ -10,7 +10,7 @@ class Dropdown extends Component {
     disabledClassName: PropTypes.string,
     label: PropTypes.string,
     isDisabled: PropTypes.bool,
-    children: ""
+    children: []
   };
 
   static defaultProps = {
@@ -27,10 +27,6 @@ class Dropdown extends Component {
   state = {
     isOpened: false
   };
-
-  constructor(props) {
-    super(props);
-  }
 
   open = event => {
     if (this.props.isDisabled) {
