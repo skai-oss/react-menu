@@ -74,7 +74,6 @@
   },
   "release": {
     "debug": false,
-    "analyzeCommits": "./semantic_release/analyze_commits",
     "verifyConditions": {
       "path": "./semantic_release/verify_conditions"
     }
