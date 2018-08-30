@@ -3,8 +3,9 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { boolean, text, withKnobs } from "@storybook/addon-knobs";
 
-import { Button, Menu } from "../src";
 import SampleDropDownMenuItem from "./sample_dropdown_menu_item";
+import { Menu, Button, LeftMenuContainer, RightMenuContainer } from "../src/";
+
 import styles from "./story_book.scss";
 import Dropdown from "../src/components/dropdown/dropdown";
 
@@ -65,5 +66,37 @@ storiesOf("Button", module)
       >
         Button
       </Button>
+    </Menu>
+  ))
+  .add("with left / right menu", () => (
+    <Menu className={styles.menu}>
+      <LeftMenuContainer>
+        <Button
+          className={styles.custom_button}
+          onClick={action("Button clicked")}
+        >
+          Left
+        </Button>
+        <Button
+          className={styles.custom_button}
+          onClick={action("Button clicked")}
+        >
+          Button
+        </Button>
+      </LeftMenuContainer>
+      <RightMenuContainer>
+        <Button
+          className={styles.custom_button}
+          onClick={action("Button clicked")}
+        >
+          Right
+        </Button>
+        <Button
+          className={styles.custom_button}
+          onClick={action("Button clicked")}
+        >
+          Button
+        </Button>
+      </RightMenuContainer>
     </Menu>
   ));

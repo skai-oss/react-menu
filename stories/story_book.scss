@@ -16,6 +16,7 @@ $button-color-disabled: white;
 }
 
 .custom_button {
+  height: $menu-height;
   background: $button-background-color;
 
   &:hover {
