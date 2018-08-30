@@ -1,17 +1,17 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
-import { RightMenu } from "../../../src/";
+import { RightMenuContainer } from "../../../src/";
 
-describe("RightMenu component", () => {
+describe("RightMenuContainer component", () => {
   test("renders children", () => {
-    const cmp = renderer.create(<RightMenu>TEST</RightMenu>);
+    const cmp = renderer.create(<RightMenuContainer>TEST</RightMenuContainer>);
     expect(cmp).toMatchSnapshot();
   });
 
   test("recieves className", () => {
     const cmp = renderer.create(
-      <RightMenu className="TEST_CLASS">TEST</RightMenu>
+      <RightMenuContainer className="TEST_CLASS">TEST</RightMenuContainer>
     );
     expect(cmp).toMatchSnapshot();
   });

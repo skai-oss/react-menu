@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LeftMenuContainer component recieves className 1`] = `
+<div
+  className="left_menu_container TEST_CLASS"
+>
+  TEST
+</div>
+`;
+
+exports[`LeftMenuContainer component renders children 1`] = `
+<div
+  className="left_menu_container"
+>
+  TEST
+</div>
+`;
