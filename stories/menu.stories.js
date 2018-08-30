@@ -4,21 +4,54 @@ import { action } from "@storybook/addon-actions";
 import { boolean, text, withKnobs } from "@storybook/addon-knobs";
 
 import SampleDropDownMenuItem from "./sample_dropdown_menu_item";
-import { Menu, Button, LeftMenuContainer, RightMenuContainer } from "../src/";
+import { Button, LeftMenuContainer, Menu, RightMenuContainer } from "../src/";
 
 import styles from "./story_book.scss";
 import Dropdown from "../src/components/dropdown/dropdown";
 
-storiesOf("Menu", module).add("Default view", () => (
-  <Menu>
-    <Button>Button</Button>
-    <Dropdown label={"Dropdown"}>
-      <SampleDropDownMenuItem>item 1</SampleDropDownMenuItem>
-      <SampleDropDownMenuItem>item 2</SampleDropDownMenuItem>
-      <SampleDropDownMenuItem>item 3</SampleDropDownMenuItem>
-    </Dropdown>
-  </Menu>
-));
+storiesOf("Menu", module)
+  .add("Default view", () => (
+    <Menu>
+      <Button>Button</Button>
+      <Dropdown label={"Dropdown"}>
+        <SampleDropDownMenuItem>item 1</SampleDropDownMenuItem>
+        <SampleDropDownMenuItem>item 2</SampleDropDownMenuItem>
+        <SampleDropDownMenuItem>item 3</SampleDropDownMenuItem>
+      </Dropdown>
+    </Menu>
+  ))
+  .add("with left / right menu", () => (
+    <Menu className={styles.menu}>
+      <LeftMenuContainer>
+        <Button
+          className={styles.custom_button}
+          onClick={action("Button clicked")}
+        >
+          Left
+        </Button>
+        <Button
+          className={styles.custom_button}
+          onClick={action("Button clicked")}
+        >
+          Button
+        </Button>
+      </LeftMenuContainer>
+      <RightMenuContainer>
+        <Button
+          className={styles.custom_button}
+          onClick={action("Button clicked")}
+        >
+          Right
+        </Button>
+        <Button
+          className={styles.custom_button}
+          onClick={action("Button clicked")}
+        >
+          Button
+        </Button>
+      </RightMenuContainer>
+    </Menu>
+  ));
 
 storiesOf("Dropdown", module)
   .add("Simple", () => (
@@ -66,37 +99,5 @@ storiesOf("Button", module)
       >
         Button
       </Button>
-    </Menu>
-  ))
-  .add("with left / right menu", () => (
-    <Menu className={styles.menu}>
-      <LeftMenuContainer>
-        <Button
-          className={styles.custom_button}
-          onClick={action("Button clicked")}
-        >
-          Left
-        </Button>
-        <Button
-          className={styles.custom_button}
-          onClick={action("Button clicked")}
-        >
-          Button
-        </Button>
-      </LeftMenuContainer>
-      <RightMenuContainer>
-        <Button
-          className={styles.custom_button}
-          onClick={action("Button clicked")}
-        >
-          Right
-        </Button>
-        <Button
-          className={styles.custom_button}
-          onClick={action("Button clicked")}
-        >
-          Button
-        </Button>
-      </RightMenuContainer>
     </Menu>
   ));
