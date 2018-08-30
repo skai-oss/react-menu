@@ -12,7 +12,11 @@ export class Menu extends PureComponent {
 
   render() {
     const children = React.Children.map(this.props.children, (child, index) =>
-      React.cloneElement(child, { index, onSelect: this.onSelect })
+      React.cloneElement(child, {
+        index,
+        onSelect: this.onSelect,
+        activeElement: this.state.activeElement
+      })
     );
 
     return <div className={classnames(styles.menu, className)}>{children}</div>;
