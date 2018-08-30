@@ -4,12 +4,14 @@ import classnames from "classnames";
 
 import styles from "./dropdown.scss";
 import { Button } from "../../";
+import { DOWN, RIGHT } from "./items_direction_consts";
 
 export default class Dropdown extends Component {
   static propTypes = {
     className: PropTypes.string,
     disabledClassName: PropTypes.string,
     itemsClassName: PropTypes.string,
+    itemsDirection: PropTypes.string,
     label: PropTypes.string,
     isDisabled: PropTypes.bool,
     children: []
@@ -19,6 +21,7 @@ export default class Dropdown extends Component {
     className: "",
     disabledClassName: "",
     itemsClassName: "",
+    itemsDirection: RIGHT,
     label: "",
     isDisabled: false,
     children: PropTypes.oneOfType([
@@ -53,6 +56,7 @@ export default class Dropdown extends Component {
     const {
       className,
       itemsClassName,
+      itemsDirection,
       disabledClassName,
       label,
       isDisabled,
@@ -60,8 +64,6 @@ export default class Dropdown extends Component {
     } = this.props;
 
     const { isOpened } = this.state;
-
-    console.log(itemsClassName);
 
     return (
       <div>
@@ -78,7 +80,11 @@ export default class Dropdown extends Component {
         </Button>
         {isOpened && (
           <div
-            className={classnames(styles.dropdown_items, itemsClassName)}
+            className={classnames(
+              { [styles.dropdown_items_down]: itemsDirection === DOWN },
+              { [styles.dropdown_items_right]: itemsDirection === RIGHT },
+              itemsClassName
+            )}
             onClick={this.onClick}
           >
             {children}
