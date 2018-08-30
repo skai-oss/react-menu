@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
-import styles from "./dropdown.scss";
 import { Button } from "../../";
 import { DOWN, RIGHT } from "./items_direction_consts";
+import WithMenuContext from "../with_menu_context";
 
-export default class Dropdown extends Component {
+import styles from "./dropdown.scss";
+
+class Dropdown extends Component {
   static propTypes = {
     className: PropTypes.string,
     disabledClassName: PropTypes.string,
@@ -30,19 +32,11 @@ export default class Dropdown extends Component {
     ])
   };
 
-  state = {
-    isOpened: false
-  };
-
-  open = event => {
+  open = () => {
     if (this.props.isDisabled) {
       return;
     }
-    this.setState({ isOpened: true });
-  };
-
-  close = event => {
-    this.setState({ isOpened: false });
+    this.props.setActiveElement(this.props.label);
   };
 
   onClick = event => {
@@ -63,8 +57,6 @@ export default class Dropdown extends Component {
       children
     } = this.props;
 
-    const { isOpened } = this.state;
-
     return (
       <div>
         <Button
@@ -74,11 +66,11 @@ export default class Dropdown extends Component {
             className
           )}
           disabled={isDisabled}
-          onClick={isOpened ? this.close : this.open}
+          onClick={this.open}
         >
           {label}
         </Button>
-        {isOpened && (
+        {this.props.label === this.props.activeElement && (
           <div
             className={classnames(
               { [styles.dropdown_items_down]: itemsDirection === DOWN },
@@ -94,3 +86,5 @@ export default class Dropdown extends Component {
     );
   }
 }
+
+export default WithMenuContext(Dropdown);
