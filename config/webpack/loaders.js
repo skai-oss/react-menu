@@ -12,7 +12,14 @@ const cssLoader = {
     "sass-loader"
   ]
 };
+
+const mdLoader = {
+  test: /\.md$/,
+  loader: "raw"
+};
+
 module.exports = {
   babelLoader,
+  mdLoader,
   cssLoader
 };
