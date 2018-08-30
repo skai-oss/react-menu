@@ -3,7 +3,13 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { boolean, text, withKnobs } from "@storybook/addon-knobs";
 
-import { Menu, Button, LeftMenuContainer, RightMenuContainer } from "../src/";
+import {
+  Menu,
+  Button,
+  LeftMenuContainer,
+  RightMenuContainer,
+  Separator
+} from "../src/";
 
 import styles from "./story_book.scss";
 
@@ -54,5 +60,22 @@ storiesOf("Menu", module)
           Button
         </Button>
       </RightMenuContainer>
+    </Menu>
+  ))
+  .add("with Separator", () => (
+    <Menu className={styles.menu}>
+      <Button
+        className={styles.custom_button}
+        onClick={action("Button clicked")}
+      >
+        Left
+      </Button>
+      <Separator />
+      <Button
+        className={styles.custom_button}
+        onClick={action("Button clicked")}
+      >
+        Button
+      </Button>
     </Menu>
   ));
