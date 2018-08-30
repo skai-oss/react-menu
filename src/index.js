@@ -1,5 +1,6 @@
 export { Menu } from "./components/menu";
 export { Button } from "./components/button/button";
+export { Dropdown } from "./components/dropdown/dropdown";
 export {
   RightMenuContainer
 } from "./components/right_menu_container/right_menu_container";
