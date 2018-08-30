@@ -1,6 +1,8 @@
 import { configure } from "@storybook/react";
 import { setOptions } from "@storybook/addon-options";
 
+const req = require.context("../stories", true, /\.stories\.js$/);
+
 setOptions({
   name: "React Menu",
   url: "https://github.com/kenshoo/react-menu",
@@ -8,14 +10,12 @@ setOptions({
   showLeftPanel: true,
   showDownPanel: true,
   showSearchBox: false,
-  downPanelInRight: true,
+  downPanelInRight: false,
   sortStoriesByKind: false
 });
 
-// automatically import all files ending in *.stories.js
-const req = require.context("../stories", true, /.stories.js$/);
 function loadStories() {
-  req.keys().forEach(filename => req(filename));
+  req.keys().forEach(req);
 }
 
 configure(loadStories, module);
