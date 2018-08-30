@@ -65,6 +65,10 @@ storiesOf("Dropdown", module)
           "custom disabledClassName",
           `${styles.custom_dropdown_disabled}`
         )}
+        itemsClassName={text(
+          "custom itemsClassName",
+          `${styles.custom_dropdown_items}`
+        )}
       >
         <SampleDropDownMenuItem>item 1</SampleDropDownMenuItem>
         <SampleDropDownMenuItem>item 2</SampleDropDownMenuItem>
@@ -78,10 +82,14 @@ storiesOf("Dropdown", module)
         label={"Cascading"}
         onClick={action("item clicked")}
         isDisabled={boolean("disabled", false)}
-        className={text("className", `${styles.custom_dropdown}`)}
+        className={text("custom className", `${styles.custom_dropdown}`)}
         disabledClassName={text(
-          "disabledClassName",
+          "custom disabledClassName",
           `${styles.custom_dropdown_disabled}`
+        )}
+        itemsClassName={text(
+          "custom itemsClassName",
+          `${styles.custom_dropdown_items}`
         )}
       >
         <SampleDropDownMenuItem>item 1</SampleDropDownMenuItem>

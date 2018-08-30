@@ -9,6 +9,7 @@ export default class Dropdown extends Component {
   static propTypes = {
     className: PropTypes.string,
     disabledClassName: PropTypes.string,
+    itemsClassName: PropTypes.string,
     label: PropTypes.string,
     isDisabled: PropTypes.bool,
     children: []
@@ -17,6 +18,7 @@ export default class Dropdown extends Component {
   static defaultProps = {
     className: "",
     disabledClassName: "",
+    itemsClassName: "",
     label: "",
     isDisabled: false,
     children: PropTypes.oneOfType([
@@ -50,6 +52,7 @@ export default class Dropdown extends Component {
   render() {
     const {
       className,
+      itemsClassName,
       disabledClassName,
       label,
       isDisabled,
@@ -57,6 +60,8 @@ export default class Dropdown extends Component {
     } = this.props;
 
     const { isOpened } = this.state;
+
+    console.log(itemsClassName);
 
     return (
       <div>
@@ -72,7 +77,10 @@ export default class Dropdown extends Component {
           {label}
         </Button>
         {isOpened && (
-          <div onClick={this.onClick} className={styles.dropdown_items}>
+          <div
+            className={classnames(styles.dropdown_items, itemsClassName)}
+            onClick={this.onClick}
+          >
             {children}
           </div>
         )}

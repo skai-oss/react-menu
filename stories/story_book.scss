@@ -2,13 +2,12 @@ $menu-hover-color: #bfbfbf;
 $menu-height: 40px;
 $menu-background-color: #dddddd;
 $button-background-color: papayawhip;
+$button-background-color-2: #e3d3bc;
 $button-background-color-hover: orange;
 $button-background-color-disabled: gray;
 $button-color-disabled: white;
 
 .dropdown_item {
-  margin-left: 10px;
-
   &:hover {
     background: $menu-hover-color;
   }
@@ -27,10 +26,10 @@ $button-color-disabled: white;
   background-color: $button-background-color-disabled;
   cursor: default;
   color: $button-color-disabled;
+}
 
-  &:hover {
-    background: $button-background-color-disabled;
-  }
+.custom_dropdown_items {
+  background-color: $button-background-color-2;
 }
 
 .custom_button {
