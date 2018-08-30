@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 
 import styles from "./dropdown.scss";
+import { Button } from "../../";
 
-class Dropdown extends Component {
+export default class Dropdown extends Component {
   static propTypes = {
     className: PropTypes.string,
     disabledClassName: PropTypes.string,
@@ -59,7 +60,7 @@ class Dropdown extends Component {
 
     return (
       <div>
-        <div
+        <Button
           className={classnames(
             styles.dropdown,
             { [disabledClassName || styles.disabled]: isDisabled },
@@ -69,7 +70,7 @@ class Dropdown extends Component {
           onClick={isOpened ? this.close : this.open}
         >
           {label}
-        </div>
+        </Button>
         {isOpened && (
           <div onClick={this.onClick} className={styles.dropdown_items}>
             {children}
@@ -79,5 +80,3 @@ class Dropdown extends Component {
     );
   }
 }
-
-export default Dropdown;

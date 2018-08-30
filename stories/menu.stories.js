@@ -3,11 +3,21 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { boolean, text, withKnobs } from "@storybook/addon-knobs";
 
-import { Menu } from "../src";
-import Dropdown from "../src/components/dropdown/dropdown";
+import { Button, Menu } from "../src";
 import SampleDropDownMenuItem from "./sample_dropdown_menu_item";
+import styles from "./story_book.scss";
+import Dropdown from "../src/components/dropdown/dropdown";
 
-storiesOf("Menu", module).add("Default view", () => <Menu />);
+storiesOf("Menu", module).add("Default view", () => (
+  <Menu>
+    <Button>Button</Button>
+    <Dropdown label={"Dropdown"}>
+      <SampleDropDownMenuItem>item 1</SampleDropDownMenuItem>
+      <SampleDropDownMenuItem>item 2</SampleDropDownMenuItem>
+      <SampleDropDownMenuItem>item 3</SampleDropDownMenuItem>
+    </Dropdown>
+  </Menu>
+));
 
 storiesOf("Dropdown", module)
   .add("Simple", () => (

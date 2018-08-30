@@ -2,72 +2,72 @@
 
 exports[`Dropdown component default snapshot 1`] = `
 <div>
-  <div
-    className="dropdown"
+  <button
+    className="button dropdown"
     disabled={false}
     onClick={[Function]}
   >
     
-  </div>
+  </button>
 </div>
 `;
 
 exports[`Dropdown component snapshot with children 1`] = `
 <div>
-  <div
-    className="dropdown"
+  <button
+    className="button dropdown"
     disabled={false}
     onClick={[Function]}
   >
     
-  </div>
+  </button>
 </div>
 `;
 
 exports[`Dropdown component snapshot with className 1`] = `
 <div>
-  <div
-    className="dropdown className"
+  <button
+    className="button dropdown className"
     disabled={false}
     onClick={[Function]}
   >
     
-  </div>
+  </button>
 </div>
 `;
 
 exports[`Dropdown component snapshot with disabled 1`] = `
 <div>
-  <div
-    className="dropdown disabled"
+  <button
+    className="button dropdown disabled"
     disabled={true}
     onClick={[Function]}
   >
     
-  </div>
+  </button>
 </div>
 `;
 
 exports[`Dropdown component snapshot with disabledClassName 1`] = `
 <div>
-  <div
-    className="dropdown disabledClassName"
+  <button
+    className="button dropdown disabledClassName"
     disabled={true}
     onClick={[Function]}
   >
     
-  </div>
+  </button>
 </div>
 `;
 
 exports[`Dropdown component snapshot with label 1`] = `
 <div>
-  <div
-    className="dropdown"
+  <button
+    className="button dropdown"
     disabled={false}
     onClick={[Function]}
   >
     menu1
-  </div>
+  </button>
 </div>
 `;

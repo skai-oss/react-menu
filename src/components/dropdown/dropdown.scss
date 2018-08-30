@@ -2,6 +2,7 @@
 
 .dropdown {
   background-color: $element-background-color;
+  padding: 1em;
   cursor: pointer;
 
   &:hover {
@@ -11,6 +12,7 @@
 
 .dropdown_items {
   cursor: pointer;
+  position: absolute;
 }
 
 .disabled {
