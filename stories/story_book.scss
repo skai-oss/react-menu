@@ -1,5 +1,4 @@
 $menu-hover-color: #bfbfbf;
-$menu-height: 40px;
 $menu-background-color: #dddddd;
 $button-background-color: papayawhip;
 $button-background-color-2: #e3d3bc;
@@ -14,7 +13,6 @@ $button-color-disabled: white;
 }
 
 .custom_dropdown {
-  height: $menu-height;
   background: $button-background-color;
 
   &:hover {
@@ -33,7 +31,6 @@ $button-color-disabled: white;
 }
 
 .custom_button {
-  height: $menu-height;
   background: $button-background-color;
 
   &:hover {

@@ -1,7 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-
-import { Menu } from "../../src/";
+import Menu from "../../src/components/menu";
 
 describe("Menu component", () => {
   test("renders children", () => {
