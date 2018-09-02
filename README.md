@@ -32,7 +32,7 @@ React menu is a simple menu container component that helps a user create a simpl
 import React, { Component } from "react";
 import Menu from "@kenshooui/react-menu";
 
-class Menu1 extends Component {
+class Menu2 extends Component {
   constructonr(props) {
     super(props);
     ...

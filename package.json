@@ -86,5 +86,18 @@
     "verifyConditions": {
       "path": "./semantic_release/verify_conditions"
     }
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "menu",
+    "react-menu",
+    "header",
+    "react",
+    "Masthead",
+    "react-component",
+    "header",
+    "ui"
+  ]
 }
