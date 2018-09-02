@@ -7,3 +7,5 @@ export {
 export {
   LeftMenuContainer
 } from "./components/left_menu_container/left_menu_container";
+
+export { Separator } from "./components/separator/separator";

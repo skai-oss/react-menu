@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Separator component recieves className 1`] = `
+<div
+  className="separator TEST_CLASS"
+/>
+`;
+
+exports[`Separator component renders children 1`] = `
+<div
+  className="separator"
+/>
+`;
