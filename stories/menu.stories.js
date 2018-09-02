@@ -95,6 +95,24 @@ storiesOf("Dropdown", module)
         <SampleDropDownMenuItem>item 1</SampleDropDownMenuItem>
         <SampleDropDownMenuItem>item 2</SampleDropDownMenuItem>
         <SampleDropDownMenuItem>item 3</SampleDropDownMenuItem>
+      </Dropdown>{" "}
+      <Dropdown
+        label={"Dimple"}
+        onClick={action("item clicked")}
+        isDisabled={boolean("disabled", false)}
+        className={text("custom className", `${styles.custom_dropdown}`)}
+        disabledClassName={text(
+          "custom disabledClassName",
+          `${styles.custom_dropdown_disabled}`
+        )}
+        itemsClassName={text(
+          "custom itemsClassName",
+          `${styles.custom_dropdown_items}`
+        )}
+      >
+        <SampleDropDownMenuItem>item 1</SampleDropDownMenuItem>
+        <SampleDropDownMenuItem>item 2</SampleDropDownMenuItem>
+        <SampleDropDownMenuItem>item 3</SampleDropDownMenuItem>
       </Dropdown>
     </Menu>
   ))

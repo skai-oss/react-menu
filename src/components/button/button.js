@@ -2,9 +2,11 @@ import React from "react";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 
+import WithMenuContext from "../with_menu_context";
+
 import styles from "./button.scss";
 
-export const Button = ({
+const Button = ({
   className,
   disabledClassName,
   children,
@@ -39,3 +41,5 @@ Button.defaultProps = {
   isDisabled: false,
   children: []
 };
+
+export default WithMenuContext(Button);
