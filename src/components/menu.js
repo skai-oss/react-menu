@@ -10,21 +10,18 @@ class Menu extends PureComponent {
     activeElement: undefined
   };
 
-  setActiveElement = activeElement => this.setState({ activeElement });
+  onSelect = index => this.setState({ activeElement: index });
 
   render() {
-    return (
-      <MenuContext.Provider
-        value={{
-          ...this.state,
-          setActiveElement: this.setActiveElement
-        }}
-      >
-        <div className={classnames(styles.menu, this.props.className)}>
-          {this.props.children}
-        </div>
-      </MenuContext.Provider>
+    const children = React.Children.map(this.props.children, (child, index) =>
+      React.cloneElement(child, {
+        index,
+        onSelect: this.onSelect,
+        activeElement: this.state.activeElement
+      })
     );
+
+    return <div className={classnames(styles.menu, className)}>{children}</div>;
   }
 }
 
