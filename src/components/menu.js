@@ -3,7 +3,9 @@ import classnames from "classnames";
 
 import styles from "./menu.scss";
 
-export class Menu extends PureComponent {
+export const MenuContext = React.createContext({});
+
+class Menu extends PureComponent {
   state = {
     activeElement: undefined
   };
@@ -22,3 +24,5 @@ export class Menu extends PureComponent {
     return <div className={classnames(styles.menu, className)}>{children}</div>;
   }
 }
+
+export default Menu;

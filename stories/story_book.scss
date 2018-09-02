@@ -1,17 +1,39 @@
+$menu-hover-color: #bfbfbf;
 $menu-height: 40px;
 $menu-background-color: #dddddd;
 $button-background-color: papayawhip;
+$button-background-color-2: #e3d3bc;
 $button-background-color-hover: orange;
 $button-background-color-disabled: gray;
 $button-color-disabled: white;
 
-.menu {
-  width: 100%;
+.dropdown_item {
+  &:hover {
+    background: $menu-hover-color;
+  }
+}
+
+.custom_dropdown {
   height: $menu-height;
-  background-color: $menu-background-color;
+  background: $button-background-color;
+
+  &:hover {
+    background: $button-background-color-hover;
+  }
+}
+
+.custom_dropdown_disabled {
+  background-color: $button-background-color-disabled;
+  cursor: default;
+  color: $button-color-disabled;
+}
+
+.custom_dropdown_items {
+  background-color: $button-background-color-2;
 }
 
 .custom_button {
+  height: $menu-height;
   background: $button-background-color;
 
   &:hover {
