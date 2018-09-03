@@ -2,7 +2,6 @@ import React from "react";
 import renderer from "react-test-renderer";
 import { mount, shallow } from "enzyme";
 import Dropdown from "../../../src/components/dropdown/dropdown";
-import { DOWN } from "../../../src/components/dropdown/items_direction_consts";
 
 describe("Dropdown component", () => {
   test("default snapshot", () => {
@@ -94,7 +93,7 @@ describe("Dropdown component", () => {
   test("click on opened dropdown will trigger onClick", () => {
     const mockFn = jest.fn();
     const cmp = shallow(
-      <Dropdown onClick={mockFn} itemsDirection={DOWN}>
+      <Dropdown onClick={mockFn}>
         <div>item 1</div>
         <div>item 2</div>
       </Dropdown>
@@ -107,7 +106,7 @@ describe("Dropdown component", () => {
     cmp.update();
 
     cmp
-      .find(".dropdown_items_down")
+      .find(".dropdown_items")
       .find("div")
       .at(0)
       .simulate("click");

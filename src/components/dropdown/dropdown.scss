@@ -9,22 +9,22 @@
   }
 }
 
-.dropdown_items_down {
+.dropdown_items {
   cursor: pointer;
   position: absolute;
-}
-
-.dropdown_items_right {
-  // Need to add support for this
-  cursor: pointer;
-  position: absolute;
+  margin-top: $space-15;
 }
 
 .disabled {
-  user-select: none;
+  color: $element-disabled-color;
   cursor: default;
 
   &:hover {
     background: inherit;
   }
+}
+
+.icon {
+  font-size: $font-small;
+  padding: $space-10;
 }

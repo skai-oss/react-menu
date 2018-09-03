@@ -1,12 +1,12 @@
-# Multi select
+# React Menu
 
-[![Build Status](https://travis-ci.org/kenshoo/react-menu.svg?branch=master)](https://travis-ci.org/kenshoo/react-menu) [![npm version](https://badge.fury.io/js/%40kenshooui%2Freact-menu.svg)](https://badge.fury.io/js/%40kenshooui%2Freact-menu) [![Test Coverage](https://api.codeclimate.com/v1/badges/<placeholder>/test_coverage)](https://codeclimate.com/github/kenshoo/react-menu/test_coverage)
+[![Build Status](https://travis-ci.org/kenshoo/react-menu.svg?branch=master)](https://travis-ci.org/kenshoo/react-menu) [![npm version](https://badge.fury.io/js/%40kenshooui%2Freact-menu.svg)](https://badge.fury.io/js/%40kenshooui%2Freact-menu)
 
 **Kenshoo menu component**
 
 **[react-menu demo](https://kenshoo.github.io/react-menu)**
 
-React menu is a simple menu container component that helps a user create a simple menu bar out of the box
+React menu is a simple menu container component that helps a user create a simple menu bar
 
 <p align="center">
     <img src="preview.gif?raw=true" width="600" />
@@ -31,15 +31,30 @@ React menu is a simple menu container component that helps a user create a simpl
 ```jsx
 import React, { Component } from "react";
 import Menu from "@kenshooui/react-menu";
+import {Button, DropDown, Seperator, RightMenuContainer} from "../src";
 
-class Menu2 extends Component {
-  constructonr(props) {
+class Menu extends Component {
+  constructor(props) {
     super(props);
-    ...
   }
   
   render() {
-   ...
+     <Menu>
+            <Button>Analysis</Button>
+            <DropDown label="options">
+                <div>option 1</div>
+                 <Separator/>
+                <div>Option 2/div>
+            </DropDown>
+            <RightMenuContainer>
+                <Button>Help</Button>
+                <DropDown label="more options">
+                    <div>option 1</div>
+                    <div>Option 2</div>
+                </DropDown>
+            </RightMenuContainer>
+            <div>I'm a div</div>
+        </Menu>
   }
 }
 ```

@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
-import { DOWN, RIGHT } from "./items_direction_consts";
-import WithMenuContext from "../with_menu_context";
 
 import styles from "./dropdown.scss";
+import { FaChevronDown } from "react-icons/fa/index";
 
 class Dropdown extends Component {
   static propTypes = {
     className: PropTypes.string,
     disabledClassName: PropTypes.string,
     itemsClassName: PropTypes.string,
-    itemsDirection: PropTypes.string,
+    iconClassName: PropTypes.string,
     label: PropTypes.string,
     isDisabled: PropTypes.bool,
     children: []
@@ -21,7 +20,7 @@ class Dropdown extends Component {
     className: "",
     disabledClassName: "",
     itemsClassName: "",
-    itemsDirection: DOWN,
+    iconClassName: PropTypes.string,
     label: "",
     isDisabled: false,
     children: PropTypes.oneOfType([
@@ -52,21 +51,12 @@ class Dropdown extends Component {
     }
   };
 
-  saveParentSize = element => {
-    if (element) {
-      this.parentWidth =
-        element.getBoundingClientRect().width +
-        element.getBoundingClientRect().left;
-      this.parentHeight = element.getBoundingClientRect().top;
-    }
-  };
-
   render() {
     const {
       className,
       itemsClassName,
-      itemsDirection,
       disabledClassName,
+      iconClassName,
       label,
       isDisabled,
       children
@@ -75,30 +65,30 @@ class Dropdown extends Component {
     const { isOpened } = this.state;
 
     return (
-      <div>
-        <div
+      <div
+        className={classnames(
+          styles.dropdown,
+          { [disabledClassName || styles.disabled]: isDisabled },
+          className
+        )}
+        disabled={isDisabled}
+        onClick={isOpened ? this.close : this.open}
+        ref={this.saveParentSize}
+        onMouseLeave={this.close}
+      >
+        <span>{label}</span>
+        <span
           className={classnames(
-            styles.dropdown,
+            styles.icon,
             { [disabledClassName || styles.disabled]: isDisabled },
-            className
+            iconClassName
           )}
-          disabled={isDisabled}
-          onClick={isOpened ? this.close : this.open}
-          ref={this.saveParentSize}
         >
-          {label}
-        </div>
+          <FaChevronDown />
+        </span>
         {isOpened && (
           <div
-            style={{
-              top: itemsDirection === RIGHT ? this.parentHeight : "inherit",
-              left: itemsDirection === RIGHT ? this.parentWidth : "inherit"
-            }}
-            className={classnames(
-              { [styles.dropdown_items_down]: itemsDirection === DOWN },
-              { [styles.dropdown_items_right]: itemsDirection === RIGHT },
-              itemsClassName
-            )}
+            className={classnames(styles.dropdown_items, itemsClassName)}
             onClick={this.onClick}
           >
             {children}

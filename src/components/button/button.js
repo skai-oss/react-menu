@@ -2,8 +2,6 @@ import React from "react";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 
-import WithMenuContext from "../with_menu_context";
-
 import styles from "./button.scss";
 
 const Button = ({
@@ -11,20 +9,24 @@ const Button = ({
   disabledClassName,
   children,
   isDisabled,
+  onClick,
   ...props
 }) => {
   return (
-    <button
+    <div
       className={classnames(
         styles.button,
         { [disabledClassName || styles.disabled]: isDisabled },
         className
       )}
       disabled={isDisabled}
+      onClick={event => {
+        !isDisabled ? onClick(event) : {};
+      }}
       {...props}
     >
       {children}
-    </button>
+    </div>
   );
 };
 
@@ -42,4 +44,4 @@ Button.defaultProps = {
   children: []
 };
 
-export default WithMenuContext(Button);
+export default Button;

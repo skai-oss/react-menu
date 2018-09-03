@@ -2,6 +2,7 @@ import { configure } from "@storybook/react";
 import { setOptions } from "@storybook/addon-options";
 
 const req = require.context("../stories", true, /\.stories\.js$/);
+import "./app.scss";
 
 setOptions({
   name: "React Menu",

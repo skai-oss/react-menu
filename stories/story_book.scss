@@ -1,49 +1,59 @@
-$menu-hover-color: #bfbfbf;
-$menu-background-color: #dddddd;
-$button-background-color: papayawhip;
-$button-background-color-2: #e3d3bc;
-$button-background-color-hover: orange;
-$button-background-color-disabled: gray;
-$button-color-disabled: white;
+@import "../src/resources/globals";
 
-.dropdown_item {
+$advanced-button-width: 100px;
+
+.advanced_menu {
+  background-image: -webkit-linear-gradient(
+    left,
+    #2caf82 5%,
+    #0caee2 97%
+  ) !important;
+}
+
+.advanced_logo {
+  padding: 5px;
+}
+
+.advanced_width {
+  width: $advanced-button-width;
+}
+
+.advanced_button {
+  color: white;
+  padding: 20px;
   &:hover {
-    background: $menu-hover-color;
+    background: rgb(29, 145, 127);
   }
 }
 
-.custom_dropdown {
-  background: $button-background-color;
-
+.advanced_dropdown {
+  color: white;
+  padding: 20px;
   &:hover {
-    background: $button-background-color-hover;
+    background: rgb(29, 145, 127);
   }
 }
 
-.custom_dropdown_disabled {
-  background-color: $button-background-color-disabled;
-  cursor: default;
-  color: $button-color-disabled;
+.advanced_dropdown_items {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  color: grey;
 }
 
-.custom_dropdown_items {
-  background-color: $button-background-color-2;
-}
-
-.custom_button {
-  background: $button-background-color;
+.advanced_item {
+  padding: 10px;
+  color: grey;
 
   &:hover {
-    background: $button-background-color-hover;
+    background: #dff8e5;
   }
 }
 
-.custom_button_disabled {
-  background: $button-background-color-disabled;
-  cursor: default;
-  color: $button-color-disabled;
+.advanced_seperator_item {
+  border-top: grey 1px solid;
+}
 
-  &:hover {
-    background: $button-background-color-disabled;
-  }
+.advanced_items {
+  color: black;
+  width: $advanced-button-width;
+  background-color: $element-background-color;
 }

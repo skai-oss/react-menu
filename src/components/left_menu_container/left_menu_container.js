@@ -2,8 +2,6 @@ import React from "react";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 
-import WithMenuContext from "../with_menu_context";
-
 import styles from "./left_menu_container.scss";
 
 const LeftMenuContainer = ({ className, children }) => (
@@ -17,4 +15,4 @@ LeftMenuContainer.propTypes = {
   children: PropTypes.node
 };
 
-export default WithMenuContext(LeftMenuContainer);
+export default LeftMenuContainer;
