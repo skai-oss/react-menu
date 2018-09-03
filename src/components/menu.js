@@ -3,8 +3,6 @@ import classnames from "classnames";
 
 import styles from "./menu.scss";
 
-export const MenuContext = React.createContext({});
-
 export default class Menu extends PureComponent {
   render() {
     const { className, children } = this.props;

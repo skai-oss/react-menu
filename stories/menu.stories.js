@@ -3,25 +3,27 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { boolean, text, withKnobs } from "@storybook/addon-knobs";
 import {
-  Menu,
   Button,
   LeftMenuContainer,
+  Menu,
   RightMenuContainer,
   Separator
 } from "../src/";
-import SampleDropDownMenuItem from "./sample_dropdown_menu_item";
-import { DOWN, RIGHT } from "../src/components/dropdown/items_direction_consts";
+import { SampleDropDown } from "./sample_dropdown";
 import styles from "./story_book.scss";
 import Dropdown from "../src/components/dropdown/dropdown";
+import { SampleButton } from "./sample_button";
+import { SampleItem } from "./sample_item";
+import { SampleItemWithSeperator } from "./sample_item_seperator";
 
 storiesOf("Menu", module)
   .add("Default view", () => (
     <Menu>
-      <Button>Button</Button>
+      <Button isDisabled={true}>Button</Button>
       <Dropdown label={"Dropdown"}>
-        <SampleDropDownMenuItem>item 1</SampleDropDownMenuItem>
-        <SampleDropDownMenuItem>item 2</SampleDropDownMenuItem>
-        <SampleDropDownMenuItem>item 3</SampleDropDownMenuItem>
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
       </Dropdown>
     </Menu>
   ))
@@ -73,15 +75,47 @@ storiesOf("Menu", module)
         Button
       </Button>
     </Menu>
+  ))
+  .add("Advanced", () => (
+    <Menu className={styles.advanced_menu}>
+      <img
+        className={styles.advanced_logo}
+        src={"http://logo.kenh.net/logo/kenshoo.svg.png"}
+        height={40}
+      />
+      <SampleButton onClick={action("button clicked")}>Analysis</SampleButton>
+      <SampleDropDown label={"Management"} onClick={action("item clicked")}>
+        <SampleItem>Accounts</SampleItem>
+        <SampleItem>Automated Actions</SampleItem>
+        <SampleItem>Automation History</SampleItem>
+        <SampleItem>Change Log</SampleItem>
+        <SampleItem>Custom Metric</SampleItem>
+        <SampleItemWithSeperator>Bulk Actions</SampleItemWithSeperator>
+      </SampleDropDown>
+      <SampleDropDown label={"Optimizations"} onClick={action("item clicked")}>
+        <SampleItem>Halogen Inform</SampleItem>
+        <SampleItem>Budget Manager</SampleItem>
+      </SampleDropDown>
+      <RightMenuContainer>
+        <SampleButton onClick={action("button clicked")}>Help</SampleButton>
+        <SampleDropDown label={"Agency 1"} onClick={action("item clicked")}>
+          <SampleItem>Agency 2</SampleItem>
+          <SampleItem>Agency 3</SampleItem>
+        </SampleDropDown>
+        <SampleButton onClick={action("button clicked")} isDisabled={true}>
+          john.smith@kenshoo.com
+        </SampleButton>
+      </RightMenuContainer>
+    </Menu>
   ));
 
 storiesOf("Dropdown", module)
   .add("Simple", () => (
     <Menu>
       <Dropdown label={"Simple"} onClick={action("item clicked")}>
-        <SampleDropDownMenuItem>item 1</SampleDropDownMenuItem>
-        <SampleDropDownMenuItem>item 2</SampleDropDownMenuItem>
-        <SampleDropDownMenuItem>item 3</SampleDropDownMenuItem>
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
       </Dropdown>
       <Dropdown
         label={"Dimple"}
@@ -97,9 +131,9 @@ storiesOf("Dropdown", module)
           `${styles.custom_dropdown_items}`
         )}
       >
-        <SampleDropDownMenuItem>item 1</SampleDropDownMenuItem>
-        <SampleDropDownMenuItem>item 2</SampleDropDownMenuItem>
-        <SampleDropDownMenuItem>item 3</SampleDropDownMenuItem>
+        <div>item 1</div>
+        <div>item 2</div>
+        <div>item 3</div>
       </Dropdown>
     </Menu>
   ))
@@ -119,11 +153,11 @@ storiesOf("Dropdown", module)
           `${styles.custom_dropdown_items}`
         )}
       >
-        <SampleDropDownMenuItem>item 1</SampleDropDownMenuItem>
-        <SampleDropDownMenuItem>item 2</SampleDropDownMenuItem>
+        <div>item 1</div>
+        <div>item 2</div>
         <Dropdown label={"Sub Menu"}>
-          <SampleDropDownMenuItem>sub item 1</SampleDropDownMenuItem>
-          <SampleDropDownMenuItem>sub item 2</SampleDropDownMenuItem>
+          <div>sub item 1</div>
+          <div>sub item 2</div>
         </Dropdown>
       </Dropdown>
     </Menu>
@@ -133,15 +167,7 @@ storiesOf("Button", module)
   .addDecorator(withKnobs)
   .add("Simple", () => (
     <Menu className={styles.menu}>
-      <Button
-        onClick={action("Button clicked")}
-        isDisabled={boolean("disabled", false)}
-        className={text("custom className", `${styles.custom_button}`)}
-        disabledClassName={text(
-          "custom disabledClassName",
-          `${styles.custom_button_disabled}`
-        )}
-      >
+      <Button onClick={action("Button clicked")} isDisabled={true}>
         Button
       </Button>
     </Menu>

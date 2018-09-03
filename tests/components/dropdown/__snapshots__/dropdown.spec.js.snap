@@ -1,73 +1,235 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dropdown component default snapshot 1`] = `
-<div>
-  <div
-    className="dropdown"
-    disabled={false}
-    onClick={[Function]}
-  >
+<div
+  className="dropdown"
+  disabled={false}
+  onClick={[Function]}
+  onMouseLeave={[Function]}
+>
+  <span>
     
-  </div>
+  </span>
+  <span
+    className="icon"
+  >
+    <svg
+      attr={
+        Object {
+          "viewBox": "0 0 448 512",
+        }
+      }
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 448 512"
+      width="1em"
+    >
+      <path
+        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+      />
+    </svg>
+  </span>
 </div>
 `;
 
 exports[`Dropdown component snapshot with children 1`] = `
-<div>
-  <div
-    className="dropdown"
-    disabled={false}
-    onClick={[Function]}
-  >
+<div
+  className="dropdown"
+  disabled={false}
+  onClick={[Function]}
+  onMouseLeave={[Function]}
+>
+  <span>
     
-  </div>
+  </span>
+  <span
+    className="icon"
+  >
+    <svg
+      attr={
+        Object {
+          "viewBox": "0 0 448 512",
+        }
+      }
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 448 512"
+      width="1em"
+    >
+      <path
+        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+      />
+    </svg>
+  </span>
 </div>
 `;
 
 exports[`Dropdown component snapshot with className 1`] = `
-<div>
-  <div
-    className="dropdown className"
-    disabled={false}
-    onClick={[Function]}
-  >
+<div
+  className="dropdown className"
+  disabled={false}
+  onClick={[Function]}
+  onMouseLeave={[Function]}
+>
+  <span>
     
-  </div>
+  </span>
+  <span
+    className="icon"
+  >
+    <svg
+      attr={
+        Object {
+          "viewBox": "0 0 448 512",
+        }
+      }
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 448 512"
+      width="1em"
+    >
+      <path
+        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+      />
+    </svg>
+  </span>
 </div>
 `;
 
 exports[`Dropdown component snapshot with disabled 1`] = `
-<div>
-  <div
-    className="dropdown disabled"
-    disabled={true}
-    onClick={[Function]}
-  >
+<div
+  className="dropdown disabled"
+  disabled={true}
+  onClick={[Function]}
+  onMouseLeave={[Function]}
+>
+  <span>
     
-  </div>
+  </span>
+  <span
+    className="icon disabled"
+  >
+    <svg
+      attr={
+        Object {
+          "viewBox": "0 0 448 512",
+        }
+      }
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 448 512"
+      width="1em"
+    >
+      <path
+        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+      />
+    </svg>
+  </span>
 </div>
 `;
 
 exports[`Dropdown component snapshot with disabledClassName 1`] = `
-<div>
-  <div
-    className="dropdown disabledClassName"
-    disabled={true}
-    onClick={[Function]}
-  >
+<div
+  className="dropdown disabledClassName"
+  disabled={true}
+  onClick={[Function]}
+  onMouseLeave={[Function]}
+>
+  <span>
     
-  </div>
+  </span>
+  <span
+    className="icon disabledClassName"
+  >
+    <svg
+      attr={
+        Object {
+          "viewBox": "0 0 448 512",
+        }
+      }
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 448 512"
+      width="1em"
+    >
+      <path
+        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+      />
+    </svg>
+  </span>
 </div>
 `;
 
 exports[`Dropdown component snapshot with label 1`] = `
-<div>
-  <div
-    className="dropdown"
-    disabled={false}
-    onClick={[Function]}
-  >
+<div
+  className="dropdown"
+  disabled={false}
+  onClick={[Function]}
+  onMouseLeave={[Function]}
+>
+  <span>
     menu1
-  </div>
+  </span>
+  <span
+    className="icon"
+  >
+    <svg
+      attr={
+        Object {
+          "viewBox": "0 0 448 512",
+        }
+      }
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        Object {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 448 512"
+      width="1em"
+    >
+      <path
+        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+      />
+    </svg>
+  </span>
 </div>
 `;

@@ -40,7 +40,7 @@ describe("Button component", () => {
   test("cannot click on disabled button", () => {
     const mockFn = jest.fn();
     const cmp = mount(
-      <Button isDisabled onClick={mockFn}>
+      <Button isDisabled={true} onClick={mockFn}>
         TEST
       </Button>
     );

@@ -1,37 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button component disabled Button 1`] = `
-<button
+<div
   className="button disabled"
   disabled={true}
+  onClick={[Function]}
 >
   TEST
-</button>
+</div>
 `;
 
 exports[`Button component disabledClassName prop 1`] = `
-<button
+<div
   className="button DISABLED_CLASS"
   disabled={true}
+  onClick={[Function]}
 >
   TEST
-</button>
+</div>
 `;
 
 exports[`Button component recieves className 1`] = `
-<button
+<div
   className="button TEST_CLASS"
   disabled={false}
+  onClick={[Function]}
 >
   TEST
-</button>
+</div>
 `;
 
 exports[`Button component renders children 1`] = `
-<button
+<div
   className="button"
   disabled={false}
+  onClick={[Function]}
 >
   TEST
-</button>
+</div>
 `;

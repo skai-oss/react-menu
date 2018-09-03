@@ -1,10 +1,20 @@
-
-$light-gray: #f0f0f0;
+//Colors
+$light-gray: #dddddd;
 $gray: #dcdcdc;
 $dark-gray: #bfbfbf;
+$darker-gray: #777;
 
 $element-background-color: $light-gray;
 $element-hover-color: $dark-gray;
-$element-disabled-color: $gray;
+$element-disabled-color: $darker-gray;
 
-// @import "./_colors";
+//Fonts
+$font-default-family: Roboto, "Helvetica Neue", sans-serif;
+$font-xlarge: 20px;
+$font-large: 18px;
+$font-default: 12px;
+$font-small: 10px;
+
+//Spacing
+$space-15: 15px;
+$space-10: 10px;

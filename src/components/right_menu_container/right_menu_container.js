@@ -2,8 +2,6 @@ import React from "react";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 
-import WithMenuContext from "../with_menu_context";
-
 import styles from "./right_menu_container.scss";
 
 const RightMenuContainer = ({ className, children }) => (
@@ -17,4 +15,4 @@ RightMenuContainer.propTypes = {
   children: PropTypes.node
 };
 
-export default WithMenuContext(RightMenuContainer);
+export default RightMenuContainer;
