@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
-
-import { Button } from "../../";
 import { DOWN, RIGHT } from "./items_direction_consts";
 import WithMenuContext from "../with_menu_context";
 
@@ -23,7 +21,7 @@ class Dropdown extends Component {
     className: "",
     disabledClassName: "",
     itemsClassName: "",
-    itemsDirection: RIGHT,
+    itemsDirection: DOWN,
     label: "",
     isDisabled: false,
     children: PropTypes.oneOfType([
@@ -32,17 +30,34 @@ class Dropdown extends Component {
     ])
   };
 
+  state = {
+    isOpened: false
+  };
+
   open = () => {
     if (this.props.isDisabled) {
       return;
     }
-    this.props.setActiveElement(this.props.label);
+    this.setState({ isOpened: true });
+  };
+
+  close = event => {
+    this.setState({ isOpened: false });
   };
 
   onClick = event => {
     const { onClick } = this.props;
     if (onClick) {
       onClick(event);
+    }
+  };
+
+  saveParentSize = element => {
+    if (element) {
+      this.parentWidth =
+        element.getBoundingClientRect().width +
+        element.getBoundingClientRect().left;
+      this.parentHeight = element.getBoundingClientRect().top;
     }
   };
 
@@ -57,21 +72,28 @@ class Dropdown extends Component {
       children
     } = this.props;
 
+    const { isOpened } = this.state;
+
     return (
       <div>
-        <Button
+        <div
           className={classnames(
             styles.dropdown,
             { [disabledClassName || styles.disabled]: isDisabled },
             className
           )}
           disabled={isDisabled}
-          onClick={this.open}
+          onClick={isOpened ? this.close : this.open}
+          ref={this.saveParentSize}
         >
           {label}
-        </Button>
-        {this.props.label === this.props.activeElement && (
+        </div>
+        {isOpened && (
           <div
+            style={{
+              top: itemsDirection === RIGHT ? this.parentHeight : "inherit",
+              left: itemsDirection === RIGHT ? this.parentWidth : "inherit"
+            }}
             className={classnames(
               { [styles.dropdown_items_down]: itemsDirection === DOWN },
               { [styles.dropdown_items_right]: itemsDirection === RIGHT },
@@ -87,4 +109,4 @@ class Dropdown extends Component {
   }
 }
 
-export default WithMenuContext(Dropdown);
+export default Dropdown;
