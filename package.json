@@ -16,7 +16,7 @@
     "build-storybook": "build-storybook",
     "lint:dev": "eslint --ext js --ext jsx ./src --fix",
     "lint:jenkins": "eslint --ext js --ext jsx ./src",
-    "semantic-release": "semantic-release npm publish && semantic-release post",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "precommit": "lint-staged",
     "postcommit": "git update-index -g"
   },
