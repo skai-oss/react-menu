@@ -10,7 +10,7 @@ import {
   Separator
 } from "../src/";
 import SampleDropDownMenuItem from "./sample_dropdown_menu_item";
-
+import { DOWN, RIGHT } from "../src/components/dropdown/items_direction_consts";
 import styles from "./story_book.scss";
 import Dropdown from "../src/components/dropdown/dropdown";
 
@@ -78,24 +78,11 @@ storiesOf("Menu", module)
 storiesOf("Dropdown", module)
   .add("Simple", () => (
     <Menu>
-      <Dropdown
-        label={"Simple"}
-        onClick={action("item clicked")}
-        isDisabled={boolean("disabled", false)}
-        className={text("custom className", `${styles.custom_dropdown}`)}
-        disabledClassName={text(
-          "custom disabledClassName",
-          `${styles.custom_dropdown_disabled}`
-        )}
-        itemsClassName={text(
-          "custom itemsClassName",
-          `${styles.custom_dropdown_items}`
-        )}
-      >
+      <Dropdown label={"Simple"} onClick={action("item clicked")}>
         <SampleDropDownMenuItem>item 1</SampleDropDownMenuItem>
         <SampleDropDownMenuItem>item 2</SampleDropDownMenuItem>
         <SampleDropDownMenuItem>item 3</SampleDropDownMenuItem>
-      </Dropdown>{" "}
+      </Dropdown>
       <Dropdown
         label={"Dimple"}
         onClick={action("item clicked")}
@@ -116,7 +103,7 @@ storiesOf("Dropdown", module)
       </Dropdown>
     </Menu>
   ))
-  .add("Cascading dropdowns", () => (
+  .add("Cascading", () => (
     <Menu>
       <Dropdown
         label={"Cascading"}
