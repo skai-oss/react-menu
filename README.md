@@ -59,6 +59,51 @@ class Menu extends Component {
 }
 ```
 
+## Properties
+
+#### Menu
+
+| Name                            | Type                  | Default                                          | Description                                                                                                                                       
+|:-----                           |:-----                 |:-----                                            |:-----                                                                                                                                             
+| `className`                     | `String`              | ''                                               | Used for customizing the style.
+| `children`                      | `Elements/Components` | ''                                               | List of elements to place in the menu
+
+#### Button
+
+| Name                            | Type                  | Default                                          | Description                                                                                                                                       
+|:-----                           |:-----                 |:-----                                            |:-----                                                                                                                                             
+| `className`                     | `String`              | ''                                               | Used for customizing the style.
+| `disabledClassName`             | `String`              | ''                                               | Used for customizing the disabled style.
+| `children`                      | `Elements/Components` | ''                                               | List of elements to place in the menu
+| `isDisabled`                    | `boolean`             | ''                                               | Toggle to disable/enable the component.
+| `onClick`                       | `function`            | ''                                               | The click callback function.
+
+#### Dropdown
+
+| Name                            | Type                  | Default                                          | Description                                                                                                                                       
+|:-----                           |:-----                 |:-----                                            |:-----                                                                                                                                             
+| `className`                     | `String`              | ''                                               | Used for customizing the style.
+| `disabledClassName`             | `String`              | ''                                               | Used for customizing the disabled style.
+| `itemsClassName`                | `String`              | ''                                               | Used for customizing the items container style.
+| `iconClassName`                 | `String`              | ''                                               | Used for customizing the chevron icon.
+| `label`                         | `String`              | ''                                               | The dropdown label
+| `children`                      | `Elements/Components` | ''                                               | List of elements to place in the menu
+| `isDisabled`                    | `boolean`             | ''                                               | Toggle to disable/enable the component.
+| `onClick`                       | `function`            | ''                                               | The click callback function.
+
+#### Seperator
+
+| Name                            | Type                  | Default                                          | Description                                                                                                                                       
+|:-----                           |:-----                 |:-----                                            |:-----                                                                                                                                             
+| `className`                     | `String`              | ''                                               | class name - Used for customizing the style.
+
+#### Left/Right Menu Container
+
+| Name                            | Type                  | Default                                          | Description                                                                                                                                       
+|:-----                           |:-----                 |:-----                                            |:-----                                                                                                                                             
+| `className`                     | `String`              | ''                                               | Used for customizing the style.
+| `children`                      | `Elements/Components` | ''                                               | List of elements to place in the menu
+
 ## How to Contribute
 
 #### Setting up development environment
