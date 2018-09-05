@@ -4,8 +4,6 @@
 
 **Kenshoo menu component**
 
-**[react-menu demo](https://kenshoo.github.io/react-menu)**
-
 React menu is a simple menu container component that helps a user create a simple menu bar
 
 <p align="center">
@@ -30,7 +28,7 @@ React menu is a simple menu container component that helps a user create a simpl
  
 ```jsx
 import React, { Component } from "react";
-import Menu from "@kenshooui/react-menu";
+import Menu from "@kenshooui/react-menu/dist/menu";
 import {Button, DropDown, Seperator, RightMenuContainer} from "../src";
 
 class Menu extends Component {
