@@ -2,8 +2,8 @@ import React from "react";
 import renderer from "react-test-renderer";
 import { mount } from "enzyme";
 
-import WithMenuContext from "../../src/components/with_menu_context";
-import Menu from "../../src/components/menu";
+import { WithMenuContext } from "../../src/";
+import { Menu } from "../../src/";
 
 const mockCmp = () => <div>TEST</div>;
 const MockCmpWithMenuContext = WithMenuContext(mockCmp);
