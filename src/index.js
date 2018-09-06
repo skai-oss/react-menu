@@ -1,6 +1,6 @@
+export { default as Dropdown } from "./components/dropdown/dropdown";
 export { default as Menu } from "./components/menu";
 export { default as Button } from "./components/button/button";
-export { default as Dropdown } from "./components/dropdown/dropdown";
 export {
   default as RightMenuContainer
 } from "./components/right_menu_container/right_menu_container";
