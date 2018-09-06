@@ -3,17 +3,9 @@
 .button {
   padding: 1em;
   cursor: pointer;
-
-  &:hover {
-    background: $element-hover-color;
-  }
 }
 
 .disabled {
   color: $element-disabled-color;
   cursor: default;
-
-  &:hover {
-    background: inherit;
-  }
 }

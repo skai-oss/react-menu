@@ -3,10 +3,6 @@
 .dropdown {
   padding: 1em;
   cursor: pointer;
-
-  &:hover {
-    background: $element-hover-color;
-  }
 }
 
 .dropdown_items {
@@ -18,10 +14,6 @@
 .disabled {
   color: $element-disabled-color;
   cursor: default;
-
-  &:hover {
-    background: inherit;
-  }
 }
 
 .icon {
