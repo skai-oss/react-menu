@@ -2,21 +2,33 @@ import React from "react";
 import renderer from "react-test-renderer";
 import { mount } from "enzyme";
 
-import { Button } from "../../../src/";
+import { Menu, Button } from "../../../src/";
 
 describe("Button component", () => {
   test("renders children", () => {
-    const cmp = renderer.create(<Button>TEST</Button>);
+    const cmp = renderer.create(
+      <Menu>
+        <Button>TEST</Button>
+      </Menu>
+    );
     expect(cmp).toMatchSnapshot();
   });
 
   test("recieves className", () => {
-    const cmp = renderer.create(<Button className="TEST_CLASS">TEST</Button>);
+    const cmp = renderer.create(
+      <Menu>
+        <Button className="TEST_CLASS">TEST</Button>
+      </Menu>
+    );
     expect(cmp).toMatchSnapshot();
   });
 
   test("disabled Button", () => {
-    const cmp = renderer.create(<Button isDisabled>TEST</Button>);
+    const cmp = renderer.create(
+      <Menu>
+        <Button isDisabled>TEST</Button>
+      </Menu>
+    );
     expect(cmp).toMatchSnapshot();
   });
 
@@ -31,18 +43,24 @@ describe("Button component", () => {
 
   test("triggers onClick", () => {
     const mockFn = jest.fn();
-    const cmp = mount(<Button onClick={mockFn}>TEST</Button>);
+    const cmp = mount(
+      <Menu>
+        <Button onClick={mockFn}>TEST</Button>
+      </Menu>
+    );
 
-    cmp.simulate("click");
+    cmp.find(Button).simulate("click");
     expect(mockFn).toHaveBeenCalled();
   });
 
   test("cannot click on disabled button", () => {
     const mockFn = jest.fn();
     const cmp = mount(
-      <Button isDisabled={true} onClick={mockFn}>
-        TEST
-      </Button>
+      <Menu>
+        <Button isDisabled onClick={mockFn}>
+          TEST
+        </Button>
+      </Menu>
     );
 
     cmp.simulate("click");

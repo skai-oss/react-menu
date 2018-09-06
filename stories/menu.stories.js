@@ -17,9 +17,10 @@ import { SampleItem } from "./sample_item";
 import { SampleItemWithSeperator } from "./sample_item_seperator";
 
 storiesOf("Menu", module)
+  .addDecorator(withKnobs)
   .add("Default view", () => (
     <Menu>
-      <Button isDisabled={true}>Button</Button>
+      <Button onClick={action("Button clicked")}>Button</Button>
       <Dropdown label={"Dropdown"}>
         <div>item 1</div>
         <div>item 2</div>
@@ -160,15 +161,5 @@ storiesOf("Dropdown", module)
           <div>sub item 2</div>
         </Dropdown>
       </Dropdown>
-    </Menu>
-  ));
-
-storiesOf("Button", module)
-  .addDecorator(withKnobs)
-  .add("Simple", () => (
-    <Menu className={styles.menu}>
-      <Button onClick={action("Button clicked")} isDisabled={true}>
-        Button
-      </Button>
     </Menu>
   ));
