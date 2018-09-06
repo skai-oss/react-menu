@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WithMenuContext HOC renders wrapped component 1`] = `
+<div
+  className="menu"
+>
+  <div>
+    TEST
+  </div>
+</div>
+`;
