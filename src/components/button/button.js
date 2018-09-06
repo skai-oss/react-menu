@@ -1,47 +1,48 @@
-import React from "react";
+import React, { PureComponent } from "react";
 import classnames from "classnames";
 import PropTypes from "prop-types";
 
+import WithMenuContext from "../with_menu_context";
+
 import styles from "./button.scss";
 
-const Button = ({
-  className,
-  disabledClassName,
-  children,
-  isDisabled,
-  onClick,
-  ...props
-}) => {
-  return (
-    <div
-      className={classnames(
-        styles.button,
-        { [disabledClassName || styles.disabled]: isDisabled },
-        className
-      )}
-      disabled={isDisabled}
-      onClick={event => {
-        !isDisabled ? onClick(event) : {};
-      }}
-      {...props}
-    >
-      {children}
-    </div>
-  );
-};
+class Button extends PureComponent {
+  static propTypes = {
+    className: PropTypes.string,
+    disabledClassName: PropTypes.string,
+    isDisabled: PropTypes.bool,
+    children: PropTypes.node
+  };
 
-Button.propTypes = {
-  className: PropTypes.string,
-  disabledClassName: PropTypes.string,
-  isDisabled: PropTypes.bool,
-  children: PropTypes.node
-};
+  static defaultProps = {
+    className: "",
+    disabledClassName: "",
+    isDisabled: false,
+    children: []
+  };
 
-Button.defaultProps = {
-  className: "",
-  disabledClassName: "",
-  isDisabled: false,
-  children: []
-};
+  onClick = () => {
+    this.props.onSelectElement(this.props.children);
+    this.props.onClick();
+  };
 
-export default Button;
+  render() {
+    const { className, disabledClassName, children, isDisabled } = this.props;
+
+    return (
+      <button
+        className={classnames(
+          styles.button,
+          { [disabledClassName || styles.disabled]: isDisabled },
+          className
+        )}
+        disabled={isDisabled}
+        onClick={this.onClick}
+      >
+        {children}
+      </button>
+    );
+  }
+}
+
+export default WithMenuContext(Button);
