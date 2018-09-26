@@ -1,8 +1,12 @@
 @import "../../resources/globals";
 
 .button {
+  font-size: 1rem;
   padding: 1em;
   cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
 }
 
 .disabled {

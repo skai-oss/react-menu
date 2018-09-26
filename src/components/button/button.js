@@ -11,24 +11,20 @@ const Button = ({
   isDisabled,
   onClick,
   ...props
-}) => {
-  return (
-    <div
-      className={classnames(
-        styles.button,
-        { [disabledClassName || styles.disabled]: isDisabled },
-        className
-      )}
-      disabled={isDisabled}
-      onClick={event => {
-        !isDisabled ? onClick(event) : {};
-      }}
-      {...props}
-    >
-      {children}
-    </div>
-  );
-};
+}) => (
+  <button
+    className={classnames(
+      styles.button,
+      { [disabledClassName || styles.disabled]: isDisabled },
+      className
+    )}
+    disabled={isDisabled}
+    onClick={onClick}
+    {...props}
+  >
+    {children}
+  </button>
+);
 
 Button.propTypes = {
   className: PropTypes.string,
