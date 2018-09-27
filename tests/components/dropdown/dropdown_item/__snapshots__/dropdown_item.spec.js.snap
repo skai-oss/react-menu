@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropdownItem component className prop 1`] = `
+<div
+  className="dropdown_item TEST"
+>
+  TEST
+</div>
+`;
+
+exports[`DropdownItem component default snapshot 1`] = `
+<div
+  className="dropdown_item"
+/>
+`;
+
+exports[`DropdownItem component renders children 1`] = `
+<div
+  className="dropdown_item"
+>
+  TEST
+</div>
+`;
