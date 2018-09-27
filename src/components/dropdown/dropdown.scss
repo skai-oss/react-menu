@@ -1,22 +1,38 @@
 @import "../../resources/globals";
 
 .dropdown {
+  position: relative;
   padding: 1em;
   cursor: pointer;
+
+  &:hover {
+    background: $light-gray;
+  }
 }
 
 .dropdown_items {
-  cursor: pointer;
   position: absolute;
-  margin-top: $space-15;
+  border: 1px solid $light-gray;
+  min-width: 10em;
+  z-index: 1;
+}
+
+.dropdown_items_bottom {
+  top: 100%;
+  left: 0;
+}
+
+.dropdown_items_left {
+  right: 100%;
+  top: 0;
+}
+
+.dropdown_items_right {
+  left: 100%;
+  top: 0;
 }
 
 .disabled {
   color: $element-disabled-color;
   cursor: default;
-}
-
-.icon {
-  font-size: $font-small;
-  padding: $space-10;
 }

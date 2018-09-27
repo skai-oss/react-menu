@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
+import DropdownTitle from "./dropdown_title/dropdown_title";
+
 import styles from "./dropdown.scss";
-import { FaChevronDown } from "react-icons/fa/index";
 
 class Dropdown extends Component {
   static propTypes = {
@@ -13,41 +14,41 @@ class Dropdown extends Component {
     iconClassName: PropTypes.string,
     label: PropTypes.string,
     isDisabled: PropTypes.bool,
-    children: []
+    direction: PropTypes.string,
+    children: PropTypes.node
   };
 
   static defaultProps = {
     className: "",
     disabledClassName: "",
     itemsClassName: "",
-    iconClassName: PropTypes.string,
+    iconClassName: "",
     label: "",
     isDisabled: false,
-    children: PropTypes.oneOfType([
-      PropTypes.element,
-      PropTypes.arrayOf(PropTypes.element)
-    ])
+    children: []
   };
 
   state = {
-    isOpened: false
+    isOpen: false
   };
 
-  open = () => {
-    if (this.props.isDisabled) {
-      return;
-    }
-    this.setState({ isOpened: true });
+  openDropdown = e => {
+    e.stopPropagation();
+    !this.props.isDisabled && this.setState({ isOpen: true });
   };
 
-  close = event => {
-    this.setState({ isOpened: false });
-  };
+  closeDropdown = () => this.setState({ isOpen: false });
 
-  onClick = event => {
-    const { onClick } = this.props;
-    if (onClick) {
-      onClick(event);
+  getDirectionClassName = () => {
+    switch (this.props.direction) {
+      case "left":
+        return styles.dropdown_items_left;
+      case "bottom":
+        return styles.dropdown_items_bottom;
+      case "right":
+        return styles.dropdown_items_right;
+      default:
+        return styles.dropdown_items_bottom;
     }
   };
 
@@ -59,10 +60,11 @@ class Dropdown extends Component {
       iconClassName,
       label,
       isDisabled,
-      children
+      children,
+      direction
     } = this.props;
 
-    const { isOpened } = this.state;
+    const { isOpen } = this.state;
 
     return (
       <div
@@ -71,25 +73,24 @@ class Dropdown extends Component {
           { [disabledClassName || styles.disabled]: isDisabled },
           className
         )}
-        disabled={isDisabled}
-        onClick={isOpened ? this.close : this.open}
-        ref={this.saveParentSize}
-        onMouseLeave={this.close}
+        onClick={isOpen ? this.closeDropdown : this.openDropdown}
+        onMouseLeave={this.closeDropdown}
       >
-        <span>{label}</span>
-        <span
-          className={classnames(
-            styles.icon,
-            { [disabledClassName || styles.disabled]: isDisabled },
-            iconClassName
-          )}
+        <DropdownTitle
+          direction={direction}
+          isDisabled={isDisabled}
+          iconClassName={iconClassName}
+          disabledClassName={disabledClassName}
         >
-          <FaChevronDown />
-        </span>
-        {isOpened && (
+          {label}
+        </DropdownTitle>
+        {isOpen && (
           <div
-            className={classnames(styles.dropdown_items, itemsClassName)}
-            onClick={this.onClick}
+            className={classnames(
+              styles.dropdown_items,
+              this.getDirectionClassName(),
+              itemsClassName
+            )}
           >
             {children}
           </div>
