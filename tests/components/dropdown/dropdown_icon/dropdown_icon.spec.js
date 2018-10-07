@@ -1,5 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
+import { DIRECTIONS } from "../../../../src/common/constants";
 import DropdownIcon from "../../../../src/components/dropdown/dropdown_icon/dropdown_icon";
 
 describe("DropdownIcon component", () => {
@@ -14,17 +15,17 @@ describe("DropdownIcon component", () => {
   });
 
   test("arrow direction - left", () => {
-    const cmp = renderer.create(<DropdownIcon direction="left" />);
+    const cmp = renderer.create(<DropdownIcon direction={DIRECTIONS.LEFT} />);
     expect(cmp).toMatchSnapshot();
   });
 
   test("arrow direction - bottom", () => {
-    const cmp = renderer.create(<DropdownIcon direction="bottom" />);
+    const cmp = renderer.create(<DropdownIcon direction={DIRECTIONS.BOTTOM} />);
     expect(cmp).toMatchSnapshot();
   });
 
   test("arrow direction - right", () => {
-    const cmp = renderer.create(<DropdownIcon direction="right" />);
+    const cmp = renderer.create(<DropdownIcon direction={DIRECTIONS.RIGHT} />);
     expect(cmp).toMatchSnapshot();
   });
 

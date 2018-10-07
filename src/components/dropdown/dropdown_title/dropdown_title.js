@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import { DIRECTIONS } from "../../../common/constants";
+
 import DropdownIcon from "../dropdown_icon/dropdown_icon";
 
 import styles from "./dropdown_title.scss";
@@ -13,7 +15,7 @@ const DropdownTitle = ({
   children
 }) => (
   <span className={styles.dropdown_title}>
-    {direction === "left" && (
+    {direction === DIRECTIONS.LEFT && (
       <DropdownIcon
         direction={direction}
         isDisabled={isDisabled}
@@ -22,7 +24,7 @@ const DropdownTitle = ({
       />
     )}
     {children}
-    {direction !== "left" && (
+    {direction !== DIRECTIONS.LEFT && (
       <DropdownIcon
         direction={direction}
         isDisabled={isDisabled}
@@ -35,8 +37,8 @@ const DropdownTitle = ({
 
 DropdownTitle.defaultProps = {
   iconClassName: "",
-  direction: "bottom",
   className: "",
+  direction: DIRECTIONS.BOTTOM,
   disabledClassName: "",
   isDisabled: false,
   children: []

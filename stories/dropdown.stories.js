@@ -3,6 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { boolean, text, withKnobs } from "@storybook/addon-knobs";
 
+import { DIRECTIONS } from "../src/common/constants";
 import { Menu } from "../src";
 import Dropdown from "../src/components/dropdown/dropdown";
 import DropdownItem from "../src/components/dropdown/dropdown_item/dropdown_item";
@@ -39,12 +40,12 @@ storiesOf("Dropdown", module)
         )}
       >
         <DropdownItem>All Bands</DropdownItem>
-        <Dropdown label="70's" direction="right">
+        <Dropdown label="70's" direction={DIRECTIONS.RIGHT}>
           <DropdownItem>Kiss</DropdownItem>
           <DropdownItem>ZZ Top</DropdownItem>
           <DropdownItem>Bee Gees</DropdownItem>
         </Dropdown>
-        <Dropdown label="80's" direction="right">
+        <Dropdown label="80's" direction={DIRECTIONS.RIGHT}>
           <DropdownItem>Def Leppard</DropdownItem>
           <DropdownItem>AC/DC</DropdownItem>
           <DropdownItem>The Smiths</DropdownItem>
@@ -54,17 +55,17 @@ storiesOf("Dropdown", module)
   ))
   .add("Dropdown direction", () => (
     <Menu>
-      <Dropdown direction="right" label="Rock Bands">
+      <Dropdown direction={DIRECTIONS.RIGHT} label="Rock Bands">
         <DropdownItem>Muse</DropdownItem>
         <DropdownItem>Pearl Jam</DropdownItem>
         <DropdownItem>Jethro Tull</DropdownItem>
       </Dropdown>
-      <Dropdown direction="bottom" label="Rock Bands">
+      <Dropdown direction={DIRECTIONS.BOTTOM} label="Rock Bands">
         <DropdownItem>Muse</DropdownItem>
         <DropdownItem>Pearl Jam</DropdownItem>
         <DropdownItem>Jethro Tull</DropdownItem>
       </Dropdown>
-      <Dropdown direction="left" label="Rock Bands">
+      <Dropdown direction={DIRECTIONS.LEFT} label="Rock Bands">
         <DropdownItem>Muse</DropdownItem>
         <DropdownItem>Pearl Jam</DropdownItem>
         <DropdownItem>Jethro Tull</DropdownItem>

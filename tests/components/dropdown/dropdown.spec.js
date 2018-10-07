@@ -3,6 +3,7 @@ import renderer from "react-test-renderer";
 import { mount, shallow } from "enzyme";
 import toJson from "enzyme-to-json";
 
+import { DIRECTIONS } from "../../../src/common/constants";
 import Dropdown from "../../../src/components/dropdown/dropdown";
 
 describe("Dropdown component", () => {
@@ -53,7 +54,7 @@ describe("Dropdown component", () => {
     );
 
     expect(cmp.state("isOpen")).toEqual(false);
-    cmp.instance().openDropdown({
+    cmp.instance().open({
       stopPropagation: () => {}
     });
     expect(cmp.state("isOpen")).toEqual(true);
@@ -69,9 +70,9 @@ describe("Dropdown component", () => {
     );
 
     expect(cmp.state("isOpen")).toEqual(false);
-    cmp.instance().openDropdown({ stopPropagation: () => {} });
+    cmp.instance().open({ stopPropagation: () => {} });
     expect(cmp.state("isOpen")).toEqual(true);
-    cmp.instance().closeDropdown({ stopPropagation: () => {} });
+    cmp.instance().close({ stopPropagation: () => {} });
 
     expect(cmp.state("isOpen")).toEqual(false);
   });
@@ -90,7 +91,7 @@ describe("Dropdown component", () => {
 
   test("arrow direction - left", () => {
     const cmp = mount(
-      <Dropdown label="TEST" direction="left">
+      <Dropdown label="TEST" direction={DIRECTIONS.LEFT}>
         <div>item 1</div>
         <div>item 2</div>
       </Dropdown>
@@ -105,7 +106,7 @@ describe("Dropdown component", () => {
 
   test("arrow direction - bottom", () => {
     const cmp = mount(
-      <Dropdown label="TEST" direction="bottom">
+      <Dropdown label="TEST" direction={DIRECTIONS.BOTTOM}>
         <div>item 1</div>
         <div>item 2</div>
       </Dropdown>
@@ -120,7 +121,7 @@ describe("Dropdown component", () => {
 
   test("arrow direction - right", () => {
     const cmp = mount(
-      <Dropdown label="TEST" direction="right">
+      <Dropdown label="TEST" direction={DIRECTIONS.RIGHT}>
         <div>item 1</div>
         <div>item 2</div>
       </Dropdown>

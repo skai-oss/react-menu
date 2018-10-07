@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
+import { DIRECTIONS } from "../../common/constants";
+
 import DropdownTitle from "./dropdown_title/dropdown_title";
 
 import styles from "./dropdown.scss";
@@ -32,20 +34,25 @@ class Dropdown extends Component {
     isOpen: false
   };
 
-  openDropdown = e => {
+  open = e => {
     e.stopPropagation();
-    !this.props.isDisabled && this.setState({ isOpen: true });
+
+    if (this.props.isDisabled) {
+      return;
+    }
+
+    this.setState({ isOpen: true });
   };
 
-  closeDropdown = () => this.setState({ isOpen: false });
+  close = () => this.setState({ isOpen: false });
 
   getDirectionClassName = () => {
     switch (this.props.direction) {
-      case "left":
+      case DIRECTIONS.LEFT:
         return styles.dropdown_items_left;
-      case "bottom":
+      case DIRECTIONS.BOTTOM:
         return styles.dropdown_items_bottom;
-      case "right":
+      case DIRECTIONS.RIGHT:
         return styles.dropdown_items_right;
       default:
         return styles.dropdown_items_bottom;
@@ -73,8 +80,8 @@ class Dropdown extends Component {
           { [disabledClassName || styles.disabled]: isDisabled },
           className
         )}
-        onClick={isOpen ? this.closeDropdown : this.openDropdown}
-        onMouseLeave={this.closeDropdown}
+        onClick={isOpen ? this.close : this.open}
+        onMouseLeave={this.close}
       >
         <DropdownTitle
           direction={direction}
