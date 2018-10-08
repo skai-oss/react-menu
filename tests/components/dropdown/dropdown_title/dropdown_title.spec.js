@@ -1,6 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 
+import { DIRECTIONS } from "../../../../src/common/constants";
 import DropdownTitle from "../../../../src/components/dropdown/dropdown_title/dropdown_title";
 
 describe("DropdownTitle component", () => {
@@ -23,7 +24,7 @@ describe("DropdownTitle component", () => {
 
   test("arrow direction - left", () => {
     const cmp = renderer.create(
-      <DropdownTitle className="TEST" direction="left">
+      <DropdownTitle className="TEST" direction={DIRECTIONS.LEFT}>
         TEST
       </DropdownTitle>
     );
@@ -32,7 +33,7 @@ describe("DropdownTitle component", () => {
 
   test("arrow direction - bottom", () => {
     const cmp = renderer.create(
-      <DropdownTitle className="TEST" direction="bottom">
+      <DropdownTitle className="TEST" direction={DIRECTIONS.BOTTOM}>
         TEST
       </DropdownTitle>
     );
@@ -41,7 +42,7 @@ describe("DropdownTitle component", () => {
 
   test("arrow direction - right", () => {
     const cmp = renderer.create(
-      <DropdownTitle className="TEST" direction="right">
+      <DropdownTitle className="TEST" direction={DIRECTIONS.RIGHT}>
         TEST
       </DropdownTitle>
     );

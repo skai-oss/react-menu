@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 import { FaChevronDown, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
+import { DIRECTIONS } from "../../../common/constants";
 import styles from "./dropdown_icon.scss";
 
 const DropdownIcon = ({
@@ -12,7 +13,7 @@ const DropdownIcon = ({
   isDisabled
 }) => {
   switch (direction) {
-    case "left":
+    case DIRECTIONS.LEFT:
       return (
         <FaChevronLeft
           className={classnames(
@@ -22,7 +23,7 @@ const DropdownIcon = ({
           )}
         />
       );
-    case "bottom":
+    case DIRECTIONS.BOTTOM:
       return (
         <FaChevronDown
           className={classnames(
@@ -32,7 +33,7 @@ const DropdownIcon = ({
           )}
         />
       );
-    case "right":
+    case DIRECTIONS.RIGHT:
       return (
         <FaChevronRight
           className={classnames(
@@ -56,7 +57,7 @@ const DropdownIcon = ({
 };
 
 DropdownIcon.defaultProps = {
-  direction: "bottom",
+  direction: DIRECTIONS.BOTTOM,
   className: "",
   disabledClassName: "",
   isDisabled: false

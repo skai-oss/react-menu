@@ -1,24 +1,366 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Dropdown component arrow direction - bottom 1`] = `
+<Dropdown
+  className=""
+  direction="bottom"
+  disabledClassName=""
+  iconClassName=""
+  isDisabled={false}
+  itemsClassName=""
+  label="TEST"
+>
+  <div
+    className="dropdown"
+    onClick={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <DropdownTitle
+      className=""
+      direction="bottom"
+      disabledClassName=""
+      iconClassName=""
+      isDisabled={false}
+    >
+      <span
+        className="dropdown_title"
+      >
+        TEST
+        <DropdownIcon
+          className=""
+          direction="bottom"
+          disabledClassName=""
+          isDisabled={false}
+        >
+          <Component
+            className="icon"
+          >
+            <IconBase
+              attr={
+                Object {
+                  "viewBox": "0 0 448 512",
+                }
+              }
+              className="icon"
+            >
+              <svg
+                attr={
+                  Object {
+                    "viewBox": "0 0 448 512",
+                  }
+                }
+                className="undefined icon"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 448 512"
+                width="1em"
+              >
+                <path
+                  d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                  key="0"
+                />
+              </svg>
+            </IconBase>
+          </Component>
+        </DropdownIcon>
+      </span>
+    </DropdownTitle>
+    <div
+      className="dropdown_items dropdown_items_bottom"
+    >
+      <div>
+        item 1
+      </div>
+      <div>
+        item 2
+      </div>
+    </div>
+  </div>
+</Dropdown>
+`;
+
+exports[`Dropdown component arrow direction - left 1`] = `
+<Dropdown
+  className=""
+  direction="left"
+  disabledClassName=""
+  iconClassName=""
+  isDisabled={false}
+  itemsClassName=""
+  label="TEST"
+>
+  <div
+    className="dropdown"
+    onClick={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <DropdownTitle
+      className=""
+      direction="left"
+      disabledClassName=""
+      iconClassName=""
+      isDisabled={false}
+    >
+      <span
+        className="dropdown_title"
+      >
+        <DropdownIcon
+          className=""
+          direction="left"
+          disabledClassName=""
+          isDisabled={false}
+        >
+          <Component
+            className="icon"
+          >
+            <IconBase
+              attr={
+                Object {
+                  "viewBox": "0 0 320 512",
+                }
+              }
+              className="icon"
+            >
+              <svg
+                attr={
+                  Object {
+                    "viewBox": "0 0 320 512",
+                  }
+                }
+                className="undefined icon"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 320 512"
+                width="1em"
+              >
+                <path
+                  d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+                  key="0"
+                />
+              </svg>
+            </IconBase>
+          </Component>
+        </DropdownIcon>
+        TEST
+      </span>
+    </DropdownTitle>
+    <div
+      className="dropdown_items dropdown_items_left"
+    >
+      <div>
+        item 1
+      </div>
+      <div>
+        item 2
+      </div>
+    </div>
+  </div>
+</Dropdown>
+`;
+
+exports[`Dropdown component arrow direction - right 1`] = `
+<Dropdown
+  className=""
+  direction="right"
+  disabledClassName=""
+  iconClassName=""
+  isDisabled={false}
+  itemsClassName=""
+  label="TEST"
+>
+  <div
+    className="dropdown"
+    onClick={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <DropdownTitle
+      className=""
+      direction="right"
+      disabledClassName=""
+      iconClassName=""
+      isDisabled={false}
+    >
+      <span
+        className="dropdown_title"
+      >
+        TEST
+        <DropdownIcon
+          className=""
+          direction="right"
+          disabledClassName=""
+          isDisabled={false}
+        >
+          <Component
+            className="icon"
+          >
+            <IconBase
+              attr={
+                Object {
+                  "viewBox": "0 0 320 512",
+                }
+              }
+              className="icon"
+            >
+              <svg
+                attr={
+                  Object {
+                    "viewBox": "0 0 320 512",
+                  }
+                }
+                className="undefined icon"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 320 512"
+                width="1em"
+              >
+                <path
+                  d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+                  key="0"
+                />
+              </svg>
+            </IconBase>
+          </Component>
+        </DropdownIcon>
+      </span>
+    </DropdownTitle>
+    <div
+      className="dropdown_items dropdown_items_right"
+    >
+      <div>
+        item 1
+      </div>
+      <div>
+        item 2
+      </div>
+    </div>
+  </div>
+</Dropdown>
+`;
+
+exports[`Dropdown component arrow direction - unknown 1`] = `
+<Dropdown
+  className=""
+  direction="TEST"
+  disabledClassName=""
+  iconClassName=""
+  isDisabled={false}
+  itemsClassName=""
+  label="TEST"
+>
+  <div
+    className="dropdown"
+    onClick={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <DropdownTitle
+      className=""
+      direction="TEST"
+      disabledClassName=""
+      iconClassName=""
+      isDisabled={false}
+    >
+      <span
+        className="dropdown_title"
+      >
+        TEST
+        <DropdownIcon
+          className=""
+          direction="TEST"
+          disabledClassName=""
+          isDisabled={false}
+        >
+          <Component
+            className="icon"
+          >
+            <IconBase
+              attr={
+                Object {
+                  "viewBox": "0 0 448 512",
+                }
+              }
+              className="icon"
+            >
+              <svg
+                attr={
+                  Object {
+                    "viewBox": "0 0 448 512",
+                  }
+                }
+                className="undefined icon"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 448 512"
+                width="1em"
+              >
+                <path
+                  d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                  key="0"
+                />
+              </svg>
+            </IconBase>
+          </Component>
+        </DropdownIcon>
+      </span>
+    </DropdownTitle>
+    <div
+      className="dropdown_items dropdown_items_bottom"
+    >
+      <div>
+        item 1
+      </div>
+      <div>
+        item 2
+      </div>
+    </div>
+  </div>
+</Dropdown>
+`;
+
 exports[`Dropdown component default snapshot 1`] = `
 <div
   className="dropdown"
-  disabled={false}
   onClick={[Function]}
   onMouseLeave={[Function]}
 >
-  <span>
-    
-  </span>
   <span
-    className="icon"
+    className="dropdown_title"
   >
+    
     <svg
       attr={
         Object {
           "viewBox": "0 0 448 512",
         }
       }
+      className="undefined icon"
       fill="currentColor"
       height="1em"
       stroke="currentColor"
@@ -42,22 +384,20 @@ exports[`Dropdown component default snapshot 1`] = `
 exports[`Dropdown component snapshot with children 1`] = `
 <div
   className="dropdown"
-  disabled={false}
   onClick={[Function]}
   onMouseLeave={[Function]}
 >
-  <span>
-    
-  </span>
   <span
-    className="icon"
+    className="dropdown_title"
   >
+    
     <svg
       attr={
         Object {
           "viewBox": "0 0 448 512",
         }
       }
+      className="undefined icon"
       fill="currentColor"
       height="1em"
       stroke="currentColor"
@@ -81,22 +421,20 @@ exports[`Dropdown component snapshot with children 1`] = `
 exports[`Dropdown component snapshot with className 1`] = `
 <div
   className="dropdown className"
-  disabled={false}
   onClick={[Function]}
   onMouseLeave={[Function]}
 >
-  <span>
-    
-  </span>
   <span
-    className="icon"
+    className="dropdown_title"
   >
+    
     <svg
       attr={
         Object {
           "viewBox": "0 0 448 512",
         }
       }
+      className="undefined icon"
       fill="currentColor"
       height="1em"
       stroke="currentColor"
@@ -120,22 +458,20 @@ exports[`Dropdown component snapshot with className 1`] = `
 exports[`Dropdown component snapshot with disabled 1`] = `
 <div
   className="dropdown disabled"
-  disabled={true}
   onClick={[Function]}
   onMouseLeave={[Function]}
 >
-  <span>
-    
-  </span>
   <span
-    className="icon disabled"
+    className="dropdown_title"
   >
+    
     <svg
       attr={
         Object {
           "viewBox": "0 0 448 512",
         }
       }
+      className="undefined icon disabled"
       fill="currentColor"
       height="1em"
       stroke="currentColor"
@@ -159,22 +495,20 @@ exports[`Dropdown component snapshot with disabled 1`] = `
 exports[`Dropdown component snapshot with disabledClassName 1`] = `
 <div
   className="dropdown disabledClassName"
-  disabled={true}
   onClick={[Function]}
   onMouseLeave={[Function]}
 >
-  <span>
-    
-  </span>
   <span
-    className="icon disabledClassName"
+    className="dropdown_title"
   >
+    
     <svg
       attr={
         Object {
           "viewBox": "0 0 448 512",
         }
       }
+      className="undefined icon disabledClassName"
       fill="currentColor"
       height="1em"
       stroke="currentColor"
@@ -198,22 +532,20 @@ exports[`Dropdown component snapshot with disabledClassName 1`] = `
 exports[`Dropdown component snapshot with label 1`] = `
 <div
   className="dropdown"
-  disabled={false}
   onClick={[Function]}
   onMouseLeave={[Function]}
 >
-  <span>
-    menu1
-  </span>
   <span
-    className="icon"
+    className="dropdown_title"
   >
+    menu1
     <svg
       attr={
         Object {
           "viewBox": "0 0 448 512",
         }
       }
+      className="undefined icon"
       fill="currentColor"
       height="1em"
       stroke="currentColor"
