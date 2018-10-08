@@ -1,7 +1,8 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import { boolean, text, withKnobs } from "@storybook/addon-knobs";
+import { withKnobs } from "@storybook/addon-knobs";
+
 import {
   Button,
   LeftMenuContainer,
@@ -15,15 +16,16 @@ import Dropdown from "../src/components/dropdown/dropdown";
 import { SampleButton } from "./sample_button";
 import { SampleItem } from "./sample_item";
 import { SampleItemWithSeperator } from "./sample_item_seperator";
+import DropdownItem from "../src/components/dropdown/dropdown_item/dropdown_item";
 
 storiesOf("Menu", module)
   .add("Default view", () => (
     <Menu>
       <Button isDisabled={true}>Button</Button>
       <Dropdown label={"Dropdown"}>
-        <div>item 1</div>
-        <div>item 2</div>
-        <div>item 3</div>
+        <DropdownItem>item 1</DropdownItem>
+        <DropdownItem>item 2</DropdownItem>
+        <DropdownItem>item 3</DropdownItem>
       </Dropdown>
     </Menu>
   ))
@@ -106,60 +108,6 @@ storiesOf("Menu", module)
           john.smith@kenshoo.com
         </SampleButton>
       </RightMenuContainer>
-    </Menu>
-  ));
-
-storiesOf("Dropdown", module)
-  .add("Simple", () => (
-    <Menu>
-      <Dropdown label={"Simple"} onClick={action("item clicked")}>
-        <div>item 1</div>
-        <div>item 2</div>
-        <div>item 3</div>
-      </Dropdown>
-      <Dropdown
-        label={"Dimple"}
-        onClick={action("item clicked")}
-        isDisabled={boolean("disabled", false)}
-        className={text("custom className", `${styles.custom_dropdown}`)}
-        disabledClassName={text(
-          "custom disabledClassName",
-          `${styles.custom_dropdown_disabled}`
-        )}
-        itemsClassName={text(
-          "custom itemsClassName",
-          `${styles.custom_dropdown_items}`
-        )}
-      >
-        <div>item 1</div>
-        <div>item 2</div>
-        <div>item 3</div>
-      </Dropdown>
-    </Menu>
-  ))
-  .add("Cascading", () => (
-    <Menu>
-      <Dropdown
-        label={"Cascading"}
-        onClick={action("item clicked")}
-        isDisabled={boolean("disabled", false)}
-        className={text("custom className", `${styles.custom_dropdown}`)}
-        disabledClassName={text(
-          "custom disabledClassName",
-          `${styles.custom_dropdown_disabled}`
-        )}
-        itemsClassName={text(
-          "custom itemsClassName",
-          `${styles.custom_dropdown_items}`
-        )}
-      >
-        <div>item 1</div>
-        <div>item 2</div>
-        <Dropdown label={"Sub Menu"}>
-          <div>sub item 1</div>
-          <div>sub item 2</div>
-        </Dropdown>
-      </Dropdown>
     </Menu>
   ));
 

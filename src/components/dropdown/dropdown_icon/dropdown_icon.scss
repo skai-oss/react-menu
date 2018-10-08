@@ -1,0 +1,11 @@
+@import "../../../resources/globals";
+
+.icon {
+  font-size: 0.7rem;
+  padding: 0 1em;
+}
+
+.disabled {
+  color: $element-disabled-color;
+  cursor: default;
+}

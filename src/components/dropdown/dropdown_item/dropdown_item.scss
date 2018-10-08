@@ -1,0 +1,10 @@
+@import "../../../resources/globals";
+
+.dropdown_item {
+  padding: 1em;
+  background: $white;
+
+  &:hover {
+    background: $light-gray;
+  }
+}

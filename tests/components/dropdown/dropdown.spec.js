@@ -1,6 +1,9 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import { mount, shallow } from "enzyme";
+import toJson from "enzyme-to-json";
+
+import { DIRECTIONS } from "../../../src/common/constants";
 import Dropdown from "../../../src/components/dropdown/dropdown";
 
 describe("Dropdown component", () => {
@@ -50,11 +53,11 @@ describe("Dropdown component", () => {
       </Dropdown>
     );
 
-    expect(cmp.state("isOpened")).toEqual(false);
+    expect(cmp.state("isOpen")).toEqual(false);
     cmp.instance().open({
-      preventDefault: () => {}
+      stopPropagation: () => {}
     });
-    expect(cmp.state("isOpened")).toEqual(true);
+    expect(cmp.state("isOpen")).toEqual(true);
   });
 
   test("call to close() will change state", () => {
@@ -66,16 +69,12 @@ describe("Dropdown component", () => {
       </Dropdown>
     );
 
-    expect(cmp.state("isOpened")).toEqual(false);
-    cmp.instance().open({
-      preventDefault: () => {}
-    });
-    expect(cmp.state("isOpened")).toEqual(true);
-    cmp.instance().close({
-      preventDefault: () => {}
-    });
+    expect(cmp.state("isOpen")).toEqual(false);
+    cmp.instance().open({ stopPropagation: () => {} });
+    expect(cmp.state("isOpen")).toEqual(true);
+    cmp.instance().close({ stopPropagation: () => {} });
 
-    expect(cmp.state("isOpened")).toEqual(false);
+    expect(cmp.state("isOpen")).toEqual(false);
   });
 
   test("click on dropdown will not trigger onClick", () => {
@@ -90,41 +89,63 @@ describe("Dropdown component", () => {
     expect(mockFn).not.toHaveBeenCalled();
   });
 
-  test("click on opened dropdown will trigger onClick", () => {
-    const mockFn = jest.fn();
-    const cmp = shallow(
-      <Dropdown onClick={mockFn}>
+  test("arrow direction - left", () => {
+    const cmp = mount(
+      <Dropdown label="TEST" direction={DIRECTIONS.LEFT}>
         <div>item 1</div>
         <div>item 2</div>
       </Dropdown>
     );
 
-    cmp.instance().open({
-      preventDefault: () => {}
+    cmp.setState({
+      isOpen: true
     });
-    expect(cmp.state("isOpened")).toEqual(true);
-    cmp.update();
 
-    cmp
-      .find(".dropdown_items")
-      .find("div")
-      .at(0)
-      .simulate("click");
-    expect(mockFn).toHaveBeenCalled();
+    expect(toJson(cmp)).toMatchSnapshot();
   });
 
-  test("click on disabled dropdown will not open", () => {
-    const mockFn = jest.fn();
-    const cmp = shallow(
-      <Dropdown isDisabled={true} onClick={mockFn}>
+  test("arrow direction - bottom", () => {
+    const cmp = mount(
+      <Dropdown label="TEST" direction={DIRECTIONS.BOTTOM}>
         <div>item 1</div>
         <div>item 2</div>
       </Dropdown>
     );
 
-    cmp.instance().open({
-      preventDefault: () => {}
+    cmp.setState({
+      isOpen: true
     });
-    expect(cmp.state("isOpened")).toEqual(false);
+
+    expect(toJson(cmp)).toMatchSnapshot();
+  });
+
+  test("arrow direction - right", () => {
+    const cmp = mount(
+      <Dropdown label="TEST" direction={DIRECTIONS.RIGHT}>
+        <div>item 1</div>
+        <div>item 2</div>
+      </Dropdown>
+    );
+
+    cmp.setState({
+      isOpen: true
+    });
+
+    expect(toJson(cmp)).toMatchSnapshot();
+  });
+
+  test("arrow direction - unknown", () => {
+    const cmp = mount(
+      <Dropdown label="TEST" direction="TEST">
+        <div>item 1</div>
+        <div>item 2</div>
+      </Dropdown>
+    );
+
+    cmp.setState({
+      isOpen: true
+    });
+
+    expect(toJson(cmp)).toMatchSnapshot();
   });
 });
