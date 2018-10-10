@@ -9,8 +9,9 @@
 React menu is a simple menu container component that helps a user create a simple menu bar
 
 <p align="center">
-    <img src="preview.gif?raw=true" width="600" />
+    <img src="preview.png?raw=true" width="600" />
 </p>
+
 
 ## Installation
  
