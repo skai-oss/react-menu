@@ -86,6 +86,92 @@ exports[`Dropdown component arrow direction - bottom 1`] = `
 </Dropdown>
 `;
 
+exports[`Dropdown component arrow direction - bottom_left 1`] = `
+<Dropdown
+  className=""
+  direction="bottom_left"
+  disabledClassName=""
+  iconClassName=""
+  isDisabled={false}
+  itemsClassName=""
+  label="TEST"
+>
+  <div
+    className="dropdown"
+    onClick={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <DropdownTitle
+      className=""
+      direction="bottom_left"
+      disabledClassName=""
+      iconClassName=""
+      isDisabled={false}
+    >
+      <span
+        className="dropdown_title"
+      >
+        TEST
+        <DropdownIcon
+          className=""
+          direction="bottom_left"
+          disabledClassName=""
+          isDisabled={false}
+        >
+          <Component
+            className="icon"
+          >
+            <IconBase
+              attr={
+                Object {
+                  "viewBox": "0 0 448 512",
+                }
+              }
+              className="icon"
+            >
+              <svg
+                attr={
+                  Object {
+                    "viewBox": "0 0 448 512",
+                  }
+                }
+                className="undefined icon"
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                strokeWidth="0"
+                style={
+                  Object {
+                    "color": undefined,
+                  }
+                }
+                viewBox="0 0 448 512"
+                width="1em"
+              >
+                <path
+                  d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                  key="0"
+                />
+              </svg>
+            </IconBase>
+          </Component>
+        </DropdownIcon>
+      </span>
+    </DropdownTitle>
+    <div
+      className="dropdown_items dropdown_items_bottom_left"
+    >
+      <div>
+        item 1
+      </div>
+      <div>
+        item 2
+      </div>
+    </div>
+  </div>
+</Dropdown>
+`;
+
 exports[`Dropdown component arrow direction - left 1`] = `
 <Dropdown
   className=""
@@ -420,7 +506,7 @@ exports[`Dropdown component snapshot with children 1`] = `
 
 exports[`Dropdown component snapshot with className 1`] = `
 <div
-  className="dropdown className"
+  className="className"
   onClick={[Function]}
   onMouseLeave={[Function]}
 >

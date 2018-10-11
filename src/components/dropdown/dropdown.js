@@ -50,10 +50,11 @@ class Dropdown extends Component {
     switch (this.props.direction) {
       case DIRECTIONS.LEFT:
         return styles.dropdown_items_left;
-      case DIRECTIONS.BOTTOM:
-        return styles.dropdown_items_bottom;
+      case DIRECTIONS.BOTTOM_LEFT:
+        return styles.dropdown_items_bottom_left;
       case DIRECTIONS.RIGHT:
         return styles.dropdown_items_right;
+      case DIRECTIONS.BOTTOM:
       default:
         return styles.dropdown_items_bottom;
     }
@@ -75,11 +76,9 @@ class Dropdown extends Component {
 
     return (
       <div
-        className={classnames(
-          styles.dropdown,
-          { [disabledClassName || styles.disabled]: isDisabled },
-          className
-        )}
+        className={classnames(className || styles.dropdown, {
+          [disabledClassName || styles.disabled]: isDisabled
+        })}
         onClick={isOpen ? this.close : this.open}
         onMouseLeave={this.close}
       >

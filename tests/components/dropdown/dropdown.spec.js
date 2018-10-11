@@ -134,6 +134,21 @@ describe("Dropdown component", () => {
     expect(toJson(cmp)).toMatchSnapshot();
   });
 
+  test("arrow direction - bottom_left", () => {
+    const cmp = mount(
+      <Dropdown label="TEST" direction={DIRECTIONS.BOTTOM_LEFT}>
+        <div>item 1</div>
+        <div>item 2</div>
+      </Dropdown>
+    );
+
+    cmp.setState({
+      isOpen: true
+    });
+
+    expect(toJson(cmp)).toMatchSnapshot();
+  });
+
   test("arrow direction - unknown", () => {
     const cmp = mount(
       <Dropdown label="TEST" direction="TEST">
