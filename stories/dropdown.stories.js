@@ -29,15 +29,12 @@ storiesOf("Dropdown", module)
         label="Rock Bands"
         onClick={action("item clicked")}
         isDisabled={boolean("disabled", false)}
-        className={text("custom className", `${styles.custom_dropdown}`)}
+        className={text("custom className", "")}
         disabledClassName={text(
           "custom disabledClassName",
           `${styles.custom_dropdown_disabled}`
         )}
-        itemsClassName={text(
-          "custom itemsClassName",
-          `${styles.custom_dropdown_items}`
-        )}
+        itemsClassName={text("custom itemsClassName", "")}
       >
         <DropdownItem>All Bands</DropdownItem>
         <Dropdown label="70's" direction={DIRECTIONS.RIGHT}>
