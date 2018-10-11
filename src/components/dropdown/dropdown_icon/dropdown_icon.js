@@ -16,41 +16,27 @@ const DropdownIcon = ({
     case DIRECTIONS.LEFT:
       return (
         <FaChevronLeft
-          className={classnames(
-            styles.icon,
-            { [disabledClassName || styles.disabled]: isDisabled },
-            className
-          )}
-        />
-      );
-    case DIRECTIONS.BOTTOM:
-      return (
-        <FaChevronDown
-          className={classnames(
-            styles.icon,
-            { [disabledClassName || styles.disabled]: isDisabled },
-            className
-          )}
+          className={classnames(className || styles.icon, {
+            [disabledClassName || styles.disabled]: isDisabled
+          })}
         />
       );
     case DIRECTIONS.RIGHT:
       return (
         <FaChevronRight
-          className={classnames(
-            styles.icon,
-            { [disabledClassName || styles.disabled]: isDisabled },
-            className
-          )}
+          className={classnames(className || styles.icon, {
+            [disabledClassName || styles.disabled]: isDisabled
+          })}
         />
       );
+    case DIRECTIONS.BOTTOM:
+    case DIRECTIONS.BOTTOM_LEFT:
     default:
       return (
         <FaChevronDown
-          className={classnames(
-            styles.icon,
-            { [disabledClassName || styles.disabled]: isDisabled },
-            className
-          )}
+          className={classnames(className || styles.icon, {
+            [disabledClassName || styles.disabled]: isDisabled
+          })}
         />
       );
   }

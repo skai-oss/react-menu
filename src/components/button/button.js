@@ -13,11 +13,9 @@ const Button = ({
   ...props
 }) => (
   <button
-    className={classnames(
-      styles.button,
-      { [disabledClassName || styles.disabled]: isDisabled },
-      className
-    )}
+    className={classnames(className || styles.button, {
+      [disabledClassName || styles.disabled]: isDisabled
+    })}
     disabled={isDisabled}
     onClick={onClick}
     {...props}

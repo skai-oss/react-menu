@@ -10,7 +10,7 @@ describe("DropdownIcon component", () => {
   });
 
   test("className prop", () => {
-    const cmp = renderer.create(<DropdownIcon clasName="TEST" />);
+    const cmp = renderer.create(<DropdownIcon className="TEST" />);
     expect(cmp).toMatchSnapshot();
   });
 

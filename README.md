@@ -91,6 +91,7 @@ class Menu extends Component {
 | `children`                      | `Elements/Components` | ''                                               | List of elements to place in the menu
 | `isDisabled`                    | `boolean`             | ''                                               | Toggle to disable/enable the component.
 | `onClick`                       | `function`            | ''                                               | The click callback function.
+| `direction`                     | `String`              | ''                                               | bottom, right, left, bottom_left - default uses bottom style. 
 
 #### Seperator
 

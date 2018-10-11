@@ -9,3 +9,4 @@ export {
 } from "./components/left_menu_container/left_menu_container";
 
 export { Separator } from "./components/separator/separator";
+export { DIRECTIONS } from "./common/constants";
