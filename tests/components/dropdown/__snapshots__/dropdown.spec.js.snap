@@ -506,7 +506,7 @@ exports[`Dropdown component snapshot with children 1`] = `
 
 exports[`Dropdown component snapshot with className 1`] = `
 <div
-  className="className dropdown"
+  className="dropdown className"
   onClick={[Function]}
   onMouseLeave={[Function]}
 >
