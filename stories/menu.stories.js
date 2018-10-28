@@ -29,7 +29,7 @@ storiesOf("Menu", module)
         className={styles.custom_button}
         onClick={action("Button clicked")}
       >
-        Left button 1
+        Custom style button
       </Button>
       <Dropdown label={"Dropdown"}>
         <DropdownItem>item 1</DropdownItem>
@@ -37,18 +37,8 @@ storiesOf("Menu", module)
         <DropdownItem>item 3</DropdownItem>
       </Dropdown>
       <Separator />
-      <Button
-        className={styles.custom_button}
-        onClick={action("Button clicked")}
-      >
-        Right button 1
-      </Button>
-      <Button
-        className={styles.custom_button}
-        onClick={action("Button clicked")}
-      >
-        Right Button 2
-      </Button>
+      <Button onClick={action("Button clicked")}>Right button 1</Button>
+      <Button onClick={action("Button clicked")}>Right Button 2</Button>
     </Menu>
   ))
   .add("Advanced", () => (
