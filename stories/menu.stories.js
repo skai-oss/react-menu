@@ -3,13 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { withKnobs } from "@storybook/addon-knobs";
 
-import {
-  Button,
-  LeftMenuContainer,
-  Menu,
-  RightMenuContainer,
-  Separator
-} from "../src/";
+import { Button, Menu, Separator } from "../src/";
 import { SampleDropDown } from "./sample_dropdown";
 import styles from "./story_book.scss";
 import Dropdown from "../src/components/dropdown/dropdown";
@@ -29,52 +23,31 @@ storiesOf("Menu", module)
       </Dropdown>
     </Menu>
   ))
-  .add("with left / right menu", () => (
-    <Menu className={styles.menu}>
-      <LeftMenuContainer>
-        <Button
-          className={styles.custom_button}
-          onClick={action("Button clicked")}
-        >
-          Left
-        </Button>
-        <Button
-          className={styles.custom_button}
-          onClick={action("Button clicked")}
-        >
-          Button
-        </Button>
-      </LeftMenuContainer>
-      <RightMenuContainer>
-        <Button
-          className={styles.custom_button}
-          onClick={action("Button clicked")}
-        >
-          Right
-        </Button>
-        <Button
-          className={styles.custom_button}
-          onClick={action("Button clicked")}
-        >
-          Button
-        </Button>
-      </RightMenuContainer>
-    </Menu>
-  ))
   .add("with Separator", () => (
     <Menu className={styles.menu}>
       <Button
         className={styles.custom_button}
         onClick={action("Button clicked")}
       >
-        Left
+        Left button 1
       </Button>
+      <Dropdown label={"Dropdown"}>
+        <DropdownItem>item 1</DropdownItem>
+        <DropdownItem>item 2</DropdownItem>
+        <DropdownItem>item 3</DropdownItem>
+      </Dropdown>
       <Separator />
       <Button
         className={styles.custom_button}
         onClick={action("Button clicked")}
       >
-        Button
+        Right button 1
+      </Button>
+      <Button
+        className={styles.custom_button}
+        onClick={action("Button clicked")}
+      >
+        Right Button 2
       </Button>
     </Menu>
   ))
@@ -98,16 +71,14 @@ storiesOf("Menu", module)
         <SampleItem>Halogen Inform</SampleItem>
         <SampleItem>Budget Manager</SampleItem>
       </SampleDropDown>
-      <RightMenuContainer>
-        <SampleButton onClick={action("button clicked")}>Help</SampleButton>
-        <SampleDropDown label={"Agency 1"} onClick={action("item clicked")}>
-          <SampleItem>Agency 2</SampleItem>
-          <SampleItem>Agency 3</SampleItem>
-        </SampleDropDown>
-        <SampleButton onClick={action("button clicked")} isDisabled={true}>
-          john.smith@kenshoo.com
-        </SampleButton>
-      </RightMenuContainer>
+      <SampleButton onClick={action("button clicked")}>Help</SampleButton>
+      <SampleDropDown label={"Agency 1"} onClick={action("item clicked")}>
+        <SampleItem>Agency 2</SampleItem>
+        <SampleItem>Agency 3</SampleItem>
+      </SampleDropDown>
+      <SampleButton onClick={action("button clicked")} isDisabled={true}>
+        john.smith@kenshoo.com
+      </SampleButton>
     </Menu>
   ));
 

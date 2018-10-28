@@ -13,7 +13,7 @@ const Button = ({
   ...props
 }) => (
   <button
-    className={classnames(className || styles.button, {
+    className={classnames(className, styles.button, {
       [disabledClassName || styles.disabled]: isDisabled
     })}
     disabled={isDisabled}

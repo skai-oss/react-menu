@@ -76,7 +76,7 @@ class Dropdown extends Component {
 
     return (
       <div
-        className={classnames(className || styles.dropdown, {
+        className={classnames(className, styles.dropdown, {
           [disabledClassName || styles.disabled]: isDisabled
         })}
         onClick={isOpen ? this.close : this.open}
