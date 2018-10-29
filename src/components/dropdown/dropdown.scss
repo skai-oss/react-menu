@@ -4,6 +4,7 @@
   position: relative;
   padding: 12px;
   cursor: pointer;
+  display: flex;
 
   &:hover {
     background: $light-gray;

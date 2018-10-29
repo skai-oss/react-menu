@@ -18,7 +18,7 @@ storiesOf("Menu", module)
     <Menu className={styles.advanced_menu}>
       <img
         className={styles.advanced_logo}
-        src={"http://logo.kenh.net/logo/kenshoo.svg.png"}
+        src={"https://cdn.kenshoo.com/resources/logos/kenshoo-logo.svg"}
         height={40}
       />
       <SampleButton onClick={action("button clicked")}>Analysis</SampleButton>

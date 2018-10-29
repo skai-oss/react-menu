@@ -3,11 +3,12 @@
 $advanced-button-width: 100px;
 
 .advanced_menu {
-  background-color: #939393;
+  background-color: $dark-gray-2;
 }
 
 .advanced_logo {
-  padding: 5px 10px 5px 5px;
+  padding: 0 10px;
+  align-self: center;
 }
 
 .advanced_width {
@@ -16,17 +17,15 @@ $advanced-button-width: 100px;
 
 .advanced_button {
   color: white;
-  padding: 20px;
   &:hover {
-    background-color: #7e7e7e;
+    background-color: $dark-gray-3;
   }
 }
 
 .advanced_dropdown {
   color: white;
-  padding: 20px;
   &:hover {
-    background-color: #7e7e7e;
+    background-color: $dark-gray-3;
   }
 }
 
@@ -40,7 +39,7 @@ $advanced-button-width: 100px;
   color: grey;
 
   &:hover {
-    background: #e5e5e5;
+    background: $light-gray;
   }
 }
 
