@@ -20,7 +20,7 @@ exports[`Button component disabledClassName prop 1`] = `
 
 exports[`Button component recieves className 1`] = `
 <button
-  className="TEST_CLASS"
+  className="button TEST_CLASS"
   disabled={false}
 >
   TEST

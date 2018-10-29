@@ -3,15 +3,12 @@
 $advanced-button-width: 100px;
 
 .advanced_menu {
-  background-image: -webkit-linear-gradient(
-    left,
-    #2caf82 5%,
-    #0caee2 97%
-  ) !important;
+  background-color: $dark-gray-2;
 }
 
 .advanced_logo {
-  padding: 5px;
+  padding: 0 10px;
+  align-self: center;
 }
 
 .advanced_width {
@@ -20,17 +17,15 @@ $advanced-button-width: 100px;
 
 .advanced_button {
   color: white;
-  padding: 20px;
   &:hover {
-    background: rgb(29, 145, 127);
+    background-color: $dark-gray-3;
   }
 }
 
 .advanced_dropdown {
   color: white;
-  padding: 20px;
   &:hover {
-    background: rgb(29, 145, 127);
+    background-color: $dark-gray-3;
   }
 }
 
@@ -42,10 +37,15 @@ $advanced-button-width: 100px;
 .advanced_item {
   padding: 10px;
   color: grey;
+  white-space: nowrap;
 
   &:hover {
-    background: #dff8e5;
+    background: $light-gray;
   }
+}
+
+.big_advanced_item {
+  width: 180px;
 }
 
 .advanced_seperator_item {
@@ -56,4 +56,8 @@ $advanced-button-width: 100px;
   color: black;
   width: $advanced-button-width;
   background-color: $element-background-color;
+}
+
+.custom_button {
+  color: red;
 }

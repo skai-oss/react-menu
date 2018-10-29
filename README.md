@@ -47,13 +47,12 @@ class Menu extends Component {
                  <Separator/>
                 <div>Option 2/div>
             </DropDown>
-            <RightMenuContainer>
-                <Button>Help</Button>
-                <DropDown label="more options">
-                    <div>option 1</div>
-                    <div>Option 2</div>
-                </DropDown>
-            </RightMenuContainer>
+            <Separator />
+            <Button>Help</Button>
+            <DropDown label="more options">
+                <div>option 1</div>
+                <div>Option 2</div>
+            </DropDown>
             <div>I'm a div</div>
         </Menu>
   }
@@ -95,16 +94,11 @@ class Menu extends Component {
 
 #### Seperator
 
+Use this component to divide the menu to left and right sections
+
 | Name                            | Type                  | Default                                          | Description                                                                                                                                       
 |:-----                           |:-----                 |:-----                                            |:-----                                                                                                                                             
 | `className`                     | `String`              | ''                                               | class name - Used for customizing the style.
-
-#### Left/Right Menu Container
-
-| Name                            | Type                  | Default                                          | Description                                                                                                                                       
-|:-----                           |:-----                 |:-----                                            |:-----                                                                                                                                             
-| `className`                     | `String`              | ''                                               | Used for customizing the style.
-| `children`                      | `Elements/Components` | ''                                               | List of elements to place in the menu
 
 ## How to Contribute
 

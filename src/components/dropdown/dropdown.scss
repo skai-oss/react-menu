@@ -2,8 +2,9 @@
 
 .dropdown {
   position: relative;
-  padding: 1em;
+  padding: 12px;
   cursor: pointer;
+  display: flex;
 
   &:hover {
     background: $light-gray;
@@ -13,7 +14,7 @@
 .dropdown_items {
   position: absolute;
   border: 1px solid $light-gray;
-  min-width: 10em;
+  min-width: 120px;
   z-index: 1;
 }
 

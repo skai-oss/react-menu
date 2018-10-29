@@ -111,7 +111,7 @@ exports[`DropdownIcon component className prop 1`] = `
       "viewBox": "0 0 448 512",
     }
   }
-  className="undefined TEST"
+  className="undefined icon TEST"
   fill="currentColor"
   height="1em"
   stroke="currentColor"

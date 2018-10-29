@@ -1,8 +1,9 @@
 @import "../../../resources/globals";
 
 .dropdown_item {
-  padding: 1em;
+  padding: 12px;
   background: $white;
+  white-space: nowrap;
 
   &:hover {
     background: $light-gray;
