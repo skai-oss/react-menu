@@ -11,8 +11,49 @@ import { SampleButton } from "./sample_button";
 import { SampleItem } from "./sample_item";
 import { SampleItemWithSeperator } from "./sample_item_seperator";
 import DropdownItem from "../src/components/dropdown/dropdown_item/dropdown_item";
+import { DIRECTIONS } from "../src/common/constants";
 
 storiesOf("Menu", module)
+  .add("Customized", () => (
+    <Menu className={styles.advanced_menu}>
+      <img
+        className={styles.advanced_logo}
+        src={"http://logo.kenh.net/logo/kenshoo.svg.png"}
+        height={40}
+      />
+      <SampleButton onClick={action("button clicked")}>Analysis</SampleButton>
+      <SampleDropDown label={"Management"} onClick={action("item clicked")}>
+        <Dropdown label="Accounts" direction={DIRECTIONS.RIGHT}>
+          <DropdownItem>account 1</DropdownItem>
+          <DropdownItem>account 2</DropdownItem>
+          <DropdownItem>account 3</DropdownItem>
+        </Dropdown>
+        <SampleItem>Automated Actions</SampleItem>
+        <SampleItem>Automation History</SampleItem>
+        <SampleItem>Change Log</SampleItem>
+        <SampleItem>Custom Metric</SampleItem>
+        <SampleItemWithSeperator>Bulk Actions</SampleItemWithSeperator>
+      </SampleDropDown>
+      <SampleDropDown label={"Optimizations"} onClick={action("item clicked")}>
+        <SampleItem>Halogen Inform</SampleItem>
+        <SampleItem>Budget Manager</SampleItem>
+      </SampleDropDown>
+      <SampleButton onClick={action("button clicked")}>Help</SampleButton>
+      <SampleDropDown label={"Agency 1"} onClick={action("item clicked")}>
+        <SampleItem>Agency 2</SampleItem>
+        <SampleItem>Agency 3</SampleItem>
+      </SampleDropDown>
+      <Separator />
+      <SampleDropDown
+        label={"user.name@kenshoo.com"}
+        onClick={action("item clicked")}
+        itemsClassName={styles.big_advanced_item}
+      >
+        <SampleItem className={styles.big_advanced_item}>Settings</SampleItem>
+        <SampleItem>Log out</SampleItem>
+      </SampleDropDown>
+    </Menu>
+  ))
   .add("Default view", () => (
     <Menu>
       <Button isDisabled={true}>Button</Button>
@@ -39,36 +80,6 @@ storiesOf("Menu", module)
       <Separator />
       <Button onClick={action("Button clicked")}>Right button 1</Button>
       <Button onClick={action("Button clicked")}>Right Button 2</Button>
-    </Menu>
-  ))
-  .add("Advanced", () => (
-    <Menu className={styles.advanced_menu}>
-      <img
-        className={styles.advanced_logo}
-        src={"http://logo.kenh.net/logo/kenshoo.svg.png"}
-        height={40}
-      />
-      <SampleButton onClick={action("button clicked")}>Analysis</SampleButton>
-      <SampleDropDown label={"Management"} onClick={action("item clicked")}>
-        <SampleItem>Accounts</SampleItem>
-        <SampleItem>Automated Actions</SampleItem>
-        <SampleItem>Automation History</SampleItem>
-        <SampleItem>Change Log</SampleItem>
-        <SampleItem>Custom Metric</SampleItem>
-        <SampleItemWithSeperator>Bulk Actions</SampleItemWithSeperator>
-      </SampleDropDown>
-      <SampleDropDown label={"Optimizations"} onClick={action("item clicked")}>
-        <SampleItem>Halogen Inform</SampleItem>
-        <SampleItem>Budget Manager</SampleItem>
-      </SampleDropDown>
-      <SampleButton onClick={action("button clicked")}>Help</SampleButton>
-      <SampleDropDown label={"Agency 1"} onClick={action("item clicked")}>
-        <SampleItem>Agency 2</SampleItem>
-        <SampleItem>Agency 3</SampleItem>
-      </SampleDropDown>
-      <SampleButton onClick={action("button clicked")} isDisabled={true}>
-        john.smith@kenshoo.com
-      </SampleButton>
     </Menu>
   ));
 

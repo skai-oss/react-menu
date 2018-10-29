@@ -3,15 +3,11 @@
 $advanced-button-width: 100px;
 
 .advanced_menu {
-  background-image: -webkit-linear-gradient(
-    left,
-    #2caf82 5%,
-    #0caee2 97%
-  ) !important;
+  background-color: #939393;
 }
 
 .advanced_logo {
-  padding: 5px;
+  padding: 5px 10px 5px 5px;
 }
 
 .advanced_width {
@@ -22,7 +18,7 @@ $advanced-button-width: 100px;
   color: white;
   padding: 20px;
   &:hover {
-    background: rgb(29, 145, 127);
+    background-color: #7e7e7e;
   }
 }
 
@@ -30,7 +26,7 @@ $advanced-button-width: 100px;
   color: white;
   padding: 20px;
   &:hover {
-    background: rgb(29, 145, 127);
+    background-color: #7e7e7e;
   }
 }
 
@@ -44,8 +40,12 @@ $advanced-button-width: 100px;
   color: grey;
 
   &:hover {
-    background: #dff8e5;
+    background: #e5e5e5;
   }
+}
+
+.big_advanced_item {
+  width: 180px;
 }
 
 .advanced_seperator_item {
