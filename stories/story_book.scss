@@ -37,6 +37,7 @@ $advanced-button-width: 100px;
 .advanced_item {
   padding: 10px;
   color: grey;
+  white-space: nowrap;
 
   &:hover {
     background: $light-gray;

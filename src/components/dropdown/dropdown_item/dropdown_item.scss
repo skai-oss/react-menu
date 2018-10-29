@@ -3,6 +3,7 @@
 .dropdown_item {
   padding: 12px;
   background: $white;
+  white-space: nowrap;
 
   &:hover {
     background: $light-gray;
