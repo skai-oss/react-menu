@@ -94,7 +94,7 @@ class Menu extends Component {
 
 #### Seperator
 
-USe this component to divide the menu to left and right sections
+Use this component to divide the menu to left and right sections
 
 | Name                            | Type                  | Default                                          | Description                                                                                                                                       
 |:-----                           |:-----                 |:-----                                            |:-----                                                                                                                                             
