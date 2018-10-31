@@ -17,6 +17,17 @@ describe("Dropdown component", () => {
     expect(cmp).toMatchSnapshot();
   });
 
+  test("snapshot with active", () => {
+    const cmp = shallow(
+      <Dropdown active>
+        <div>item 1</div>
+        <div>item 2</div>
+      </Dropdown>
+    );
+    cmp.instance().onMouseEnter(1);
+    expect(cmp).toMatchSnapshot();
+  });
+
   test("snapshot with disabled", () => {
     const cmp = renderer.create(<Dropdown isDisabled />);
     expect(cmp).toMatchSnapshot();
@@ -44,49 +55,32 @@ describe("Dropdown component", () => {
     expect(cmp).toMatchSnapshot();
   });
 
-  test("call to open() will change state", () => {
+  test("call to onMouseEnter will not change state when not active", () => {
     const mockFn = jest.fn();
     const cmp = shallow(
-      <Dropdown onClick={mockFn}>
+      <Dropdown>
         <div>item 1</div>
         <div>item 2</div>
       </Dropdown>
     );
 
-    expect(cmp.state("isOpen")).toEqual(false);
-    cmp.instance().open({
-      stopPropagation: () => {}
-    });
-    expect(cmp.state("isOpen")).toEqual(true);
+    expect(cmp.state("activeIndex")).toEqual(undefined);
+    cmp.instance().onMouseEnter(2);
+    expect(cmp.state("activeIndex")).toEqual(undefined);
   });
 
-  test("call to close() will change state", () => {
+  test("call to onMouseEnter will change state when active", () => {
     const mockFn = jest.fn();
     const cmp = shallow(
-      <Dropdown onClick={mockFn}>
+      <Dropdown active>
         <div>item 1</div>
         <div>item 2</div>
       </Dropdown>
     );
 
-    expect(cmp.state("isOpen")).toEqual(false);
-    cmp.instance().open({ stopPropagation: () => {} });
-    expect(cmp.state("isOpen")).toEqual(true);
-    cmp.instance().close({ stopPropagation: () => {} });
-
-    expect(cmp.state("isOpen")).toEqual(false);
-  });
-
-  test("click on dropdown will not trigger onClick", () => {
-    const mockFn = jest.fn();
-    const cmp = mount(
-      <Dropdown onClick={mockFn}>
-        <div>item 1</div>
-      </Dropdown>
-    );
-
-    cmp.simulate("click");
-    expect(mockFn).not.toHaveBeenCalled();
+    expect(cmp.state("activeIndex")).toEqual(undefined);
+    cmp.instance().onMouseEnter(2);
+    expect(cmp.state("activeIndex")).toEqual(2);
   });
 
   test("arrow direction - left", () => {
@@ -96,10 +90,6 @@ describe("Dropdown component", () => {
         <div>item 2</div>
       </Dropdown>
     );
-
-    cmp.setState({
-      isOpen: true
-    });
 
     expect(toJson(cmp)).toMatchSnapshot();
   });
@@ -112,10 +102,6 @@ describe("Dropdown component", () => {
       </Dropdown>
     );
 
-    cmp.setState({
-      isOpen: true
-    });
-
     expect(toJson(cmp)).toMatchSnapshot();
   });
 
@@ -126,10 +112,6 @@ describe("Dropdown component", () => {
         <div>item 2</div>
       </Dropdown>
     );
-
-    cmp.setState({
-      isOpen: true
-    });
 
     expect(toJson(cmp)).toMatchSnapshot();
   });
@@ -142,10 +124,6 @@ describe("Dropdown component", () => {
       </Dropdown>
     );
 
-    cmp.setState({
-      isOpen: true
-    });
-
     expect(toJson(cmp)).toMatchSnapshot();
   });
 
@@ -156,10 +134,6 @@ describe("Dropdown component", () => {
         <div>item 2</div>
       </Dropdown>
     );
-
-    cmp.setState({
-      isOpen: true
-    });
 
     expect(toJson(cmp)).toMatchSnapshot();
   });

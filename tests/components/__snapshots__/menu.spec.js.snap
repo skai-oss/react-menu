@@ -4,7 +4,14 @@ exports[`Menu component recieves className 1`] = `
 <div
   className="menu TEST_CLASS"
 >
-  TEST
+  <div
+    active={false}
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    openTabClassName={false}
+  >
+    TEST
+  </div>
 </div>
 `;
 
@@ -12,6 +19,13 @@ exports[`Menu component renders children 1`] = `
 <div
   className="menu"
 >
-  TEST
+  <div
+    active={false}
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+    openTabClassName={false}
+  >
+    TEST
+  </div>
 </div>
 `;

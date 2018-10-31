@@ -2,6 +2,7 @@
 
 exports[`Dropdown component arrow direction - bottom 1`] = `
 <Dropdown
+  active={false}
   className=""
   direction="bottom"
   disabledClassName=""
@@ -12,8 +13,6 @@ exports[`Dropdown component arrow direction - bottom 1`] = `
 >
   <div
     className="dropdown"
-    onClick={[Function]}
-    onMouseLeave={[Function]}
   >
     <DropdownTitle
       className=""
@@ -72,22 +71,13 @@ exports[`Dropdown component arrow direction - bottom 1`] = `
         </DropdownIcon>
       </span>
     </DropdownTitle>
-    <div
-      className="dropdown_items dropdown_items_bottom"
-    >
-      <div>
-        item 1
-      </div>
-      <div>
-        item 2
-      </div>
-    </div>
   </div>
 </Dropdown>
 `;
 
 exports[`Dropdown component arrow direction - bottom_left 1`] = `
 <Dropdown
+  active={false}
   className=""
   direction="bottom_left"
   disabledClassName=""
@@ -98,8 +88,6 @@ exports[`Dropdown component arrow direction - bottom_left 1`] = `
 >
   <div
     className="dropdown"
-    onClick={[Function]}
-    onMouseLeave={[Function]}
   >
     <DropdownTitle
       className=""
@@ -158,22 +146,13 @@ exports[`Dropdown component arrow direction - bottom_left 1`] = `
         </DropdownIcon>
       </span>
     </DropdownTitle>
-    <div
-      className="dropdown_items dropdown_items_bottom_left"
-    >
-      <div>
-        item 1
-      </div>
-      <div>
-        item 2
-      </div>
-    </div>
   </div>
 </Dropdown>
 `;
 
 exports[`Dropdown component arrow direction - left 1`] = `
 <Dropdown
+  active={false}
   className=""
   direction="left"
   disabledClassName=""
@@ -184,8 +163,6 @@ exports[`Dropdown component arrow direction - left 1`] = `
 >
   <div
     className="dropdown"
-    onClick={[Function]}
-    onMouseLeave={[Function]}
   >
     <DropdownTitle
       className=""
@@ -244,22 +221,13 @@ exports[`Dropdown component arrow direction - left 1`] = `
         TEST
       </span>
     </DropdownTitle>
-    <div
-      className="dropdown_items dropdown_items_left"
-    >
-      <div>
-        item 1
-      </div>
-      <div>
-        item 2
-      </div>
-    </div>
   </div>
 </Dropdown>
 `;
 
 exports[`Dropdown component arrow direction - right 1`] = `
 <Dropdown
+  active={false}
   className=""
   direction="right"
   disabledClassName=""
@@ -270,8 +238,6 @@ exports[`Dropdown component arrow direction - right 1`] = `
 >
   <div
     className="dropdown"
-    onClick={[Function]}
-    onMouseLeave={[Function]}
   >
     <DropdownTitle
       className=""
@@ -330,22 +296,13 @@ exports[`Dropdown component arrow direction - right 1`] = `
         </DropdownIcon>
       </span>
     </DropdownTitle>
-    <div
-      className="dropdown_items dropdown_items_right"
-    >
-      <div>
-        item 1
-      </div>
-      <div>
-        item 2
-      </div>
-    </div>
   </div>
 </Dropdown>
 `;
 
 exports[`Dropdown component arrow direction - unknown 1`] = `
 <Dropdown
+  active={false}
   className=""
   direction="TEST"
   disabledClassName=""
@@ -356,8 +313,6 @@ exports[`Dropdown component arrow direction - unknown 1`] = `
 >
   <div
     className="dropdown"
-    onClick={[Function]}
-    onMouseLeave={[Function]}
   >
     <DropdownTitle
       className=""
@@ -416,16 +371,6 @@ exports[`Dropdown component arrow direction - unknown 1`] = `
         </DropdownIcon>
       </span>
     </DropdownTitle>
-    <div
-      className="dropdown_items dropdown_items_bottom"
-    >
-      <div>
-        item 1
-      </div>
-      <div>
-        item 2
-      </div>
-    </div>
   </div>
 </Dropdown>
 `;
@@ -433,8 +378,6 @@ exports[`Dropdown component arrow direction - unknown 1`] = `
 exports[`Dropdown component default snapshot 1`] = `
 <div
   className="dropdown"
-  onClick={[Function]}
-  onMouseLeave={[Function]}
 >
   <span
     className="dropdown_title"
@@ -467,11 +410,277 @@ exports[`Dropdown component default snapshot 1`] = `
 </div>
 `;
 
+exports[`Dropdown component snapshot with active 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Dropdown
+    active={true}
+    className=""
+    disabledClassName=""
+    iconClassName=""
+    isDisabled={false}
+    itemsClassName=""
+    label=""
+  >
+    <div>
+      item 1
+    </div>
+    <div>
+      item 2
+    </div>
+  </Dropdown>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <DropdownTitle
+          className=""
+          direction="bottom"
+          disabledClassName=""
+          iconClassName=""
+          isDisabled={false}
+        >
+          
+        </DropdownTitle>,
+        <div
+          className="dropdown_items dropdown_items_bottom"
+        >
+          <div
+            active={false}
+            onMouseEnter={[Function]}
+          >
+            item 1
+          </div>
+          <div
+            active={true}
+            onMouseEnter={[Function]}
+          >
+            item 2
+          </div>
+        </div>,
+      ],
+      "className": "dropdown",
+      "onClick": undefined,
+      "onMouseEnter": undefined,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": "",
+          "className": "",
+          "direction": "bottom",
+          "disabledClassName": "",
+          "iconClassName": "",
+          "isDisabled": false,
+        },
+        "ref": null,
+        "rendered": "",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              active={false}
+              onMouseEnter={[Function]}
+            >
+              item 1
+            </div>,
+            <div
+              active={true}
+              onMouseEnter={[Function]}
+            >
+              item 2
+            </div>,
+          ],
+          "className": "dropdown_items dropdown_items_bottom",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": ".0",
+            "nodeType": "host",
+            "props": Object {
+              "active": false,
+              "children": "item 1",
+              "onMouseEnter": [Function],
+            },
+            "ref": null,
+            "rendered": "item 1",
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": ".1",
+            "nodeType": "host",
+            "props": Object {
+              "active": true,
+              "children": "item 2",
+              "onMouseEnter": [Function],
+            },
+            "ref": null,
+            "rendered": "item 2",
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <DropdownTitle
+            className=""
+            direction="bottom"
+            disabledClassName=""
+            iconClassName=""
+            isDisabled={false}
+          >
+            
+          </DropdownTitle>,
+          <div
+            className="dropdown_items dropdown_items_bottom"
+          >
+            <div
+              active={false}
+              onMouseEnter={[Function]}
+            >
+              item 1
+            </div>
+            <div
+              active={true}
+              onMouseEnter={[Function]}
+            >
+              item 2
+            </div>
+          </div>,
+        ],
+        "className": "dropdown",
+        "onClick": undefined,
+        "onMouseEnter": undefined,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "",
+            "className": "",
+            "direction": "bottom",
+            "disabledClassName": "",
+            "iconClassName": "",
+            "isDisabled": false,
+          },
+          "ref": null,
+          "rendered": "",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                active={false}
+                onMouseEnter={[Function]}
+              >
+                item 1
+              </div>,
+              <div
+                active={true}
+                onMouseEnter={[Function]}
+              >
+                item 2
+              </div>,
+            ],
+            "className": "dropdown_items dropdown_items_bottom",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": ".0",
+              "nodeType": "host",
+              "props": Object {
+                "active": false,
+                "children": "item 1",
+                "onMouseEnter": [Function],
+              },
+              "ref": null,
+              "rendered": "item 1",
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": ".1",
+              "nodeType": "host",
+              "props": Object {
+                "active": true,
+                "children": "item 2",
+                "onMouseEnter": [Function],
+              },
+              "ref": null,
+              "rendered": "item 2",
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;
+
 exports[`Dropdown component snapshot with children 1`] = `
 <div
   className="dropdown"
-  onClick={[Function]}
-  onMouseLeave={[Function]}
 >
   <span
     className="dropdown_title"
@@ -507,8 +716,6 @@ exports[`Dropdown component snapshot with children 1`] = `
 exports[`Dropdown component snapshot with className 1`] = `
 <div
   className="dropdown className"
-  onClick={[Function]}
-  onMouseLeave={[Function]}
 >
   <span
     className="dropdown_title"
@@ -544,8 +751,6 @@ exports[`Dropdown component snapshot with className 1`] = `
 exports[`Dropdown component snapshot with disabled 1`] = `
 <div
   className="dropdown disabled"
-  onClick={[Function]}
-  onMouseLeave={[Function]}
 >
   <span
     className="dropdown_title"
@@ -581,8 +786,6 @@ exports[`Dropdown component snapshot with disabled 1`] = `
 exports[`Dropdown component snapshot with disabledClassName 1`] = `
 <div
   className="dropdown disabledClassName"
-  onClick={[Function]}
-  onMouseLeave={[Function]}
 >
   <span
     className="dropdown_title"
@@ -618,8 +821,6 @@ exports[`Dropdown component snapshot with disabledClassName 1`] = `
 exports[`Dropdown component snapshot with label 1`] = `
 <div
   className="dropdown"
-  onClick={[Function]}
-  onMouseLeave={[Function]}
 >
   <span
     className="dropdown_title"

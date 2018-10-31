@@ -15,7 +15,11 @@ import { DIRECTIONS } from "../src/common/constants";
 
 storiesOf("Menu", module)
   .add("Customized", () => (
-    <Menu className={styles.advanced_menu}>
+    <Menu
+      className={styles.advanced_menu}
+      openTab={2}
+      openTabClassName={styles.advanced_dropdown_open}
+    >
       <img
         className={styles.advanced_logo}
         src={"https://cdn.kenshoo.com/resources/logos/kenshoo-logo.svg"}
