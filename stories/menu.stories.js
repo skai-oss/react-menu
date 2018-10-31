@@ -53,7 +53,7 @@ storiesOf("Menu", module)
         onClick={action("item clicked")}
         itemsClassName={styles.big_advanced_item}
       >
-        <SampleItem className={styles.big_advanced_item}>Settings</SampleItem>
+        <SampleItem>Settings</SampleItem>
         <SampleItem>Log out</SampleItem>
       </SampleDropDown>
     </Menu>
