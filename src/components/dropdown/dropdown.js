@@ -32,9 +32,7 @@ class Dropdown extends Component {
     active: false
   };
 
-  state = {
-    activeIndex: undefined
-  };
+  state = {};
 
   static getDerivedStateFromProps(props, state) {
     if (!props.active) {
@@ -61,6 +59,12 @@ class Dropdown extends Component {
     this.props.active && this.setState({ activeIndex });
   };
 
+  onClick = event => {
+    const { setActive, onClick } = this.props;
+    onClick && onClick();
+    setActive(event);
+  };
+
   render() {
     const {
       className,
@@ -71,9 +75,9 @@ class Dropdown extends Component {
       isDisabled,
       children,
       direction,
-      onClick,
       onMouseEnter,
-      active
+      active,
+      activeClassName
     } = this.props;
 
     const { activeIndex } = this.state;
@@ -81,9 +85,10 @@ class Dropdown extends Component {
     return (
       <div
         className={classnames(styles.dropdown, className, {
-          [disabledClassName || styles.disabled]: isDisabled
+          [disabledClassName || styles.disabled]: isDisabled,
+          [activeClassName]: active
         })}
-        onClick={onClick}
+        onClick={this.onClick}
         onMouseEnter={onMouseEnter}
       >
         <DropdownTitle
@@ -102,14 +107,11 @@ class Dropdown extends Component {
               itemsClassName
             )}
           >
-            {React.Children.map(
-              children,
-              (child, index) =>
-                child &&
-                React.cloneElement(child, {
-                  onMouseEnter: () => this.onMouseEnter(index),
-                  active: activeIndex === index
-                })
+            {React.Children.map(children, (child, index) =>
+              React.cloneElement(child, {
+                onMouseEnter: () => this.onMouseEnter(index),
+                active: activeIndex === index
+              })
             )}
           </div>
         )}

@@ -13,6 +13,7 @@ exports[`Dropdown component arrow direction - bottom 1`] = `
 >
   <div
     className="dropdown"
+    onClick={[Function]}
   >
     <DropdownTitle
       className=""
@@ -88,6 +89,7 @@ exports[`Dropdown component arrow direction - bottom_left 1`] = `
 >
   <div
     className="dropdown"
+    onClick={[Function]}
   >
     <DropdownTitle
       className=""
@@ -163,6 +165,7 @@ exports[`Dropdown component arrow direction - left 1`] = `
 >
   <div
     className="dropdown"
+    onClick={[Function]}
   >
     <DropdownTitle
       className=""
@@ -238,6 +241,7 @@ exports[`Dropdown component arrow direction - right 1`] = `
 >
   <div
     className="dropdown"
+    onClick={[Function]}
   >
     <DropdownTitle
       className=""
@@ -313,6 +317,7 @@ exports[`Dropdown component arrow direction - unknown 1`] = `
 >
   <div
     className="dropdown"
+    onClick={[Function]}
   >
     <DropdownTitle
       className=""
@@ -378,6 +383,7 @@ exports[`Dropdown component arrow direction - unknown 1`] = `
 exports[`Dropdown component default snapshot 1`] = `
 <div
   className="dropdown"
+  onClick={[Function]}
 >
   <span
     className="dropdown_title"
@@ -468,8 +474,8 @@ ShallowWrapper {
           </div>
         </div>,
       ],
-      "className": "dropdown",
-      "onClick": undefined,
+      "className": "dropdown undefined",
+      "onClick": [Function],
       "onMouseEnter": undefined,
     },
     "ref": null,
@@ -578,8 +584,8 @@ ShallowWrapper {
             </div>
           </div>,
         ],
-        "className": "dropdown",
-        "onClick": undefined,
+        "className": "dropdown undefined",
+        "onClick": [Function],
         "onMouseEnter": undefined,
       },
       "ref": null,
@@ -681,6 +687,7 @@ ShallowWrapper {
 exports[`Dropdown component snapshot with children 1`] = `
 <div
   className="dropdown"
+  onClick={[Function]}
 >
   <span
     className="dropdown_title"
@@ -716,6 +723,7 @@ exports[`Dropdown component snapshot with children 1`] = `
 exports[`Dropdown component snapshot with className 1`] = `
 <div
   className="dropdown className"
+  onClick={[Function]}
 >
   <span
     className="dropdown_title"
@@ -751,6 +759,7 @@ exports[`Dropdown component snapshot with className 1`] = `
 exports[`Dropdown component snapshot with disabled 1`] = `
 <div
   className="dropdown disabled"
+  onClick={[Function]}
 >
   <span
     className="dropdown_title"
@@ -786,6 +795,7 @@ exports[`Dropdown component snapshot with disabled 1`] = `
 exports[`Dropdown component snapshot with disabledClassName 1`] = `
 <div
   className="dropdown disabledClassName"
+  onClick={[Function]}
 >
   <span
     className="dropdown_title"
@@ -821,6 +831,7 @@ exports[`Dropdown component snapshot with disabledClassName 1`] = `
 exports[`Dropdown component snapshot with label 1`] = `
 <div
   className="dropdown"
+  onClick={[Function]}
 >
   <span
     className="dropdown_title"

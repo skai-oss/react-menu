@@ -34,22 +34,17 @@ export default class Menu extends PureComponent {
   };
 
   render() {
-    const { className, children, openTabClassName } = this.props;
+    const { className, children } = this.props;
     const { activeIndex } = this.state;
 
     return (
       <div className={classnames(styles.menu, className)}>
-        {React.Children.map(
-          children,
-          (child, index) =>
-            child &&
-            React.cloneElement(child, {
-              onMouseEnter: () =>
-                this.onMouseEnter(child.props.children, index),
-              onClick: event => this.toggleActive(event, index),
-              active: activeIndex === index,
-              openTabClassName: activeIndex === index && openTabClassName
-            })
+        {React.Children.map(children, (child, index) =>
+          React.cloneElement(child, {
+            onMouseEnter: () => this.onMouseEnter(child.props.children, index),
+            setActive: event => this.toggleActive(event, index),
+            active: activeIndex === index
+          })
         )}
       </div>
     );

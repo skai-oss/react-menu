@@ -6,7 +6,7 @@ import classnames from "classnames";
 export const SampleDropDown = ({ children, itemsClassName, ...props }) => {
   return (
     <Dropdown
-      className={classnames(style.advanced_dropdown, props.openTabClassName)}
+      className={style.advanced_dropdown}
       itemsClassName={classnames(style.advanced_dropdown_items, itemsClassName)}
       {...props}
     >
