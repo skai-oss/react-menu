@@ -10,26 +10,32 @@ export default class Menu extends PureComponent {
   };
 
   componentDidMount() {
-    if (this.props.openTab) {
+    const { activeIndex } = this.props;
+    if (activeIndex) {
       window.addEventListener("click", this.toggleActive);
-      this.setState({ activeIndex: this.props.openTab, active: true });
+      this.setState({ activeIndex: activeIndex, active: true });
     }
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    if (this.state.activeIndex !== nextProps.openTab) {
-      this.setState({
-        activeIndex: nextProps.openTab,
-        active: !!nextProps.openTab
-      });
+  componentDidUpdate(prevProps) {
+    if (prevProps.activeIndex !== this.props.activeIndex) {
       window.addEventListener("click", this.toggleActive);
+    }
+  }
+
+  static getDerivedStateFromProps(props, state) {
+    if (state.activeIndex !== props.activeIndex && state.activeIndex) {
+      return { activeIndex: state.activeIndex, active: true };
+    } else {
+      return null;
     }
   }
 
   onMouseEnter = (children, activeIndex) => {
-    this.state.active &&
-      Array.isArray(children) &&
+    if (this.state.active && Array.isArray(children)) {
       this.setState({ activeIndex });
+      this.onChange(activeIndex);
+    }
   };
 
   toggleActive = (event, activeIndex) => {
@@ -37,10 +43,16 @@ export default class Menu extends PureComponent {
     if (this.state.active) {
       window.removeEventListener("click", this.toggleActive);
       this.setState({ active: false, activeIndex: undefined });
+      this.onChange(undefined);
     } else {
       window.addEventListener("click", this.toggleActive);
       this.setState({ active: true, activeIndex });
+      this.onChange(activeIndex);
     }
+  };
+
+  onChange = activeIndex => {
+    this.props.onChange && this.props.onChange(activeIndex);
   };
 
   render() {
