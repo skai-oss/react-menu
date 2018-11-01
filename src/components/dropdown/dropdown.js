@@ -17,7 +17,8 @@ class Dropdown extends Component {
     label: PropTypes.string,
     isDisabled: PropTypes.bool,
     direction: PropTypes.string,
-    children: PropTypes.node
+    children: PropTypes.node,
+    active: PropTypes.bool
   };
 
   static defaultProps = {
@@ -27,24 +28,18 @@ class Dropdown extends Component {
     iconClassName: "",
     label: "",
     isDisabled: false,
-    children: []
+    children: [],
+    active: false
   };
 
-  state = {
-    isOpen: false
-  };
+  state = {};
 
-  open = e => {
-    e.stopPropagation();
-
-    if (this.props.isDisabled) {
-      return;
+  static getDerivedStateFromProps(props, state) {
+    if (!props.active) {
+      return { activeIndex: undefined };
     }
-
-    this.setState({ isOpen: true });
-  };
-
-  close = () => this.setState({ isOpen: false });
+    return null;
+  }
 
   getDirectionClassName = () => {
     switch (this.props.direction) {
@@ -60,6 +55,16 @@ class Dropdown extends Component {
     }
   };
 
+  onMouseEnter = activeIndex => {
+    this.props.active && this.setState({ activeIndex });
+  };
+
+  onClick = event => {
+    const { setActive, onClick } = this.props;
+    onClick && onClick();
+    setActive(event);
+  };
+
   render() {
     const {
       className,
@@ -69,18 +74,22 @@ class Dropdown extends Component {
       label,
       isDisabled,
       children,
-      direction
+      direction,
+      onMouseEnter,
+      active,
+      activeClassName
     } = this.props;
 
-    const { isOpen } = this.state;
+    const { activeIndex } = this.state;
 
     return (
       <div
         className={classnames(styles.dropdown, className, {
-          [disabledClassName || styles.disabled]: isDisabled
+          [disabledClassName || styles.disabled]: isDisabled,
+          [activeClassName]: active
         })}
-        onClick={isOpen ? this.close : this.open}
-        onMouseLeave={this.close}
+        onClick={this.onClick}
+        onMouseEnter={onMouseEnter}
       >
         <DropdownTitle
           direction={direction}
@@ -90,7 +99,7 @@ class Dropdown extends Component {
         >
           {label}
         </DropdownTitle>
-        {isOpen && (
+        {active && (
           <div
             className={classnames(
               styles.dropdown_items,
@@ -98,7 +107,12 @@ class Dropdown extends Component {
               itemsClassName
             )}
           >
-            {children}
+            {React.Children.map(children, (child, index) =>
+              React.cloneElement(child, {
+                onMouseEnter: () => this.onMouseEnter(index),
+                active: activeIndex === index
+              })
+            )}
           </div>
         )}
       </div>

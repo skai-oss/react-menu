@@ -29,6 +29,22 @@ $advanced-button-width: 100px;
   }
 }
 
+.advanced_dropdown_open {
+  color: $dark-gray-3;
+  background-color: white;
+  &:hover {
+    background-color: white;
+  }
+}
+
+.advanced_dropdown_selected {
+  color: red;
+  background-color: white;
+  &:hover {
+    background-color: white;
+  }
+}
+
 .advanced_dropdown_items {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
   color: grey;

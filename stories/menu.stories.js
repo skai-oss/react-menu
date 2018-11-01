@@ -15,14 +15,18 @@ import { DIRECTIONS } from "../src/common/constants";
 
 storiesOf("Menu", module)
   .add("Customized", () => (
-    <Menu className={styles.advanced_menu}>
+    <Menu className={styles.advanced_menu} openTab={2}>
       <img
         className={styles.advanced_logo}
         src={"https://cdn.kenshoo.com/resources/logos/kenshoo-logo.svg"}
         height={40}
       />
       <SampleButton onClick={action("button clicked")}>Analysis</SampleButton>
-      <SampleDropDown label={"Management"} onClick={action("item clicked")}>
+      <SampleDropDown
+        label={"Management"}
+        onClick={action("item clicked")}
+        activeClassName={styles.advanced_dropdown_open}
+      >
         <Dropdown label="Accounts" direction={DIRECTIONS.RIGHT}>
           <DropdownItem>account 1</DropdownItem>
           <DropdownItem>account 2</DropdownItem>
@@ -34,12 +38,20 @@ storiesOf("Menu", module)
         <SampleItem>Custom Metric</SampleItem>
         <SampleItemWithSeperator>Bulk Actions</SampleItemWithSeperator>
       </SampleDropDown>
-      <SampleDropDown label={"Optimizations"} onClick={action("item clicked")}>
+      <SampleDropDown
+        label={"Optimizations"}
+        onClick={action("item clicked")}
+        activeClassName={styles.advanced_dropdown_open}
+      >
         <SampleItem>Halogen Inform</SampleItem>
         <SampleItem>Budget Manager</SampleItem>
       </SampleDropDown>
       <SampleButton onClick={action("button clicked")}>Help</SampleButton>
-      <SampleDropDown label={"Agency 1"} onClick={action("item clicked")}>
+      <SampleDropDown
+        label={"Agency 1"}
+        onClick={action("item clicked")}
+        activeClassName={styles.advanced_dropdown_open}
+      >
         <SampleItem>Agency 2</SampleItem>
         <SampleItem>Agency 3</SampleItem>
       </SampleDropDown>
@@ -48,8 +60,9 @@ storiesOf("Menu", module)
         label={"user.name@kenshoo.com"}
         onClick={action("item clicked")}
         itemsClassName={styles.big_advanced_item}
+        activeClassName={styles.advanced_dropdown_open}
       >
-        <SampleItem className={styles.big_advanced_item}>Settings</SampleItem>
+        <SampleItem>Settings</SampleItem>
         <SampleItem>Log out</SampleItem>
       </SampleDropDown>
     </Menu>
