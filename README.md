@@ -13,7 +13,6 @@ React menu is a simple menu container component that helps a user create a simpl
 </p>
 
 
-
 ## Installation
  
  **Installation using npm:**
