@@ -16,6 +16,16 @@ export default class Menu extends PureComponent {
     }
   }
 
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    if (this.state.activeIndex !== nextProps.openTab) {
+      this.setState({
+        activeIndex: nextProps.openTab,
+        active: !!nextProps.openTab
+      });
+      window.addEventListener("click", this.toggleActive);
+    }
+  }
+
   onMouseEnter = (children, activeIndex) => {
     this.state.active &&
       Array.isArray(children) &&
