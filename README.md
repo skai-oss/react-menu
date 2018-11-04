@@ -4,7 +4,7 @@
 
 **Kenshoo menu component**
 
-**[react-menu demo](https://kenshoo.github.io/react-menu)**
+**[react-menu demo](https://kenshoo.github.io/react-menu/)**
 
 React menu is a simple menu container component that helps a user create a simple menu bar
 
