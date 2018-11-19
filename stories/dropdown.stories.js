@@ -3,10 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { boolean, text, withKnobs } from "@storybook/addon-knobs";
 
-import { DIRECTIONS } from "../src/common/constants";
-import { Menu } from "../src";
-import Dropdown from "../src/components/dropdown/dropdown";
-import DropdownItem from "../src/components/dropdown/dropdown_item/dropdown_item";
+import Menu, { Dropdown, DIRECTIONS, DropdownItem } from "../src/";
 
 import styles from "./story_book.scss";
 
