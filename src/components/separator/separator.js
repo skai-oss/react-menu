@@ -11,3 +11,5 @@ export const Separator = ({ className }) => {
 Separator.propTypes = {
   className: PropTypes.string
 };
+
+export default Separator;

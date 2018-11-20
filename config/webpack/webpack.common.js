@@ -4,16 +4,9 @@ const path = require("path");
 const { babelLoader, cssLoader, mdLoader } = require("./loaders");
 
 module.exports = {
-  entry: glob.sync("./src/components/**/*.js").reduce(
-    (entries, entry) =>
-      Object.assign(entries, {
-        [entry
-          .split("/")
-          .pop()
-          .replace(".js", "")]: entry
-      }),
-    { index: path.join(__dirname, "../../src/index.js") }
-  ),
+  entry: {
+    index: "./src/index.js"
+  },
   externals: {
     react: "react"
   },

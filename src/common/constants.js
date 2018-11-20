@@ -4,3 +4,5 @@ export const DIRECTIONS = {
   BOTTOM: "bottom",
   BOTTOM_LEFT: "bottom_left"
 };
+
+export default DIRECTIONS;

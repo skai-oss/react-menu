@@ -31,8 +31,12 @@ React menu is a simple menu container component that helps a user create a simpl
  
 ```jsx
 import React, { Component } from "react";
-import Menu from "@kenshooui/react-menu";
-import {Button, DropDown, Seperator, RightMenuContainer} from "../src";
+import Menu, {
+    Button, 
+    Dropdown, 
+    Seperator, 
+    DropdownItem, 
+} from ""@kenshooui/react-menu";
 
 class Menu extends Component {
   constructor(props) {
@@ -42,17 +46,16 @@ class Menu extends Component {
   render() {
      <Menu>
             <Button>Analysis</Button>
-            <DropDown label="options">
-                <div>option 1</div>
-                 <Separator/>
-                <div>Option 2/div>
-            </DropDown>
+            <Dropdown label="options">
+                <DropdownItem>option 1</DropdownItem>
+                <DropdownItem>Option 2/DropdownItem>
+            </Dropdown>
             <Separator />
             <Button>Help</Button>
-            <DropDown label="more options">
-                <div>option 1</div>
-                <div>Option 2</div>
-            </DropDown>
+            <Dropdown label="more options">
+                <DropdownItem>option 1</DropdownItem>
+                <DropdownItem>Option 2</DropdownItem>
+            </Dropdown>
             <div>I'm a div</div>
         </Menu>
   }
