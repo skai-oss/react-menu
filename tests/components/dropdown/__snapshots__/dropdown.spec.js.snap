@@ -37,19 +37,16 @@ exports[`Dropdown component arrow direction - bottom 1`] = `
           >
             <svg
               className="icon"
-              height="24"
-              viewBox="0 0 24 24"
-              width="24"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              viewBox="0 0 448 512"
+              width="1em"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M15 11l-3.009 3.004L9 11"
-                fill="none"
-                fillRule="evenodd"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1"
+                d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
               />
             </svg>
           </DownIcon>
@@ -97,19 +94,16 @@ exports[`Dropdown component arrow direction - bottom_left 1`] = `
           >
             <svg
               className="icon"
-              height="24"
-              viewBox="0 0 24 24"
-              width="24"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              viewBox="0 0 448 512"
+              width="1em"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M15 11l-3.009 3.004L9 11"
-                fill="none"
-                fillRule="evenodd"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1"
+                d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
               />
             </svg>
           </DownIcon>
@@ -277,19 +271,16 @@ exports[`Dropdown component arrow direction - unknown 1`] = `
           >
             <svg
               className="icon"
-              height="24"
-              viewBox="0 0 24 24"
-              width="24"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              strokeWidth="0"
+              viewBox="0 0 448 512"
+              width="1em"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M15 11l-3.009 3.004L9 11"
-                fill="none"
-                fillRule="evenodd"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1"
+                d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
               />
             </svg>
           </DownIcon>
@@ -311,19 +302,16 @@ exports[`Dropdown component default snapshot 1`] = `
     
     <svg
       className="icon"
-      height="24"
-      viewBox="0 0 24 24"
-      width="24"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      viewBox="0 0 448 512"
+      width="1em"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M15 11l-3.009 3.004L9 11"
-        fill="none"
-        fillRule="evenodd"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1"
+        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
       />
     </svg>
   </span>
@@ -609,19 +597,16 @@ exports[`Dropdown component snapshot with children 1`] = `
     
     <svg
       className="icon"
-      height="24"
-      viewBox="0 0 24 24"
-      width="24"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      viewBox="0 0 448 512"
+      width="1em"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M15 11l-3.009 3.004L9 11"
-        fill="none"
-        fillRule="evenodd"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1"
+        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
       />
     </svg>
   </span>
@@ -639,19 +624,16 @@ exports[`Dropdown component snapshot with className 1`] = `
     
     <svg
       className="icon"
-      height="24"
-      viewBox="0 0 24 24"
-      width="24"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      viewBox="0 0 448 512"
+      width="1em"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M15 11l-3.009 3.004L9 11"
-        fill="none"
-        fillRule="evenodd"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1"
+        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
       />
     </svg>
   </span>
@@ -669,19 +651,16 @@ exports[`Dropdown component snapshot with disabled 1`] = `
     
     <svg
       className="icon disabled"
-      height="24"
-      viewBox="0 0 24 24"
-      width="24"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      viewBox="0 0 448 512"
+      width="1em"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M15 11l-3.009 3.004L9 11"
-        fill="none"
-        fillRule="evenodd"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1"
+        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
       />
     </svg>
   </span>
@@ -699,19 +678,16 @@ exports[`Dropdown component snapshot with disabledClassName 1`] = `
     
     <svg
       className="icon disabledClassName"
-      height="24"
-      viewBox="0 0 24 24"
-      width="24"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      viewBox="0 0 448 512"
+      width="1em"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M15 11l-3.009 3.004L9 11"
-        fill="none"
-        fillRule="evenodd"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1"
+        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
       />
     </svg>
   </span>
@@ -729,19 +705,16 @@ exports[`Dropdown component snapshot with label 1`] = `
     menu1
     <svg
       className="icon"
-      height="24"
-      viewBox="0 0 24 24"
-      width="24"
+      fill="currentColor"
+      height="1em"
+      stroke="currentColor"
+      strokeWidth="0"
+      viewBox="0 0 448 512"
+      width="1em"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M15 11l-3.009 3.004L9 11"
-        fill="none"
-        fillRule="evenodd"
-        stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1"
+        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
       />
     </svg>
   </span>
