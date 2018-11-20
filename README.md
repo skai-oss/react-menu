@@ -39,10 +39,6 @@ import Menu, {
 } from ""@kenshooui/react-menu";
 
 class Menu extends Component {
-  constructor(props) {
-    super(props);
-  }
-  
   render() {
      <Menu>
             <Button>Analysis</Button>
