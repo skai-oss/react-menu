@@ -3,15 +3,18 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { withKnobs } from "@storybook/addon-knobs";
 
-import { Button, Menu, Separator } from "../src/";
+import Menu, {
+  Button,
+  Separator,
+  Dropdown,
+  DIRECTIONS,
+  DropdownItem
+} from "../src/";
 import { SampleDropDown } from "./sample_dropdown";
 import styles from "./story_book.scss";
-import Dropdown from "../src/components/dropdown/dropdown";
 import { SampleButton } from "./sample_button";
 import { SampleItem } from "./sample_item";
 import { SampleItemWithSeperator } from "./sample_item_seperator";
-import DropdownItem from "../src/components/dropdown/dropdown_item/dropdown_item";
-import { DIRECTIONS } from "../src/common/constants";
 
 storiesOf("Menu", module)
   .add("Customized", () => (
