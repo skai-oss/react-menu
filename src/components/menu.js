@@ -6,26 +6,41 @@ import styles from "./menu.scss";
 export default class Menu extends PureComponent {
   state = {
     active: false,
-    activeIndex: undefined
+    activeIndex: undefined,
+    innerUpdate: false
   };
 
   componentDidMount() {
     const { activeIndex } = this.props;
     if (activeIndex) {
       window.addEventListener("click", this.toggleActive);
-      this.setState({ activeIndex: activeIndex, active: true });
+      this.setState({
+        activeIndex: activeIndex,
+        active: true,
+        innerUpdate: false
+      });
     }
   }
 
-  componentDidUpdate(prevProps) {
-    if (prevProps.activeIndex !== this.props.activeIndex) {
+  componentDidUpdate() {
+    if (this.state.active) {
       window.addEventListener("click", this.toggleActive);
     }
   }
 
   static getDerivedStateFromProps(props, state) {
-    if (state.activeIndex !== props.activeIndex && state.activeIndex) {
-      return { activeIndex: state.activeIndex, active: true };
+    if (state.innerUpdate && state.activeIndex !== props.activeIndex) {
+      return {
+        activeIndex: state.activeIndex,
+        active: state.active,
+        innerUpdate: false
+      };
+    } else if (!state.innerUpdate && state.activeIndex !== props.activeIndex) {
+      return {
+        activeIndex: props.activeIndex,
+        active: props.activeIndex ? true : false,
+        innerUpdate: false
+      };
     } else {
       return null;
     }
@@ -33,7 +48,7 @@ export default class Menu extends PureComponent {
 
   onMouseEnter = (children, activeIndex) => {
     if (this.state.active && Array.isArray(children)) {
-      this.setState({ activeIndex });
+      this.setState({ innerUpdate: true, activeIndex });
       this.onChange(activeIndex);
     }
   };
@@ -42,11 +57,15 @@ export default class Menu extends PureComponent {
     event.stopPropagation();
     if (this.state.active) {
       window.removeEventListener("click", this.toggleActive);
-      this.setState({ active: false, activeIndex: undefined });
+      this.setState({
+        active: false,
+        activeIndex: undefined,
+        innerUpdate: true
+      });
       this.onChange(undefined);
     } else {
       window.addEventListener("click", this.toggleActive);
-      this.setState({ active: true, activeIndex });
+      this.setState({ active: true, innerUpdate: true, activeIndex });
       this.onChange(activeIndex);
     }
   };

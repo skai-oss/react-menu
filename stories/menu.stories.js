@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { withKnobs } from "@storybook/addon-knobs";
@@ -97,7 +97,8 @@ storiesOf("Menu", module)
       <Button onClick={action("Button clicked")}>Right button 1</Button>
       <Button onClick={action("Button clicked")}>Right Button 2</Button>
     </Menu>
-  ));
+  ))
+  .add("open dropdown by props", () => <WrapperComponent />);
 
 storiesOf("Button", module)
   .addDecorator(withKnobs)
@@ -108,3 +109,44 @@ storiesOf("Button", module)
       </Button>
     </Menu>
   ));
+
+class WrapperComponent extends Component {
+  state = { activeIndex: undefined };
+
+  onMouseEnter = () => {
+    this.setState({ activeIndex: 1 });
+  };
+
+  setActive = index => {
+    this.setState({ activeIndex: index });
+  };
+
+  render() {
+    return (
+      <div>
+        <Menu
+          className={styles.menu}
+          activeIndex={this.state.activeIndex}
+          setActive={this.setActive}
+        >
+          <Dropdown label={"Dropdown1"}>
+            <DropdownItem>item 1</DropdownItem>
+            <DropdownItem>item 2</DropdownItem>
+            <DropdownItem>item 3</DropdownItem>
+          </Dropdown>
+          <Dropdown label={"Dropdown2"}>
+            <DropdownItem>item 1</DropdownItem>
+            <DropdownItem>item 2</DropdownItem>
+            <DropdownItem>item 3</DropdownItem>
+          </Dropdown>
+        </Menu>
+        <br />
+        <br />
+        <br />
+        <div className={styles.menu_label} onMouseEnter={this.onMouseEnter}>
+          Hover Me!
+        </div>
+      </div>
+    );
+  }
+}
