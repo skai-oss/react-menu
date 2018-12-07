@@ -4,7 +4,7 @@ import classnames from "classnames";
 
 import styles from "./dropdown_item.scss";
 
-const DropdownItem = ({ className, children, ...props }) => {
+const DropdownItem = ({ className, children, active, ...props }) => {
   return (
     <div className={classnames(styles.dropdown_item, className)} {...props}>
       {children}

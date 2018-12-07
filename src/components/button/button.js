@@ -10,6 +10,8 @@ const Button = ({
   children,
   isDisabled,
   onClick,
+  setActive,
+  active,
   ...props
 }) => (
   <button
