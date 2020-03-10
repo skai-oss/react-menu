@@ -82,6 +82,16 @@ describe("Dropdown component", () => {
     cmp.instance().onMouseEnter(2);
     expect(cmp.state("activeIndex")).toEqual(2);
   });
+  test("call to onClick has no exception when props are empty", () => {
+    const cmp = shallow(
+      <Dropdown active>
+        <div>item 1</div>
+        <div>item 2</div>
+      </Dropdown>
+    );
+
+    cmp.instance().onClick();
+  });
 
   test("arrow direction - left", () => {
     const cmp = mount(

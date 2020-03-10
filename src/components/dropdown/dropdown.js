@@ -60,8 +60,8 @@ class Dropdown extends Component {
   };
 
   onClick = event => {
-    const { setActive, onClick } = this.props;
-    onClick && onClick();
+    const { setActive = () => {}, onClick = () => {} } = this.props;
+    onClick();
     setActive(event);
   };
 
