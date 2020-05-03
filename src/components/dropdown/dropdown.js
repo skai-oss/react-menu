@@ -86,7 +86,7 @@ class Dropdown extends Component {
       <div
         className={classnames(styles.dropdown, className, {
           [disabledClassName || styles.disabled]: isDisabled,
-          [activeClassName]: active
+          [activeClassName]: active && !isDisabled
         })}
         onClick={this.onClick}
         onMouseEnter={onMouseEnter}
@@ -99,22 +99,23 @@ class Dropdown extends Component {
         >
           {label}
         </DropdownTitle>
-        {active && (
-          <div
-            className={classnames(
-              styles.dropdown_items,
-              this.getDirectionClassName(),
-              itemsClassName
-            )}
-          >
-            {React.Children.map(children, (child, index) =>
-              React.cloneElement(child, {
-                onMouseEnter: () => this.onMouseEnter(index),
-                active: activeIndex === index
-              })
-            )}
-          </div>
-        )}
+        {active &&
+          !isDisabled && (
+            <div
+              className={classnames(
+                styles.dropdown_items,
+                this.getDirectionClassName(),
+                itemsClassName
+              )}
+            >
+              {React.Children.map(children, (child, index) =>
+                React.cloneElement(child, {
+                  onMouseEnter: () => this.onMouseEnter(index),
+                  active: activeIndex === index
+                })
+              )}
+            </div>
+          )}
       </div>
     );
   }

@@ -25,7 +25,18 @@ describe("Dropdown component", () => {
       </Dropdown>
     );
     cmp.instance().onMouseEnter(1);
-    expect(cmp).toMatchSnapshot();
+    expect(toJson(cmp)).toMatchSnapshot();
+  });
+
+  test("snapshot with active and disbaled", () => {
+    const cmp = shallow(
+      <Dropdown active isDisabled>
+        <div>item 1</div>
+        <div>item 2</div>
+      </Dropdown>
+    );
+    cmp.instance().onMouseEnter(1);
+    expect(toJson(cmp)).toMatchSnapshot();
   });
 
   test("snapshot with disabled", () => {

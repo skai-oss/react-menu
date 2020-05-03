@@ -319,271 +319,51 @@ exports[`Dropdown component default snapshot 1`] = `
 `;
 
 exports[`Dropdown component snapshot with active 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Dropdown
-    active={true}
+<div
+  className="dropdown undefined"
+  onClick={[Function]}
+>
+  <DropdownTitle
     className=""
+    direction="bottom"
     disabledClassName=""
     iconClassName=""
     isDisabled={false}
-    itemsClassName=""
-    label=""
+  />
+  <div
+    className="dropdown_items dropdown_items_bottom"
   >
-    <div>
+    <div
+      active={false}
+      key=".0"
+      onMouseEnter={[Function]}
+    >
       item 1
     </div>
-    <div>
+    <div
+      active={true}
+      key=".1"
+      onMouseEnter={[Function]}
+    >
       item 2
     </div>
-  </Dropdown>,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <DropdownTitle
-          className=""
-          direction="bottom"
-          disabledClassName=""
-          iconClassName=""
-          isDisabled={false}
-        >
-          
-        </DropdownTitle>,
-        <div
-          className="dropdown_items dropdown_items_bottom"
-        >
-          <div
-            active={false}
-            onMouseEnter={[Function]}
-          >
-            item 1
-          </div>
-          <div
-            active={true}
-            onMouseEnter={[Function]}
-          >
-            item 2
-          </div>
-        </div>,
-      ],
-      "className": "dropdown undefined",
-      "onClick": [Function],
-      "onMouseEnter": undefined,
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "children": "",
-          "className": "",
-          "direction": "bottom",
-          "disabledClassName": "",
-          "iconClassName": "",
-          "isDisabled": false,
-        },
-        "ref": null,
-        "rendered": "",
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <div
-              active={false}
-              onMouseEnter={[Function]}
-            >
-              item 1
-            </div>,
-            <div
-              active={true}
-              onMouseEnter={[Function]}
-            >
-              item 2
-            </div>,
-          ],
-          "className": "dropdown_items dropdown_items_bottom",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": ".0",
-            "nodeType": "host",
-            "props": Object {
-              "active": false,
-              "children": "item 1",
-              "onMouseEnter": [Function],
-            },
-            "ref": null,
-            "rendered": "item 1",
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": ".1",
-            "nodeType": "host",
-            "props": Object {
-              "active": true,
-              "children": "item 2",
-              "onMouseEnter": [Function],
-            },
-            "ref": null,
-            "rendered": "item 2",
-            "type": "div",
-          },
-        ],
-        "type": "div",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <DropdownTitle
-            className=""
-            direction="bottom"
-            disabledClassName=""
-            iconClassName=""
-            isDisabled={false}
-          >
-            
-          </DropdownTitle>,
-          <div
-            className="dropdown_items dropdown_items_bottom"
-          >
-            <div
-              active={false}
-              onMouseEnter={[Function]}
-            >
-              item 1
-            </div>
-            <div
-              active={true}
-              onMouseEnter={[Function]}
-            >
-              item 2
-            </div>
-          </div>,
-        ],
-        "className": "dropdown undefined",
-        "onClick": [Function],
-        "onMouseEnter": undefined,
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "children": "",
-            "className": "",
-            "direction": "bottom",
-            "disabledClassName": "",
-            "iconClassName": "",
-            "isDisabled": false,
-          },
-          "ref": null,
-          "rendered": "",
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <div
-                active={false}
-                onMouseEnter={[Function]}
-              >
-                item 1
-              </div>,
-              <div
-                active={true}
-                onMouseEnter={[Function]}
-              >
-                item 2
-              </div>,
-            ],
-            "className": "dropdown_items dropdown_items_bottom",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": ".0",
-              "nodeType": "host",
-              "props": Object {
-                "active": false,
-                "children": "item 1",
-                "onMouseEnter": [Function],
-              },
-              "ref": null,
-              "rendered": "item 1",
-              "type": "div",
-            },
-            Object {
-              "instance": null,
-              "key": ".1",
-              "nodeType": "host",
-              "props": Object {
-                "active": true,
-                "children": "item 2",
-                "onMouseEnter": [Function],
-              },
-              "ref": null,
-              "rendered": "item 2",
-              "type": "div",
-            },
-          ],
-          "type": "div",
-        },
-      ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getDerivedStateFromProps": true,
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-    "attachTo": undefined,
-    "hydrateIn": undefined,
-  },
-}
+  </div>
+</div>
+`;
+
+exports[`Dropdown component snapshot with active and disbaled 1`] = `
+<div
+  className="dropdown disabled"
+  onClick={[Function]}
+>
+  <DropdownTitle
+    className=""
+    direction="bottom"
+    disabledClassName=""
+    iconClassName=""
+    isDisabled={true}
+  />
+</div>
 `;
 
 exports[`Dropdown component snapshot with children 1`] = `
