@@ -1,7 +1,13 @@
 import React, { PureComponent } from "react";
-import classnames from "classnames";
+import styled from "styled-components";
+import theme from "../resources/theme";
 
-import styles from "./menu.scss";
+const MenuWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: ${theme["element-background-color"]};
+`;
 
 export default class Menu extends PureComponent {
   state = {
@@ -79,7 +85,7 @@ export default class Menu extends PureComponent {
     const { activeIndex } = this.state;
 
     return (
-      <div className={classnames(styles.menu, className)}>
+      <MenuWrapper className={className}>
         {React.Children.map(children, (child, index) =>
           React.cloneElement(child, {
             onMouseEnter: () => this.onMouseEnter(child.props.children, index),
@@ -87,7 +93,7 @@ export default class Menu extends PureComponent {
             active: activeIndex === index
           })
         )}
-      </div>
+      </MenuWrapper>
     );
   }
 }

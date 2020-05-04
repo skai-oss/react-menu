@@ -11,49 +11,183 @@ exports[`Dropdown component arrow direction - bottom 1`] = `
   itemsClassName=""
   label="TEST"
 >
-  <div
-    className="dropdown"
+  <ForwardRef(styled.div)
+    className=""
     onClick={[Function]}
   >
-    <DropdownTitle
+    <StyledComponent
       className=""
-      direction="bottom"
-      disabledClassName=""
-      iconClassName=""
-      isDisabled={false}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htpNat",
+            "isStatic": false,
+            "lastClassName": "mvlPg",
+            "rules": Array [
+              "
+  position: relative;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+
+  &:hover {
+    background: ",
+              "#dddddd",
+              ";
+  }
+
+  ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-htpNat",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      onClick={[Function]}
     >
-      <span
-        className="dropdown_title"
+      <div
+        className="sc-htpNat mvlPg"
+        onClick={[Function]}
       >
-        TEST
-        <DropdownIcon
+        <DropdownTitle
           className=""
           direction="bottom"
           disabledClassName=""
+          iconClassName=""
           isDisabled={false}
         >
-          <DownIcon
-            className="icon"
-          >
-            <svg
-              className="icon"
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              viewBox="0 0 448 512"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
+          <ForwardRef(styled.span)>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "cVmiUh",
+                    "rules": Array [
+                      "
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: pre;
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
             >
-              <path
-                d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-              />
-            </svg>
-          </DownIcon>
-        </DropdownIcon>
-      </span>
-    </DropdownTitle>
-  </div>
+              <span
+                className="sc-bwzfXH cVmiUh"
+              >
+                TEST
+                <DropdownIcon
+                  className=""
+                  direction="bottom"
+                  disabledClassName=""
+                  isDisabled={false}
+                >
+                  <DownIcon
+                    className=""
+                    isDisabled={false}
+                  >
+                    <ForwardRef(styled.svg)
+                      className=""
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      strokeWidth="0"
+                      viewBox="0 0 448 512"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <StyledComponent
+                        className=""
+                        fill="currentColor"
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-bdVaJa",
+                              "isStatic": false,
+                              "lastClassName": "jBPbFr",
+                              "rules": Array [
+                                "
+  font-size: 8px;
+  margin: 0 0 0 8px;
+
+  ",
+                                [Function],
+                                ";
+",
+                              ],
+                            },
+                            "displayName": "styled.svg",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-bdVaJa",
+                            "target": "svg",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        viewBox="0 0 448 512"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <svg
+                          className="sc-bdVaJa jBPbFr"
+                          fill="currentColor"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeWidth="0"
+                          viewBox="0 0 448 512"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                          />
+                        </svg>
+                      </StyledComponent>
+                    </ForwardRef(styled.svg)>
+                  </DownIcon>
+                </DropdownIcon>
+              </span>
+            </StyledComponent>
+          </ForwardRef(styled.span)>
+        </DropdownTitle>
+      </div>
+    </StyledComponent>
+  </ForwardRef(styled.div)>
 </Dropdown>
 `;
 
@@ -68,49 +202,183 @@ exports[`Dropdown component arrow direction - bottom_left 1`] = `
   itemsClassName=""
   label="TEST"
 >
-  <div
-    className="dropdown"
+  <ForwardRef(styled.div)
+    className=""
     onClick={[Function]}
   >
-    <DropdownTitle
+    <StyledComponent
       className=""
-      direction="bottom_left"
-      disabledClassName=""
-      iconClassName=""
-      isDisabled={false}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htpNat",
+            "isStatic": false,
+            "lastClassName": "mvlPg",
+            "rules": Array [
+              "
+  position: relative;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+
+  &:hover {
+    background: ",
+              "#dddddd",
+              ";
+  }
+
+  ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-htpNat",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      onClick={[Function]}
     >
-      <span
-        className="dropdown_title"
+      <div
+        className="sc-htpNat mvlPg"
+        onClick={[Function]}
       >
-        TEST
-        <DropdownIcon
+        <DropdownTitle
           className=""
           direction="bottom_left"
           disabledClassName=""
+          iconClassName=""
           isDisabled={false}
         >
-          <DownIcon
-            className="icon"
-          >
-            <svg
-              className="icon"
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              viewBox="0 0 448 512"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
+          <ForwardRef(styled.span)>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "cVmiUh",
+                    "rules": Array [
+                      "
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: pre;
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
             >
-              <path
-                d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-              />
-            </svg>
-          </DownIcon>
-        </DropdownIcon>
-      </span>
-    </DropdownTitle>
-  </div>
+              <span
+                className="sc-bwzfXH cVmiUh"
+              >
+                TEST
+                <DropdownIcon
+                  className=""
+                  direction="bottom_left"
+                  disabledClassName=""
+                  isDisabled={false}
+                >
+                  <DownIcon
+                    className=""
+                    isDisabled={false}
+                  >
+                    <ForwardRef(styled.svg)
+                      className=""
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      strokeWidth="0"
+                      viewBox="0 0 448 512"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <StyledComponent
+                        className=""
+                        fill="currentColor"
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-bdVaJa",
+                              "isStatic": false,
+                              "lastClassName": "jBPbFr",
+                              "rules": Array [
+                                "
+  font-size: 8px;
+  margin: 0 0 0 8px;
+
+  ",
+                                [Function],
+                                ";
+",
+                              ],
+                            },
+                            "displayName": "styled.svg",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-bdVaJa",
+                            "target": "svg",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        viewBox="0 0 448 512"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <svg
+                          className="sc-bdVaJa jBPbFr"
+                          fill="currentColor"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeWidth="0"
+                          viewBox="0 0 448 512"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                          />
+                        </svg>
+                      </StyledComponent>
+                    </ForwardRef(styled.svg)>
+                  </DownIcon>
+                </DropdownIcon>
+              </span>
+            </StyledComponent>
+          </ForwardRef(styled.span)>
+        </DropdownTitle>
+      </div>
+    </StyledComponent>
+  </ForwardRef(styled.div)>
 </Dropdown>
 `;
 
@@ -125,52 +393,180 @@ exports[`Dropdown component arrow direction - left 1`] = `
   itemsClassName=""
   label="TEST"
 >
-  <div
-    className="dropdown"
+  <ForwardRef(styled.div)
+    className=""
     onClick={[Function]}
   >
-    <DropdownTitle
+    <StyledComponent
       className=""
-      direction="left"
-      disabledClassName=""
-      iconClassName=""
-      isDisabled={false}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htpNat",
+            "isStatic": false,
+            "lastClassName": "mvlPg",
+            "rules": Array [
+              "
+  position: relative;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+
+  &:hover {
+    background: ",
+              "#dddddd",
+              ";
+  }
+
+  ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-htpNat",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      onClick={[Function]}
     >
-      <span
-        className="dropdown_title"
+      <div
+        className="sc-htpNat mvlPg"
+        onClick={[Function]}
       >
-        <DropdownIcon
+        <DropdownTitle
           className=""
           direction="left"
           disabledClassName=""
+          iconClassName=""
           isDisabled={false}
         >
-          <LeftIcon
-            className="icon"
-          >
-            <svg
-              className="icon"
-              height="20"
-              viewBox="0 0 24 24"
-              width="20"
-              xmlns="http://www.w3.org/2000/svg"
+          <ForwardRef(styled.span)>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "cVmiUh",
+                    "rules": Array [
+                      "
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: pre;
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
             >
-              <path
-                d="M14 8l-4 4 4 4"
-                fill="none"
-                fillRule="evenodd"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1"
-              />
-            </svg>
-          </LeftIcon>
-        </DropdownIcon>
-        TEST
-      </span>
-    </DropdownTitle>
-  </div>
+              <span
+                className="sc-bwzfXH cVmiUh"
+              >
+                <DropdownIcon
+                  className=""
+                  direction="left"
+                  disabledClassName=""
+                  isDisabled={false}
+                >
+                  <LeftIcon
+                    className=""
+                    isDisabled={false}
+                  >
+                    <ForwardRef(styled.svg)
+                      className=""
+                      height="20"
+                      viewBox="0 0 24 24"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <StyledComponent
+                        className=""
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-bdVaJa",
+                              "isStatic": false,
+                              "lastClassName": "jBPbFr",
+                              "rules": Array [
+                                "
+  font-size: 8px;
+  margin: 0 0 0 8px;
+
+  ",
+                                [Function],
+                                ";
+",
+                              ],
+                            },
+                            "displayName": "styled.svg",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-bdVaJa",
+                            "target": "svg",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                        height="20"
+                        viewBox="0 0 24 24"
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <svg
+                          className="sc-bdVaJa jBPbFr"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          width="20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14 8l-4 4 4 4"
+                            fill="none"
+                            fillRule="evenodd"
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="1"
+                          />
+                        </svg>
+                      </StyledComponent>
+                    </ForwardRef(styled.svg)>
+                  </LeftIcon>
+                </DropdownIcon>
+                TEST
+              </span>
+            </StyledComponent>
+          </ForwardRef(styled.span)>
+        </DropdownTitle>
+      </div>
+    </StyledComponent>
+  </ForwardRef(styled.div)>
 </Dropdown>
 `;
 
@@ -185,52 +581,180 @@ exports[`Dropdown component arrow direction - right 1`] = `
   itemsClassName=""
   label="TEST"
 >
-  <div
-    className="dropdown"
+  <ForwardRef(styled.div)
+    className=""
     onClick={[Function]}
   >
-    <DropdownTitle
+    <StyledComponent
       className=""
-      direction="right"
-      disabledClassName=""
-      iconClassName=""
-      isDisabled={false}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htpNat",
+            "isStatic": false,
+            "lastClassName": "mvlPg",
+            "rules": Array [
+              "
+  position: relative;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+
+  &:hover {
+    background: ",
+              "#dddddd",
+              ";
+  }
+
+  ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-htpNat",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      onClick={[Function]}
     >
-      <span
-        className="dropdown_title"
+      <div
+        className="sc-htpNat mvlPg"
+        onClick={[Function]}
       >
-        TEST
-        <DropdownIcon
+        <DropdownTitle
           className=""
           direction="right"
           disabledClassName=""
+          iconClassName=""
           isDisabled={false}
         >
-          <RightIcon
-            className="icon"
-          >
-            <svg
-              className="icon"
-              height="20"
-              viewBox="0 0 24 24"
-              width="20"
-              xmlns="http://www.w3.org/2000/svg"
+          <ForwardRef(styled.span)>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "cVmiUh",
+                    "rules": Array [
+                      "
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: pre;
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
             >
-              <path
-                d="M10 8l4 4-4 4"
-                fill="none"
-                fillRule="evenodd"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1"
-              />
-            </svg>
-          </RightIcon>
-        </DropdownIcon>
-      </span>
-    </DropdownTitle>
-  </div>
+              <span
+                className="sc-bwzfXH cVmiUh"
+              >
+                TEST
+                <DropdownIcon
+                  className=""
+                  direction="right"
+                  disabledClassName=""
+                  isDisabled={false}
+                >
+                  <RightIcon
+                    className=""
+                    isDisabled={false}
+                  >
+                    <ForwardRef(styled.svg)
+                      className=""
+                      height="20"
+                      viewBox="0 0 24 24"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <StyledComponent
+                        className=""
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-bdVaJa",
+                              "isStatic": false,
+                              "lastClassName": "jBPbFr",
+                              "rules": Array [
+                                "
+  font-size: 8px;
+  margin: 0 0 0 8px;
+
+  ",
+                                [Function],
+                                ";
+",
+                              ],
+                            },
+                            "displayName": "styled.svg",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-bdVaJa",
+                            "target": "svg",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                        height="20"
+                        viewBox="0 0 24 24"
+                        width="20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <svg
+                          className="sc-bdVaJa jBPbFr"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          width="20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M10 8l4 4-4 4"
+                            fill="none"
+                            fillRule="evenodd"
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="1"
+                          />
+                        </svg>
+                      </StyledComponent>
+                    </ForwardRef(styled.svg)>
+                  </RightIcon>
+                </DropdownIcon>
+              </span>
+            </StyledComponent>
+          </ForwardRef(styled.span)>
+        </DropdownTitle>
+      </div>
+    </StyledComponent>
+  </ForwardRef(styled.div)>
 </Dropdown>
 `;
 
@@ -245,63 +769,197 @@ exports[`Dropdown component arrow direction - unknown 1`] = `
   itemsClassName=""
   label="TEST"
 >
-  <div
-    className="dropdown"
+  <ForwardRef(styled.div)
+    className=""
     onClick={[Function]}
   >
-    <DropdownTitle
+    <StyledComponent
       className=""
-      direction="TEST"
-      disabledClassName=""
-      iconClassName=""
-      isDisabled={false}
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-htpNat",
+            "isStatic": false,
+            "lastClassName": "mvlPg",
+            "rules": Array [
+              "
+  position: relative;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+
+  &:hover {
+    background: ",
+              "#dddddd",
+              ";
+  }
+
+  ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-htpNat",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+      onClick={[Function]}
     >
-      <span
-        className="dropdown_title"
+      <div
+        className="sc-htpNat mvlPg"
+        onClick={[Function]}
       >
-        TEST
-        <DropdownIcon
+        <DropdownTitle
           className=""
           direction="TEST"
           disabledClassName=""
+          iconClassName=""
           isDisabled={false}
         >
-          <DownIcon
-            className="icon"
-          >
-            <svg
-              className="icon"
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              viewBox="0 0 448 512"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
+          <ForwardRef(styled.span)>
+            <StyledComponent
+              forwardedComponent={
+                Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bwzfXH",
+                    "isStatic": false,
+                    "lastClassName": "cVmiUh",
+                    "rules": Array [
+                      "
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: pre;
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bwzfXH",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                }
+              }
+              forwardedRef={null}
             >
-              <path
-                d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
-              />
-            </svg>
-          </DownIcon>
-        </DropdownIcon>
-      </span>
-    </DropdownTitle>
-  </div>
+              <span
+                className="sc-bwzfXH cVmiUh"
+              >
+                TEST
+                <DropdownIcon
+                  className=""
+                  direction="TEST"
+                  disabledClassName=""
+                  isDisabled={false}
+                >
+                  <DownIcon
+                    className=""
+                    isDisabled={false}
+                  >
+                    <ForwardRef(styled.svg)
+                      className=""
+                      fill="currentColor"
+                      height="1em"
+                      stroke="currentColor"
+                      strokeWidth="0"
+                      viewBox="0 0 448 512"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <StyledComponent
+                        className=""
+                        fill="currentColor"
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "sc-bdVaJa",
+                              "isStatic": false,
+                              "lastClassName": "jBPbFr",
+                              "rules": Array [
+                                "
+  font-size: 8px;
+  margin: 0 0 0 8px;
+
+  ",
+                                [Function],
+                                ";
+",
+                              ],
+                            },
+                            "displayName": "styled.svg",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "sc-bdVaJa",
+                            "target": "svg",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                        height="1em"
+                        stroke="currentColor"
+                        strokeWidth="0"
+                        viewBox="0 0 448 512"
+                        width="1em"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <svg
+                          className="sc-bdVaJa jBPbFr"
+                          fill="currentColor"
+                          height="1em"
+                          stroke="currentColor"
+                          strokeWidth="0"
+                          viewBox="0 0 448 512"
+                          width="1em"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                          />
+                        </svg>
+                      </StyledComponent>
+                    </ForwardRef(styled.svg)>
+                  </DownIcon>
+                </DropdownIcon>
+              </span>
+            </StyledComponent>
+          </ForwardRef(styled.span)>
+        </DropdownTitle>
+      </div>
+    </StyledComponent>
+  </ForwardRef(styled.div)>
 </Dropdown>
 `;
 
 exports[`Dropdown component default snapshot 1`] = `
 <div
-  className="dropdown"
+  className="sc-htpNat mvlPg"
   onClick={[Function]}
 >
   <span
-    className="dropdown_title"
+    className="sc-bwzfXH cVmiUh"
   >
     
     <svg
-      className="icon"
+      className="sc-bdVaJa jBPbFr"
       fill="currentColor"
       height="1em"
       stroke="currentColor"
@@ -319,8 +977,8 @@ exports[`Dropdown component default snapshot 1`] = `
 `;
 
 exports[`Dropdown component snapshot with active 1`] = `
-<div
-  className="dropdown undefined"
+<ForwardRef(styled.div)
+  className="undefined"
   onClick={[Function]}
 >
   <DropdownTitle
@@ -330,8 +988,8 @@ exports[`Dropdown component snapshot with active 1`] = `
     iconClassName=""
     isDisabled={false}
   />
-  <div
-    className="dropdown_items dropdown_items_bottom"
+  <ForwardRef(Styled(styled.div))
+    className=""
   >
     <div
       active={false}
@@ -347,13 +1005,13 @@ exports[`Dropdown component snapshot with active 1`] = `
     >
       item 2
     </div>
-  </div>
-</div>
+  </ForwardRef(Styled(styled.div))>
+</ForwardRef(styled.div)>
 `;
 
 exports[`Dropdown component snapshot with active and disbaled 1`] = `
-<div
-  className="dropdown disabled"
+<ForwardRef(styled.div)
+  className=""
   onClick={[Function]}
 >
   <DropdownTitle
@@ -363,20 +1021,20 @@ exports[`Dropdown component snapshot with active and disbaled 1`] = `
     iconClassName=""
     isDisabled={true}
   />
-</div>
+</ForwardRef(styled.div)>
 `;
 
 exports[`Dropdown component snapshot with children 1`] = `
 <div
-  className="dropdown"
+  className="sc-htpNat mvlPg"
   onClick={[Function]}
 >
   <span
-    className="dropdown_title"
+    className="sc-bwzfXH cVmiUh"
   >
     
     <svg
-      className="icon"
+      className="sc-bdVaJa jBPbFr"
       fill="currentColor"
       height="1em"
       stroke="currentColor"
@@ -395,15 +1053,15 @@ exports[`Dropdown component snapshot with children 1`] = `
 
 exports[`Dropdown component snapshot with className 1`] = `
 <div
-  className="dropdown className"
+  className="sc-htpNat mvlPg className"
   onClick={[Function]}
 >
   <span
-    className="dropdown_title"
+    className="sc-bwzfXH cVmiUh"
   >
     
     <svg
-      className="icon"
+      className="sc-bdVaJa jBPbFr"
       fill="currentColor"
       height="1em"
       stroke="currentColor"
@@ -422,15 +1080,15 @@ exports[`Dropdown component snapshot with className 1`] = `
 
 exports[`Dropdown component snapshot with disabled 1`] = `
 <div
-  className="dropdown disabled"
+  className="sc-htpNat mvlPg"
   onClick={[Function]}
 >
   <span
-    className="dropdown_title"
+    className="sc-bwzfXH cVmiUh"
   >
     
     <svg
-      className="icon disabled"
+      className="sc-bdVaJa jBPbFr"
       fill="currentColor"
       height="1em"
       stroke="currentColor"
@@ -449,15 +1107,15 @@ exports[`Dropdown component snapshot with disabled 1`] = `
 
 exports[`Dropdown component snapshot with disabledClassName 1`] = `
 <div
-  className="dropdown disabledClassName"
+  className="sc-htpNat mvlPg disabledClassName"
   onClick={[Function]}
 >
   <span
-    className="dropdown_title"
+    className="sc-bwzfXH cVmiUh"
   >
     
     <svg
-      className="icon disabledClassName"
+      className="sc-bdVaJa jBPbFr disabledClassName"
       fill="currentColor"
       height="1em"
       stroke="currentColor"
@@ -476,15 +1134,15 @@ exports[`Dropdown component snapshot with disabledClassName 1`] = `
 
 exports[`Dropdown component snapshot with label 1`] = `
 <div
-  className="dropdown"
+  className="sc-htpNat mvlPg"
   onClick={[Function]}
 >
   <span
-    className="dropdown_title"
+    className="sc-bwzfXH cVmiUh"
   >
     menu1
     <svg
-      className="icon"
+      className="sc-bdVaJa jBPbFr"
       fill="currentColor"
       height="1em"
       stroke="currentColor"

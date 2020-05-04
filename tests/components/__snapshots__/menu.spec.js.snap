@@ -2,7 +2,7 @@
 
 exports[`Menu component recieves activeIndex 1`] = `
 <div
-  className="menu"
+  className="sc-bdVaJa ieAfbz"
 >
   <div
     active={false}
@@ -16,7 +16,7 @@ exports[`Menu component recieves activeIndex 1`] = `
 
 exports[`Menu component recieves className 1`] = `
 <div
-  className="menu TEST_CLASS"
+  className="sc-bdVaJa ieAfbz TEST_CLASS"
 >
   <div
     active={false}
@@ -30,7 +30,7 @@ exports[`Menu component recieves className 1`] = `
 
 exports[`Menu component renders children 1`] = `
 <div
-  className="menu"
+  className="sc-bdVaJa ieAfbz"
 >
   <div
     active={false}

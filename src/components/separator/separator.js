@@ -1,15 +1,8 @@
 import React from "react";
-import classnames from "classnames";
-import PropTypes from "prop-types";
+import styled from "styled-components";
 
-import styles from "./separator.scss";
-
-export const Separator = ({ className }) => {
-  return <div className={classnames(styles.separator, className)} />;
-};
-
-Separator.propTypes = {
-  className: PropTypes.string
-};
+const Separator = styled.div`
+  flex-grow: 1;
+`;
 
 export default Separator;

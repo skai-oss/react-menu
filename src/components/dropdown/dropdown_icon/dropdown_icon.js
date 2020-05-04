@@ -6,7 +6,6 @@ import LeftIcon from "./icons/left_icon";
 import DownIcon from "./icons/down_icon";
 
 import { DIRECTIONS } from "../../../common/constants";
-import styles from "./dropdown_icon.scss";
 
 const DropdownIcon = ({
   direction,
@@ -18,16 +17,18 @@ const DropdownIcon = ({
     case DIRECTIONS.LEFT:
       return (
         <LeftIcon
-          className={classnames(styles.icon, className, {
-            [disabledClassName || styles.disabled]: isDisabled
+          isDisabled={isDisabled}
+          className={classnames(className, {
+            [disabledClassName]: isDisabled
           })}
         />
       );
     case DIRECTIONS.RIGHT:
       return (
         <RightIcon
-          className={classnames(styles.icon, className, {
-            [disabledClassName || styles.disabled]: isDisabled
+          isDisabled={isDisabled}
+          className={classnames(className, {
+            [disabledClassName]: isDisabled
           })}
         />
       );
@@ -36,8 +37,9 @@ const DropdownIcon = ({
     default:
       return (
         <DownIcon
-          className={classnames(styles.icon, className, {
-            [disabledClassName || styles.disabled]: isDisabled
+          isDisabled={isDisabled}
+          className={classnames(className, {
+            [disabledClassName]: isDisabled
           })}
         />
       );

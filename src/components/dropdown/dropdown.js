@@ -1,12 +1,55 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 import PropTypes from "prop-types";
+
 import classnames from "classnames";
 
 import { DIRECTIONS } from "../../common/constants";
-
 import DropdownTitle from "./dropdown_title/dropdown_title";
+import theme from "../../resources/theme";
 
-import styles from "./dropdown.scss";
+const DropdownWrapper = styled.div`
+  position: relative;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+
+  &:hover {
+    background: ${theme["light-gray"]};
+  }
+
+  ${({ isDisabled }) =>
+    isDisabled &&
+    `
+  color: ${theme["element-disabled-color"]};
+  cursor: default;
+  `};
+`;
+
+const DropdownItemsBase = styled.div`
+  position: absolute;
+  border: 1px solid ${theme["light-gray"]};
+  min-width: 120px;
+  z-index: 1;
+`;
+
+const DropdownItemsBottom = styled(DropdownItemsBase)`
+  top: 100%;
+  left: 0;
+`;
+
+const DropdownItemsBottomLeft = styled(DropdownItemsBase)`
+  top: 100%;
+  right: 0;
+`;
+const DropdownItemsLeft = styled(DropdownItemsBase)`
+  right: 100%;
+  top: 0;
+`;
+const DropdownItemsRight = styled(DropdownItemsBase)`
+  left: 100%;
+  top: 0;
+`;
 
 class Dropdown extends Component {
   static propTypes = {
@@ -41,17 +84,17 @@ class Dropdown extends Component {
     return null;
   }
 
-  getDirectionClassName = () => {
+  getItemsWrapper = () => {
     switch (this.props.direction) {
       case DIRECTIONS.LEFT:
-        return styles.dropdown_items_left;
+        return DropdownItemsLeft;
       case DIRECTIONS.BOTTOM_LEFT:
-        return styles.dropdown_items_bottom_left;
+        return DropdownItemsBottomLeft;
       case DIRECTIONS.RIGHT:
-        return styles.dropdown_items_right;
+        return DropdownItemsRight;
       case DIRECTIONS.BOTTOM:
       default:
-        return styles.dropdown_items_bottom;
+        return DropdownItemsBottom;
     }
   };
 
@@ -82,10 +125,11 @@ class Dropdown extends Component {
 
     const { activeIndex } = this.state;
 
+    const ItemsWrapper = this.getItemsWrapper();
     return (
-      <div
-        className={classnames(styles.dropdown, className, {
-          [disabledClassName || styles.disabled]: isDisabled,
+      <DropdownWrapper
+        className={classnames(className, {
+          [disabledClassName]: isDisabled,
           [activeClassName]: active && !isDisabled
         })}
         onClick={this.onClick}
@@ -101,22 +145,16 @@ class Dropdown extends Component {
         </DropdownTitle>
         {active &&
           !isDisabled && (
-            <div
-              className={classnames(
-                styles.dropdown_items,
-                this.getDirectionClassName(),
-                itemsClassName
-              )}
-            >
+            <ItemsWrapper className={itemsClassName}>
               {React.Children.map(children, (child, index) =>
                 React.cloneElement(child, {
                   onMouseEnter: () => this.onMouseEnter(index),
                   active: activeIndex === index
                 })
               )}
-            </div>
+            </ItemsWrapper>
           )}
-      </div>
+      </DropdownWrapper>
     );
   }
 }

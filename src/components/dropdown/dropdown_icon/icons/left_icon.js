@@ -1,7 +1,8 @@
 import React from "react";
+import Icon from "./icon";
 
 const LeftIcon = ({ className }) => (
-  <svg
+  <Icon
     xmlns="http://www.w3.org/2000/svg"
     width="20"
     height="20"
@@ -17,7 +18,7 @@ const LeftIcon = ({ className }) => (
       strokeWidth="1"
       d="M14 8l-4 4 4 4"
     />
-  </svg>
+  </Icon>
 );
 
 export default LeftIcon;

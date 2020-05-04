@@ -2,7 +2,7 @@
 
 exports[`DropdownIcon component arrow direction - bottom 1`] = `
 <svg
-  className="icon"
+  className="sc-bdVaJa jBPbFr"
   fill="currentColor"
   height="1em"
   stroke="currentColor"
@@ -19,7 +19,7 @@ exports[`DropdownIcon component arrow direction - bottom 1`] = `
 
 exports[`DropdownIcon component arrow direction - left 1`] = `
 <svg
-  className="icon"
+  className="sc-bdVaJa jBPbFr"
   height="20"
   viewBox="0 0 24 24"
   width="20"
@@ -39,7 +39,7 @@ exports[`DropdownIcon component arrow direction - left 1`] = `
 
 exports[`DropdownIcon component arrow direction - right 1`] = `
 <svg
-  className="icon"
+  className="sc-bdVaJa jBPbFr"
   height="20"
   viewBox="0 0 24 24"
   width="20"
@@ -59,7 +59,7 @@ exports[`DropdownIcon component arrow direction - right 1`] = `
 
 exports[`DropdownIcon component arrow direction - unknown 1`] = `
 <svg
-  className="icon"
+  className="sc-bdVaJa jBPbFr"
   fill="currentColor"
   height="1em"
   stroke="currentColor"
@@ -76,7 +76,7 @@ exports[`DropdownIcon component arrow direction - unknown 1`] = `
 
 exports[`DropdownIcon component className prop 1`] = `
 <svg
-  className="icon TEST"
+  className="sc-bdVaJa jBPbFr TEST"
   fill="currentColor"
   height="1em"
   stroke="currentColor"
@@ -93,7 +93,7 @@ exports[`DropdownIcon component className prop 1`] = `
 
 exports[`DropdownIcon component default snapshot 1`] = `
 <svg
-  className="icon"
+  className="sc-bdVaJa jBPbFr"
   fill="currentColor"
   height="1em"
   stroke="currentColor"
@@ -110,7 +110,7 @@ exports[`DropdownIcon component default snapshot 1`] = `
 
 exports[`DropdownIcon component disabled prop 1`] = `
 <svg
-  className="icon disabled"
+  className="sc-bdVaJa jBPbFr"
   fill="currentColor"
   height="1em"
   stroke="currentColor"
@@ -127,7 +127,7 @@ exports[`DropdownIcon component disabled prop 1`] = `
 
 exports[`DropdownIcon component disabledClassName prop 1`] = `
 <svg
-  className="icon TEST"
+  className="sc-bdVaJa jBPbFr TEST"
   fill="currentColor"
   height="1em"
   stroke="currentColor"

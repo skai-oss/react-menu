@@ -1,11 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import styled from "styled-components";
 import { DIRECTIONS } from "../../../common/constants";
 
 import DropdownIcon from "../dropdown_icon/dropdown_icon";
 
-import styles from "./dropdown_title.scss";
+const DropdownTitleWrapper = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: pre;
+`;
 
 const DropdownTitle = ({
   isDisabled,
@@ -14,7 +19,7 @@ const DropdownTitle = ({
   direction,
   children
 }) => (
-  <span className={styles.dropdown_title}>
+  <DropdownTitleWrapper>
     {direction === DIRECTIONS.LEFT && (
       <DropdownIcon
         direction={direction}
@@ -32,7 +37,7 @@ const DropdownTitle = ({
         disabledClassName={disabledClassName}
       />
     )}
-  </span>
+  </DropdownTitleWrapper>
 );
 
 DropdownTitle.defaultProps = {

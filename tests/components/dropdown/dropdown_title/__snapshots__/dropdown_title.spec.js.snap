@@ -2,11 +2,11 @@
 
 exports[`DropdownTitle component arrow direction - bottom 1`] = `
 <span
-  className="dropdown_title"
+  className="sc-bwzfXH cVmiUh"
 >
   TEST
   <svg
-    className="icon"
+    className="sc-bdVaJa jBPbFr"
     fill="currentColor"
     height="1em"
     stroke="currentColor"
@@ -24,10 +24,10 @@ exports[`DropdownTitle component arrow direction - bottom 1`] = `
 
 exports[`DropdownTitle component arrow direction - left 1`] = `
 <span
-  className="dropdown_title"
+  className="sc-bwzfXH cVmiUh"
 >
   <svg
-    className="icon"
+    className="sc-bdVaJa jBPbFr"
     height="20"
     viewBox="0 0 24 24"
     width="20"
@@ -49,11 +49,11 @@ exports[`DropdownTitle component arrow direction - left 1`] = `
 
 exports[`DropdownTitle component arrow direction - right 1`] = `
 <span
-  className="dropdown_title"
+  className="sc-bwzfXH cVmiUh"
 >
   TEST
   <svg
-    className="icon"
+    className="sc-bdVaJa jBPbFr"
     height="20"
     viewBox="0 0 24 24"
     width="20"
@@ -74,11 +74,11 @@ exports[`DropdownTitle component arrow direction - right 1`] = `
 
 exports[`DropdownTitle component arrow direction - unknown 1`] = `
 <span
-  className="dropdown_title"
+  className="sc-bwzfXH cVmiUh"
 >
   TEST
   <svg
-    className="icon"
+    className="sc-bdVaJa jBPbFr"
     fill="currentColor"
     height="1em"
     stroke="currentColor"
@@ -96,11 +96,11 @@ exports[`DropdownTitle component arrow direction - unknown 1`] = `
 
 exports[`DropdownTitle component className prop 1`] = `
 <span
-  className="dropdown_title"
+  className="sc-bwzfXH cVmiUh"
 >
   TEST
   <svg
-    className="icon"
+    className="sc-bdVaJa jBPbFr"
     fill="currentColor"
     height="1em"
     stroke="currentColor"
@@ -118,10 +118,10 @@ exports[`DropdownTitle component className prop 1`] = `
 
 exports[`DropdownTitle component default snapshot 1`] = `
 <span
-  className="dropdown_title"
+  className="sc-bwzfXH cVmiUh"
 >
   <svg
-    className="icon"
+    className="sc-bdVaJa jBPbFr"
     fill="currentColor"
     height="1em"
     stroke="currentColor"
@@ -139,11 +139,11 @@ exports[`DropdownTitle component default snapshot 1`] = `
 
 exports[`DropdownTitle component disabled prop 1`] = `
 <span
-  className="dropdown_title"
+  className="sc-bwzfXH cVmiUh"
 >
   TEST
   <svg
-    className="icon disabled"
+    className="sc-bdVaJa jBPbFr"
     fill="currentColor"
     height="1em"
     stroke="currentColor"
@@ -161,11 +161,11 @@ exports[`DropdownTitle component disabled prop 1`] = `
 
 exports[`DropdownTitle component disabledClassName prop 1`] = `
 <span
-  className="dropdown_title"
+  className="sc-bwzfXH cVmiUh"
 >
   TEST
   <svg
-    className="icon TEST"
+    className="sc-bdVaJa jBPbFr TEST"
     fill="currentColor"
     height="1em"
     stroke="currentColor"
@@ -183,11 +183,11 @@ exports[`DropdownTitle component disabledClassName prop 1`] = `
 
 exports[`DropdownTitle component renders children 1`] = `
 <span
-  className="dropdown_title"
+  className="sc-bwzfXH cVmiUh"
 >
   TEST
   <svg
-    className="icon"
+    className="sc-bdVaJa jBPbFr"
     fill="currentColor"
     height="1em"
     stroke="currentColor"

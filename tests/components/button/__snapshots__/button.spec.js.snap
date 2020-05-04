@@ -2,7 +2,7 @@
 
 exports[`Button component disabled Button 1`] = `
 <button
-  className="button disabled"
+  className="sc-iwsKbI gGrMdL"
   disabled={true}
 >
   TEST
@@ -11,7 +11,7 @@ exports[`Button component disabled Button 1`] = `
 
 exports[`Button component disabledClassName prop 1`] = `
 <button
-  className="button DISABLED_CLASS"
+  className="sc-iwsKbI gGrMdL DISABLED_CLASS"
   disabled={true}
 >
   TEST
@@ -20,7 +20,7 @@ exports[`Button component disabledClassName prop 1`] = `
 
 exports[`Button component recieves className 1`] = `
 <button
-  className="button TEST_CLASS"
+  className="sc-iwsKbI gGrMdL TEST_CLASS"
   disabled={false}
 >
   TEST
@@ -29,7 +29,7 @@ exports[`Button component recieves className 1`] = `
 
 exports[`Button component renders children 1`] = `
 <button
-  className="button"
+  className="sc-iwsKbI gGrMdL"
   disabled={false}
 >
   TEST

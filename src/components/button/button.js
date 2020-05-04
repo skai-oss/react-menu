@@ -1,8 +1,25 @@
 import React from "react";
+import styled from "styled-components";
+import theme from "../../resources/theme";
 import classnames from "classnames";
+
 import PropTypes from "prop-types";
 
-import styles from "./button.scss";
+const ButtonWrapper = styled.button`
+  font-size: 12px;
+  padding: 12px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+
+  ${({ disabled }) => {
+    disabled &&
+      `
+  color: ${theme["element-disabled-color"]};
+  cursor: default;`;
+  }};
+`;
 
 const Button = ({
   className,
@@ -14,16 +31,16 @@ const Button = ({
   active,
   ...props
 }) => (
-  <button
-    className={classnames(styles.button, className, {
-      [disabledClassName || styles.disabled]: isDisabled
+  <ButtonWrapper
+    className={classnames(className, {
+      [disabledClassName]: isDisabled
     })}
     disabled={isDisabled}
     onClick={onClick}
     {...props}
   >
     {children}
-  </button>
+  </ButtonWrapper>
 );
 
 Button.propTypes = {

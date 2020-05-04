@@ -2,7 +2,7 @@
 
 exports[`DropdownItem component className prop 1`] = `
 <div
-  className="dropdown_item TEST"
+  className="sc-bdVaJa kRyzRN TEST"
 >
   TEST
 </div>
@@ -10,13 +10,13 @@ exports[`DropdownItem component className prop 1`] = `
 
 exports[`DropdownItem component default snapshot 1`] = `
 <div
-  className="dropdown_item"
+  className="sc-bdVaJa kRyzRN"
 />
 `;
 
 exports[`DropdownItem component renders children 1`] = `
 <div
-  className="dropdown_item"
+  className="sc-bdVaJa kRyzRN"
 >
   TEST
 </div>
