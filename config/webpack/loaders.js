@@ -1,5 +1,3 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
 const babelLoader = {
   test: /(\.jsx|\.js)$/,
   loader: "babel-loader",
@@ -9,7 +7,7 @@ const babelLoader = {
 const cssLoader = {
   test: /(\.scss|\.css)/,
   loaders: [
-    MiniCssExtractPlugin.loader,
+    "style-loader",
     "css-loader?modules&importLoaders=1&localIdentName=kn-[name]__[local]___[hash:base64:5]",
     "sass-loader"
   ]
