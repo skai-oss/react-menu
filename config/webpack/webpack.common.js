@@ -1,6 +1,5 @@
 const glob = require("glob");
 const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const { babelLoader, cssLoader, mdLoader } = require("./loaders");
 
@@ -11,11 +10,6 @@ module.exports = {
   externals: {
     react: "react"
   },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: "style.css"
-    })
-  ],
   output: {
     filename: "[name].js",
     path: path.resolve(process.cwd(), "dist"),

@@ -27,14 +27,6 @@ React menu is a simple menu container component that helps a user create a simpl
  yarn add @kenshooui/react-menu
 ```
  
-## Import styles
- 
- **Include the component's css on your app**
- 
-```jsx
- import "@kenshooui/react-menu/dist/style.css"
-```
- 
  ## How to use 
  
 ```jsx
