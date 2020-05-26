@@ -3,6 +3,13 @@ import classnames from "classnames";
 
 import styles from "./menu.scss";
 
+const registerToggleActive = (add, toggleActive, parents) =>
+  parents.forEach(parent => {
+    add
+      ? parent.addEventListener("click", toggleActive)
+      : parent.removeEventListener("click", toggleActive);
+  });
+
 export default class Menu extends PureComponent {
   state = {
     active: false,
@@ -54,9 +61,10 @@ export default class Menu extends PureComponent {
   };
 
   toggleActive = (event, activeIndex) => {
+    const { parents = [window] } = this.props;
     event.stopPropagation();
     if (this.state.active) {
-      window.removeEventListener("click", this.toggleActive);
+      registerToggleActive(false, this.toggleActive, parents);
       this.setState({
         active: false,
         activeIndex: undefined,
@@ -64,7 +72,7 @@ export default class Menu extends PureComponent {
       });
       this.onChange(undefined);
     } else {
-      window.addEventListener("click", this.toggleActive);
+      registerToggleActive(true, this.toggleActive, parents);
       this.setState({ active: true, innerUpdate: true, activeIndex });
       this.onChange(activeIndex);
     }
