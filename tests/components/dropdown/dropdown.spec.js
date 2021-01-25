@@ -115,6 +115,17 @@ describe("Dropdown component", () => {
     expect(toJson(cmp)).toMatchSnapshot();
   });
 
+  test("arrow direction - left to top", () => {
+    const cmp = mount(
+      <Dropdown label="TEST" direction={DIRECTIONS.LEFT_TO_TOP}>
+        <div>item 1</div>
+        <div>item 2</div>
+      </Dropdown>
+    );
+
+    expect(toJson(cmp)).toMatchSnapshot();
+  });
+
   test("arrow direction - bottom", () => {
     const cmp = mount(
       <Dropdown label="TEST" direction={DIRECTIONS.BOTTOM}>
@@ -129,6 +140,17 @@ describe("Dropdown component", () => {
   test("arrow direction - right", () => {
     const cmp = mount(
       <Dropdown label="TEST" direction={DIRECTIONS.RIGHT}>
+        <div>item 1</div>
+        <div>item 2</div>
+      </Dropdown>
+    );
+
+    expect(toJson(cmp)).toMatchSnapshot();
+  });
+
+  test("arrow direction - right to top", () => {
+    const cmp = mount(
+      <Dropdown label="TEST" direction={DIRECTIONS.RIGHT_TO_TOP}>
         <div>item 1</div>
         <div>item 2</div>
       </Dropdown>
