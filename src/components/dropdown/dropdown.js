@@ -45,10 +45,14 @@ class Dropdown extends Component {
     switch (this.props.direction) {
       case DIRECTIONS.LEFT:
         return styles.dropdown_items_left;
+      case DIRECTIONS.LEFT_TO_TOP:
+        return styles.dropdown_items_left_to_top;
       case DIRECTIONS.BOTTOM_LEFT:
         return styles.dropdown_items_bottom_left;
       case DIRECTIONS.RIGHT:
         return styles.dropdown_items_right;
+      case DIRECTIONS.RIGHT_TO_TOP:
+        return styles.dropdown_items_right_to_top;
       case DIRECTIONS.BOTTOM:
       default:
         return styles.dropdown_items_bottom;

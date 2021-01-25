@@ -33,9 +33,19 @@
   top: 0;
 }
 
+.dropdown_items_left_to_top {
+  right: 100%;
+  bottom: 0;
+}
+
 .dropdown_items_right {
   left: 100%;
   top: 0;
+}
+
+.dropdown_items_right_to_top {
+  left: 100%;
+  bottom: 0;
 }
 
 .disabled {
