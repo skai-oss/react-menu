@@ -16,6 +16,7 @@ const DropdownIcon = ({
 }) => {
   switch (direction) {
     case DIRECTIONS.LEFT:
+    case DIRECTIONS.LEFT_TO_TOP:
       return (
         <LeftIcon
           className={classnames(styles.icon, className, {
@@ -24,6 +25,7 @@ const DropdownIcon = ({
         />
       );
     case DIRECTIONS.RIGHT:
+    case DIRECTIONS.RIGHT_TO_TOP:
       return (
         <RightIcon
           className={classnames(styles.icon, className, {

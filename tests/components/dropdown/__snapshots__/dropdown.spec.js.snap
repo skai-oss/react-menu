@@ -206,24 +206,27 @@ exports[`Dropdown component arrow direction - left to top 1`] = `
           disabledClassName=""
           isDisabled={false}
         >
-          <DownIcon
+          <LeftIcon
             className="icon"
           >
             <svg
               className="icon"
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              viewBox="0 0 448 512"
-              width="1em"
+              height="20"
+              viewBox="0 0 24 24"
+              width="20"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                d="M14 8l-4 4 4 4"
+                fill="none"
+                fillRule="evenodd"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1"
               />
             </svg>
-          </DownIcon>
+          </LeftIcon>
         </DropdownIcon>
       </span>
     </DropdownTitle>
@@ -323,24 +326,27 @@ exports[`Dropdown component arrow direction - right to top 1`] = `
           disabledClassName=""
           isDisabled={false}
         >
-          <DownIcon
+          <RightIcon
             className="icon"
           >
             <svg
               className="icon"
-              fill="currentColor"
-              height="1em"
-              stroke="currentColor"
-              strokeWidth="0"
-              viewBox="0 0 448 512"
-              width="1em"
+              height="20"
+              viewBox="0 0 24 24"
+              width="20"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
+                d="M10 8l4 4-4 4"
+                fill="none"
+                fillRule="evenodd"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1"
               />
             </svg>
-          </DownIcon>
+          </RightIcon>
         </DropdownIcon>
       </span>
     </DropdownTitle>
