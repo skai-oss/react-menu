@@ -17,6 +17,7 @@ class Dropdown extends Component {
     label: PropTypes.string,
     isDisabled: PropTypes.bool,
     direction: PropTypes.string,
+    withIcon: PropTypes.bool,
     children: PropTypes.node,
     active: PropTypes.bool
   };
@@ -28,6 +29,7 @@ class Dropdown extends Component {
     iconClassName: "",
     label: "",
     isDisabled: false,
+    withIcon: true,
     children: [],
     active: false
   };
@@ -81,7 +83,8 @@ class Dropdown extends Component {
       direction,
       onMouseEnter,
       active,
-      activeClassName
+      activeClassName,
+      withIcon
     } = this.props;
 
     const { activeIndex } = this.state;
@@ -100,6 +103,7 @@ class Dropdown extends Component {
           isDisabled={isDisabled}
           iconClassName={iconClassName}
           disabledClassName={disabledClassName}
+          withIcon={withIcon}
         >
           {label}
         </DropdownTitle>

@@ -10,6 +10,7 @@ exports[`Dropdown component arrow direction - bottom 1`] = `
   isDisabled={false}
   itemsClassName=""
   label="TEST"
+  withIcon={true}
 >
   <div
     className="dropdown"
@@ -21,6 +22,7 @@ exports[`Dropdown component arrow direction - bottom 1`] = `
       disabledClassName=""
       iconClassName=""
       isDisabled={false}
+      withIcon={true}
     >
       <span
         className="dropdown_title"
@@ -67,6 +69,7 @@ exports[`Dropdown component arrow direction - bottom_left 1`] = `
   isDisabled={false}
   itemsClassName=""
   label="TEST"
+  withIcon={true}
 >
   <div
     className="dropdown"
@@ -78,6 +81,7 @@ exports[`Dropdown component arrow direction - bottom_left 1`] = `
       disabledClassName=""
       iconClassName=""
       isDisabled={false}
+      withIcon={true}
     >
       <span
         className="dropdown_title"
@@ -124,6 +128,7 @@ exports[`Dropdown component arrow direction - left 1`] = `
   isDisabled={false}
   itemsClassName=""
   label="TEST"
+  withIcon={true}
 >
   <div
     className="dropdown"
@@ -135,6 +140,7 @@ exports[`Dropdown component arrow direction - left 1`] = `
       disabledClassName=""
       iconClassName=""
       isDisabled={false}
+      withIcon={true}
     >
       <span
         className="dropdown_title"
@@ -184,6 +190,7 @@ exports[`Dropdown component arrow direction - left to top 1`] = `
   isDisabled={false}
   itemsClassName=""
   label="TEST"
+  withIcon={true}
 >
   <div
     className="dropdown"
@@ -195,6 +202,7 @@ exports[`Dropdown component arrow direction - left to top 1`] = `
       disabledClassName=""
       iconClassName=""
       isDisabled={false}
+      withIcon={true}
     >
       <span
         className="dropdown_title"
@@ -244,6 +252,7 @@ exports[`Dropdown component arrow direction - right 1`] = `
   isDisabled={false}
   itemsClassName=""
   label="TEST"
+  withIcon={true}
 >
   <div
     className="dropdown"
@@ -255,6 +264,7 @@ exports[`Dropdown component arrow direction - right 1`] = `
       disabledClassName=""
       iconClassName=""
       isDisabled={false}
+      withIcon={true}
     >
       <span
         className="dropdown_title"
@@ -304,6 +314,7 @@ exports[`Dropdown component arrow direction - right to top 1`] = `
   isDisabled={false}
   itemsClassName=""
   label="TEST"
+  withIcon={true}
 >
   <div
     className="dropdown"
@@ -315,6 +326,7 @@ exports[`Dropdown component arrow direction - right to top 1`] = `
       disabledClassName=""
       iconClassName=""
       isDisabled={false}
+      withIcon={true}
     >
       <span
         className="dropdown_title"
@@ -364,6 +376,7 @@ exports[`Dropdown component arrow direction - unknown 1`] = `
   isDisabled={false}
   itemsClassName=""
   label="TEST"
+  withIcon={true}
 >
   <div
     className="dropdown"
@@ -375,6 +388,7 @@ exports[`Dropdown component arrow direction - unknown 1`] = `
       disabledClassName=""
       iconClassName=""
       isDisabled={false}
+      withIcon={true}
     >
       <span
         className="dropdown_title"
@@ -449,6 +463,7 @@ exports[`Dropdown component snapshot with active 1`] = `
     disabledClassName=""
     iconClassName=""
     isDisabled={false}
+    withIcon={true}
   />
   <div
     className="dropdown_items dropdown_items_bottom"
@@ -482,6 +497,7 @@ exports[`Dropdown component snapshot with active and disbaled 1`] = `
     disabledClassName=""
     iconClassName=""
     isDisabled={true}
+    withIcon={true}
   />
 </div>
 `;
@@ -617,6 +633,19 @@ exports[`Dropdown component snapshot with label 1`] = `
         d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"
       />
     </svg>
+  </span>
+</div>
+`;
+
+exports[`Dropdown component without icon 1`] = `
+<div
+  className="dropdown"
+  onClick={[Function]}
+>
+  <span
+    className="dropdown_title"
+  >
+    
   </span>
 </div>
 `;

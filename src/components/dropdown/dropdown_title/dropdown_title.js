@@ -12,26 +12,29 @@ const DropdownTitle = ({
   iconClassName,
   disabledClassName,
   direction,
+  withIcon,
   children
 }) => (
   <span className={styles.dropdown_title}>
-    {direction === DIRECTIONS.LEFT && (
-      <DropdownIcon
-        direction={direction}
-        isDisabled={isDisabled}
-        className={iconClassName}
-        disabledClassName={disabledClassName}
-      />
-    )}
+    {withIcon &&
+      direction === DIRECTIONS.LEFT && (
+        <DropdownIcon
+          direction={direction}
+          isDisabled={isDisabled}
+          className={iconClassName}
+          disabledClassName={disabledClassName}
+        />
+      )}
     {children}
-    {direction !== DIRECTIONS.LEFT && (
-      <DropdownIcon
-        direction={direction}
-        isDisabled={isDisabled}
-        className={iconClassName}
-        disabledClassName={disabledClassName}
-      />
-    )}
+    {withIcon &&
+      direction !== DIRECTIONS.LEFT && (
+        <DropdownIcon
+          direction={direction}
+          isDisabled={isDisabled}
+          className={iconClassName}
+          disabledClassName={disabledClassName}
+        />
+      )}
   </span>
 );
 
@@ -41,6 +44,7 @@ DropdownTitle.defaultProps = {
   direction: DIRECTIONS.BOTTOM,
   disabledClassName: "",
   isDisabled: false,
+  withIcon: true,
   children: []
 };
 
@@ -50,6 +54,7 @@ DropdownTitle.propTypes = {
   disabledClassName: PropTypes.string,
   iconClassName: PropTypes.string,
   isDisabled: PropTypes.bool,
+  withIcon: PropTypes.bool,
   children: PropTypes.node
 };
 

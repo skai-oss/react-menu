@@ -12,6 +12,11 @@ describe("Dropdown component", () => {
     expect(cmp).toMatchSnapshot();
   });
 
+  test("without icon", () => {
+    const cmp = renderer.create(<Dropdown withIcon={false} />);
+    expect(cmp).toMatchSnapshot();
+  });
+
   test("snapshot with className", () => {
     const cmp = renderer.create(<Dropdown className="className" />);
     expect(cmp).toMatchSnapshot();

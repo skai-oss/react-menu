@@ -10,6 +10,11 @@ describe("DropdownTitle component", () => {
     expect(cmp).toMatchSnapshot();
   });
 
+  test("without icon", () => {
+    const cmp = renderer.create(<DropdownTitle withIcon={false} />);
+    expect(cmp).toMatchSnapshot();
+  });
+
   test("renders children", () => {
     const cmp = renderer.create(<DropdownTitle>TEST</DropdownTitle>);
     expect(cmp).toMatchSnapshot();
