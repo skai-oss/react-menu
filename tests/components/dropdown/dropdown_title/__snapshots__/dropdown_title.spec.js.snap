@@ -202,3 +202,9 @@ exports[`DropdownTitle component renders children 1`] = `
   </svg>
 </span>
 `;
+
+exports[`DropdownTitle component without icon 1`] = `
+<span
+  className="dropdown_title"
+/>
+`;
