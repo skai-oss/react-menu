@@ -1,9 +1,9 @@
 {
-  "name": "@kenshooui/react-menu",
+  "name": "@skai/react-menu",
   "version": "0.0.0-development",
   "description": "React Menu",
-  "repository": "https://github.com/kenshoo/react-menu.git",
-  "author": "Kenshoo",
+  "repository": "https://github.com/skai-oss/react-menu.git",
+  "author": "Skai",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -16,7 +16,6 @@
     "build-storybook": "build-storybook",
     "lint:dev": "eslint --ext js --ext jsx ./src --fix",
     "lint:jenkins": "eslint --ext js --ext jsx ./src",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "precommit": "lint-staged",
     "postcommit": "git update-index -g"
   },
