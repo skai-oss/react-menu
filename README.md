@@ -18,13 +18,13 @@ React menu is a simple menu container component that helps a user create a simpl
  **Installation using npm:**
  
 ```
- npm install @skai/react-menu --save
+ npm install @skai-ui/react-menu --save
 ```
 
  **Installation using Yarn:**
  
 ```
- yarn add @skai/react-menu
+ yarn add @skai-ui/react-menu
 ```
  
  ## How to use 

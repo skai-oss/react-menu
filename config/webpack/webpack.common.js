@@ -13,7 +13,7 @@ module.exports = {
   output: {
     filename: "[name].js",
     path: path.resolve(process.cwd(), "dist"),
-    library: "@skai/react-menu",
+    library: "@skai-ui/react-menu",
     libraryTarget: "umd"
   },
   module: {
