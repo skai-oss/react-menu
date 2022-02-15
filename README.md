@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/kenshoo/react-menu.svg?branch=master)](https://travis-ci.org/kenshoo/react-menu) [![npm version](https://badge.fury.io/js/%40kenshooui%2Freact-menu.svg)](https://badge.fury.io/js/%40kenshooui%2Freact-menu)
 
-**Kenshoo menu component**
+**Skai menu component**
 
 **[react-menu demo](https://kenshoo.github.io/react-menu)**
 
@@ -18,13 +18,13 @@ React menu is a simple menu container component that helps a user create a simpl
  **Installation using npm:**
  
 ```
- npm install @kenshooui/react-menu --save
+ npm install @skai-ui/react-menu --save
 ```
 
  **Installation using Yarn:**
  
 ```
- yarn add @kenshooui/react-menu
+ yarn add @skai-ui/react-menu
 ```
  
  ## How to use 
@@ -36,7 +36,7 @@ import Menu, {
     Dropdown, 
     Seperator, 
     DropdownItem, 
-} from ""@kenshooui/react-menu";
+} from ""@skai/react-menu";
 
 class Menu extends Component {
   render() {

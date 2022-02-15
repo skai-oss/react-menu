@@ -21,7 +21,7 @@ storiesOf("Menu", module)
     <Menu className={styles.advanced_menu} openTab={2}>
       <img
         className={styles.advanced_logo}
-        src={"https://cdn.kenshoo.com/resources/logos/kenshoo-logo.svg"}
+        src={"https://cdn.kenshoo.com/resources-frontend/latest/kenshoo_logo/skai-black.svg"}
         height={40}
       />
       <SampleButton onClick={action("button clicked")}>Analysis</SampleButton>
@@ -60,7 +60,7 @@ storiesOf("Menu", module)
       </SampleDropDown>
       <Separator />
       <SampleDropDown
-        label={"user.name@kenshoo.com"}
+        label={"user.name@skai.io"}
         onClick={action("item clicked")}
         itemsClassName={styles.big_advanced_item}
         activeClassName={styles.advanced_dropdown_open}

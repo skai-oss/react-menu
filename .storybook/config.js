@@ -6,7 +6,7 @@ import "./app.scss";
 
 setOptions({
   name: "React Menu",
-  url: "https://github.com/kenshoo/react-menu",
+  url: "https://github.com/skai-oss/react-menu",
   goFullScreen: false,
   showLeftPanel: true,
   showDownPanel: true,
