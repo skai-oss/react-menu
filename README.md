@@ -123,4 +123,5 @@ Use this component to divide the menu to left and right sections
 ## Compatibility
   
   - React 16 or newer
+  - 
   
